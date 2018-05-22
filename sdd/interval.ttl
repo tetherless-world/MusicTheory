@@ -1,0 +1,332 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+
+:Interval rdf:type owl:Class ;
+    rdfs:comment "The difference between two pitches"^^xsd:string ;
+    rdfs:label "Interval"^^xsd:string .
+
+:HarmonicInterval rdf:type owl:Class;
+    rdfs:subClassOf :Interval ;
+    rdfs:comment "Occurs when multiple notes are played at the same time"^^xsd:string ;
+    rdfs:label "Harmonic Interval"^^xsd:string .
+
+:Chord rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicInterval ;
+    rdfs:comment "Any harmonic set of pitches consisting of two or more notes sounded simultaneously"^^xsd:string ;
+    rdfs:label "Chord"^^xsd:string .
+
+:MelodicInterval rdf:type owl:Class;
+    rdfs:subClassOf :Interval ;
+    rdfs:comment "Occurs when multiple notes are played in sequence"^^xsd:string ;
+    rdfs:label "Melodic Interval"^^xsd:string .
+
+:DiatonicInterval rdf:type owl:Class;
+    rdfs:comment "Any interval where the first and last note are part of the same major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Diatonic Interval"^^xsd:string .
+
+:ChromaticInterval rdf:type owl:Class;
+    rdfs:comment "Any interval where the first and last note are not part of the same major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Chromatic Interval"^^xsd:string .
+
+:PerfectInterval rdf:type owl:Class ;
+    rdfs:comment "An interval with a high degree of consonance (traditionally considered perfectly consonant) that can be inverted to form other perfect intervals"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Perfect Interval"^^xsd:string .
+
+:MajorInterval rdf:type owl:Class ;
+    rdfs:comment "An interval corresponding to notes in a major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Major Interval"^^xsd:string .
+
+:MinorInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which the corresponding major interval is narrowed by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Minor Interval"^^xsd:string .
+
+:AugmentedInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which a major or perfect interval is widened by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Augmented Interval"^^xsd:string .
+
+:DiminishedInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which a minor or perfect interval is narrowed by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Diminished Interval"^^xsd:string .
+
+:PerfectUnison rdf:type owl:Class ;
+    rdfs:comment "An interval where two or more notes are playing the same pitch"^^xsd:string ;
+    :hasSemitoneCount "0"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Unison"^^xsd:string ;
+    skos:altLabel "P1"^^xsd:string ;
+    owl:equivalentClass :DiminishedSecond .
+
+:DiminishedSecond rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor second by one chromatic semitone, enharmonically equivalent to a perfect unison"^^xsd:string ;
+    :hasSemitoneCount "0"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Second"^^xsd:string ;
+    skos:altLabel "d2"^^xsd:string ;
+    owl:equivalentClass :PerfectUnison .
+
+:MinorSecond rdf:type owl:Class ;
+    rdfs:comment "An interval of a single chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Second"^^xsd:string ;
+    skos:altLabel "m2"^^xsd:string ;
+    owl:equivalentClass :AugmentedUnison, :Semitone, :HalfStep .
+
+:AugmentedUnison rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect unison by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Unison"^^xsd:string ;
+    skos:altLabel "A1"^^xsd:string ;
+    owl:equivalentClass :MinorSecond, :Semitone, :HalfStep .
+
+:MajorSecond rdf:type owl:Class ;
+    rdfs:comment "An interval of a single chromatic whole tone"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Second"^^xsd:string ;
+    skos:altLabel "M2"^^xsd:string ;
+    owl:equivalentClass :DiminishedThird, :WholeTone, :WholeStep .
+
+:DiminishedThird rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor third by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Third"^^xsd:string ;
+    skos:altLabel "d3"^^xsd:string ;
+    owl:equivalentClass :MajorSecond, :WholeTone, :WholeStep  .
+
+:MinorThird rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing three semitones"^^xsd:string ;
+    :hasSemitoneCount "3"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Third"^^xsd:string ;
+    skos:altLabel "m3"^^xsd:string ;
+    owl:equivalentClass :AugmentedSecond .
+
+:AugmentedSecond rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major second by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "3"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Second"^^xsd:string ;
+    skos:altLabel "A2"^^xsd:string ;
+    owl:equivalentClass :MinorThird .
+
+:MajorThird rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing four semitones"^^xsd:string ;
+    :hasSemitoneCount "4"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Third"^^xsd:string ;
+    skos:altLabel "M3"^^xsd:string ;
+    owl:equivalentClass :DiminishedFourth .
+
+:DiminishedFourth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect fourth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "4"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Fourth"^^xsd:string ;
+    skos:altLabel "d4"^^xsd:string ;
+    owl:equivalentClass :MajorThird .
+
+:PerfectFourth rdf:type owl:Class ;
+    rdfs:comment "An interval where the pair of pitches follow a frequency ratio of 4:3, encompassing a difference of five semitones"^^xsd:string ;
+    :hasSemitoneCount "5"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Fourth"^^xsd:string ;
+    skos:altLabel "P4"^^xsd:string ;
+    owl:equivalentClass :AugmentedThird .
+
+:AugmentedThird rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major third by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "5"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Third"^^xsd:string ;
+    skos:altLabel "A3"^^xsd:string ;
+    owl:equivalentClass :AugmentedThird .
+
+:DiminishedFifth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect fifth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Fifth"^^xsd:string ;
+    skos:altLabel "d5"^^xsd:string ;
+    owl:equivalentClass :AugmentedFourth, :Tritone .
+
+:AugmentedFourth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect fourth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Fourth"^^xsd:string ;
+    skos:altLabel "A4"^^xsd:string ;
+    owl:equivalentClass :DiminishedFifth, :Tritone .
+
+:PerfectFifth rdf:type owl:Class ;
+    rdfs:comment "An interval where the pair of pitches follow a frequency ratio of 3:2, encompassing a difference of seven semitones"^^xsd:string ;
+    :hasSemitoneCount "7"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Fifth"^^xsd:string ;
+    skos:altLabel "P5"^^xsd:string ;
+    owl:equivalentClass :DiminishedSixth .
+
+:DiminishedSixth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor sixth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "7"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Sixth"^^xsd:string ;
+    skos:altLabel "d6"^^xsd:string ;
+    owl:equivalentClass :PerfectFifth .
+
+:MinorSixth rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing eight semitones"^^xsd:string ;
+    :hasSemitoneCount "8"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Sixth"^^xsd:string ;
+    skos:altLabel "m6"^^xsd:string ;
+    owl:equivalentClass :AugmentedFifth .
+
+:AugmentedFifth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect fifth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "8"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Fifth"^^xsd:string ;
+    skos:altLabel "A5"^^xsd:string ;
+    owl:equivalentClass :MinorSixth .
+
+:MajorSixth rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing nine semitones"^^xsd:string ;
+    :hasSemitoneCount "9"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Sixth"^^xsd:string ;
+    skos:altLabel "M6"^^xsd:string ;
+    owl:equivalentClass :DiminishedSeventh .
+
+:DiminishedSeventh rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor seventh by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "9"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Seventh"^^xsd:string ;
+    skos:altLabel "d7"^^xsd:string ;
+    owl:equivalentClass :MajorSixth .
+
+:MinorSeventh rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing ten semitones"^^xsd:string ;
+    :hasSemitoneCount "10"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Seventh"^^xsd:string ;
+    skos:altLabel "m7"^^xsd:string ;
+    owl:equivalentClass :AugmentedSixth .
+
+:AugmentedSixth rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major sixth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "10"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Sixth"^^xsd:string ;
+    skos:altLabel "A6"^^xsd:string ;
+    owl:equivalentClass :MinorSeventh .
+
+:MajorSeventh rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing eleven semitones"^^xsd:string ;
+    :hasSemitoneCount "11"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Seventh"^^xsd:string ;
+    skos:altLabel "M7"^^xsd:string ;
+    owl:equivalentClass :DiminishedOctave .
+
+:DiminishedOctave rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect octave by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "11"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Seventh"^^xsd:string ;
+    skos:altLabel "d8"^^xsd:string ;
+    owl:equivalentClass :MajorSeventh .
+
+:PerfectOctave rdf:type owl:Class ;
+    rdfs:comment "An interval where the starting (lower) note is half the frequency of the ending note"^^xsd:string ;
+    :hasSemitoneCount "12"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Octave"^^xsd:string ;
+    skos:altLabel "P8"^^xsd:string ;
+    owl:equivalentClass :AugmentedSeventh .
+
+:AugmentedSeventh rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major seventh by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "12"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Seventh"^^xsd:string ;
+    skos:altLabel "A7"^^xsd:string ;
+    owl:equivalentClass :PerfectOctave .
+
+:Step rdf:type owl:Class;
+    rdfs:comment "A categorization of an interval"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Step"^^xsd:string ;
+    owl:equivalentClass :Tone .
+
+:HalfStep rdf:type owl:Class;
+    rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :Step ;
+    owl:equivalentClass :Semitone, :MinorSecond, :AugmentedUnison ;
+    skos:altLabel "S"^^xsd:string ;
+    rdfs:label "Half Step"^^xsd:string .
+
+:WholeStep rdf:type owl:Class;
+    rdfs:comment "An interval of two half steps"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :Step ;
+    owl:equivalentClass :WholeTone, :MajorSecond, :DiminishedThird ;
+    skos:altLabel "T"^^xsd:string ;
+    rdfs:label "Whole Step"^^xsd:string .
+
+:Tone rdf:type owl:Class;
+    rdfs:comment "A categorization of an interval"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Tone"^^xsd:string ;
+    owl:equivalentClass :Step .
+
+:Microtone rdf:type owl:Class;
+    rdfs:comment "An interval smaller than a semitone"^^xsd:string ;
+    rdfs:subClassOf :Tone ;
+    rdfs:label "Microtone"^^xsd:string .
+
+:Semitone rdf:type owl:Class;
+    rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :HalfStep, :MinorSecond, :AugmentedUnison ;
+    skos:altLabel "S"^^xsd:string ;
+    rdfs:label "Semitone"^^xsd:string .
+
+:WholeTone rdf:type owl:Class;
+    rdfs:comment "An interval of two semitones"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :WholeStep, :MajorSecond, :DiminishedThird ;
+    skos:altLabel "T"^^xsd:string ;
+    rdfs:label "Whole Tone"^^xsd:string .
+
+:Tritone rdf:type owl:Class;
+    rdfs:comment "An interval of six semitones"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :DiminishedFifth, :AugmentedFourth ;
+    skos:altLabel "TT"^^xsd:string ;
+    rdfs:label "Tritone"^^xsd:string .

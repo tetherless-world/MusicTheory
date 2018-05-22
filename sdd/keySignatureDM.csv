@@ -1,0 +1,8 @@
+Column,Attribute,attributeOf,Format,Unit,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,hasPosition,Label,Comment
+Major Key,,,,,,mto:MajorKey,,,??key_signature,,,,,
+Minor Key,,,,,,mto:MinorKey,,,??key_signature,,,,,
+Number of Flats,sio:Count,??flat,,,,,,,??key_signature,,,,,
+Number of Sharps,sio:Count,??sharp,,,,,,,??key_signature,,,,,
+??key_signature,,,,,,mto:KeySignature,,,,,,,,
+??flat,,,,,,mto:Sharp,,,,,,,,
+??sharp,,,,,,mto:Flat,,,,,,,,

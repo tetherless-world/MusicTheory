@@ -1,0 +1,13 @@
+Column,Code,Label,Class
+Note,A,A,mto:A
+Note,A# / Bb,A# / Bb,"mto:ASharp, mto:BFlat"
+Note,B,B,mto:B
+Note,C,C,mto:C
+Note,C# / Db,C# / Db,"mto:CSharp, mto:DFlat"
+Note,D,D,mto:D
+Note,D# / Eb,D# / Eb,"mto:DSharp, mto:EFlat"
+Note,E,E,mto:E
+Note,F,F,mto:F
+Note,F# / Gb,F# / Gb,"mto:FSharp, mto:GFlat"
+Note,G,G,mto:G
+Note,G# / Ab,G# / Ab,"mto:GSharp, mto:AFlat"

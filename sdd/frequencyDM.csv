@@ -1,0 +1,5 @@
+Column,Attribute,attributeOf,Format,Unit,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,hasPosition,Label,Comment
+Note,,,,,,mto:Note,,,,,,,Name of Note,
+Octave,mto:RelativeOctave,Note,,,,,,,,,,,Octave,
+Frequency (Hz),"dct:Frequency, sio:Frequency",Note,,uo:0000106,,,,,,,,,Frequency in Hz,
+Wavelength (m),mto:Wavelength,Note,,uo:0000008,,,,,,,,,Wavelength in meters,

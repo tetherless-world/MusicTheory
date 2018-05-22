@@ -1,0 +1,205 @@
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+
+SELECT DISTINCT * WHERE {
+  ?class a owl:Class ;
+  		rdfs:label ?label ;
+        rdfs:comment ?comment .
+  
+       OPTIONAL { ?class owl:equivalentClass [ rdfs:label ?equivLabel ] . }
+       OPTIONAL { ?class skos:altLabel ?altLabel . }
+       OPTIONAL { ?class rdfs:subClassOf [ rdfs:label ?superLabel ] . }
+  
+} 
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#>
+
+SELECT DISTINCT ?label ?OctaveVal ?FrequencyVal ?WavelengthVal WHERE {
+  
+  ?note a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?label .
+  
+  ?octave sio:isAttributeOf ?note ;
+          rdf:type mto:RelativeOctave ;
+          sio:hasValue ?OctaveVal .
+  
+  ?frequency sio:isAttributeOf ?note ;
+          rdf:type sio:Frequency ;
+          sio:hasValue ?FrequencyVal .
+  
+  ?wavelength sio:isAttributeOf ?note ;
+          rdf:type mto:Wavelength ;
+          sio:hasValue ?WavelengthVal .
+  }
+ORDER BY ?FrequencyVal
+
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#>
+
+SELECT DISTINCT ?scaleLabel ?scaleType ?intervalPattern ?tonicLabel ?OctaveVal ?FrequencyVal ?WavelengthVal WHERE {
+  ?scale a mto:DiatonicScale ;
+        rdfs:label ?scaleLabel ;
+        mto:hasTonic ?tonic ;
+        rdf:type ?scaleType .
+ ?scaleType mto:hasIntervalPattern ?intervalPattern .
+  
+  FILTER (?scaleType != mto:DiatonicScale ) .
+  FILTER (?scaleType != mto-kb:Scale ) .
+  
+  ?tonic a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?tonicLabel .
+  
+  ?note a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?tonicLabel .
+  
+  ?octave sio:isAttributeOf ?note ;
+          rdf:type mto:RelativeOctave ;
+          sio:hasValue ?OctaveVal .
+  
+  ?frequency sio:isAttributeOf ?note ;
+          rdf:type sio:Frequency ;
+          sio:hasValue ?FrequencyVal .
+  
+  ?wavelength sio:isAttributeOf ?note ;
+          rdf:type mto:Wavelength ;
+          sio:hasValue ?WavelengthVal .
+  }
+ORDER BY ?FrequencyVal
+
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#>
+
+SELECT DISTINCT ?scaleLabel ?scaleType ?intervalPattern ?tonicLabel ?supertonic ?mediant ?subdominant ?dominant ?submediant ?subtonic ?OctaveVal ?FrequencyVal ?WavelengthVal WHERE {
+  ?scale a mto:DiatonicScale ;
+        rdfs:label ?scaleLabel ;
+        mto:hasTonic ?tonic ;
+        mto:hasSupertonic ?supertonic ;
+        mto:hasMediant ?mediant ;
+        mto:hasSubdominant ?subdominant ;
+        mto:hasDominant ?dominant ;
+        mto:hasSubmediant ?submediant ;
+        mto:hasSubtonic ?subtonic ;
+        rdf:type ?scaleType .
+ ?scaleType mto:hasIntervalPattern ?intervalPattern .
+  
+  FILTER (?scaleType != mto:DiatonicScale ) .
+  FILTER (?scaleType != mto-kb:Scale ) .
+  
+  ?tonic a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?tonicLabel .
+  
+  ?note a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?tonicLabel .
+  
+  ?octave sio:isAttributeOf ?note ;
+          rdf:type mto:RelativeOctave ;
+          sio:hasValue ?OctaveVal .
+  
+  ?frequency sio:isAttributeOf ?note ;
+          rdf:type sio:Frequency ;
+          sio:hasValue ?FrequencyVal .
+  
+  ?wavelength sio:isAttributeOf ?note ;
+          rdf:type mto:Wavelength ;
+          sio:hasValue ?WavelengthVal .
+  }
+ORDER BY ?FrequencyVal
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#>
+
+SELECT DISTINCT ?tonicNote ?scaleTypeLabel ?intervalPattern ?1st ?2nd ?3rd ?4th ?5th ?6th ?7th ?8th WHERE {
+  ?scale rdf:type ?scaleType ;
+        rdfs:label ?scaleLabel ;
+        mto:hasTonic ?tonic .
+ ?scaleType mto:hasIntervalPattern ?intervalPattern ;
+           rdfs:label ?scaleTypeLabel . 
+  
+  ?tonic a [ rdfs:subClassOf mto:Note ]	;
+  	rdfs:label ?tonicNote .
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 1;
+                       sio:hasValue ?1st ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 2;
+                       sio:hasValue ?2nd ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 3;
+                       sio:hasValue ?3rd ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 4;
+                       sio:hasValue ?4th ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 5;
+                       sio:hasValue ?5th ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 6;
+                       sio:hasValue ?6th ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 7;
+                       sio:hasValue ?7th ] . }
+  
+  OPTIONAL{ ?scale mto:hasNote [ mto:hasDegree 8;
+                       sio:hasValue ?8th ] . }
+  
+  }
+ORDER BY ?tonicNote ?scaleTypeLabel
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sio: <http://semanticscience.org/resource/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>
+prefix mto: <http://idea.rpi.edu/heals/ont/mto#>
+prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#>
+
+SELECT DISTINCT ?rootNote ?chordTypeLabel ?componentsList ?1st ?2nd ?3rd ?4th ?5th
+
+WHERE{ ?chord rdf:type ?chordType ; rdfs:label ?chordLabel ; mto:hasRootNote ?root . 
+                                                        ?chordType mto:hasComponentsList ?componentsList ; rdfs:label ?chordTypeLabel .
+                                                        ?root a [ rdfs:subClassOf mto:Note ] ; rdfs:label ?rootNote .
+
+  OPTIONAL{ ?chord mto:hasNote [ mto:hasDegree 1;
+                       sio:hasValue ?1st ] . }
+  
+  OPTIONAL{ ?chord mto:hasNote [ mto:hasDegree 2;
+                       sio:hasValue ?2nd ] . }
+  
+  OPTIONAL{ ?chord mto:hasNote [ mto:hasDegree 3;
+                       sio:hasValue ?3rd ] . }
+  
+  OPTIONAL{ ?chord mto:hasNote [ mto:hasDegree 4;
+                       sio:hasValue ?4th ] . }
+  
+  OPTIONAL{ ?chord mto:hasNote [ mto:hasDegree 5;
+                       sio:hasValue ?5th ] . }
+}
+
+ORDER BY ?rootNote ?chordTypeLabel

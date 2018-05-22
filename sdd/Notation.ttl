@@ -1,0 +1,99 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+
+:MusicalNotation rdf:type owl:Class ;
+    rdfs:comment "Symbol used to represent a musical concept"^^xsd:string ;
+    rdfs:label "Musical Notation" .
+
+:Stave rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A set of five parallel, equally-spaced, lines and four spaces, each representing a different musical pitch"^^xsd:string ;
+    skos:altLabel "Staff"^^xsd:string ;
+    rdfs:label "Stave"^^xsd:string .
+
+:Bar rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A segment of time on a sheet of music corresponding to a specific number of beats"^^xsd:string ;
+    skos:altLabel "Measure"^^xsd:string ;
+    rdfs:label "Bar"^^xsd:string .
+
+:Clef rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A musical symbol used to indicate the pitch of notes on a stave"^^xsd:string ;
+    rdfs:label "Clef"^^xsd:string .
+
+:GClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note G4"^^xsd:string ;
+    rdfs:label "G-Clef"^^xsd:string .
+
+:CClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note C4"^^xsd:string ;
+    rdfs:label "C-Clef"^^xsd:string .
+
+:FClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note F3"^^xsd:string ;
+    rdfs:label "F-Clef"^^xsd:string .
+
+:Signature rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A notational convention"^^xsd:string ;
+    rdfs:label "Signature"^^xsd:string .
+
+:KeySignature rdf:type owl:Class ;
+    rdfs:comment "A set of accidentals placed on a stave to determine which notes are flat, natural, or sharp"^^xsd:string ;
+    rdfs:subClassOf :Signature ;
+    rdfs:label "Key Signature"^^xsd:string .
+
+:TimeSignature rdf:type owl:Class ;
+    rdfs:comment "A notational convention comprised of an upper and a lower numeral used to signify the number of beats per measure and time value of each beat, respectively"^^xsd:string ;
+    rdfs:subClassOf :Signature ;
+    rdfs:label "Time Signature"^^xsd:string .
+
+:SimpleMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat can be broken down into two-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Simple Meter"^^xsd:string .
+
+:CompoundMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat can be broken down into three-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Compound Meter"^^xsd:string .
+
+:ComplexMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat is irregular in the sense that it cannot be broken down into two- or three-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Complex Meter"^^xsd:string .
+
+:MixedMeter rdf:type owl:Class ;
+    rdfs:comment "A notational convention representing multiple, often alternating time signatures"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Mixed Meter"^^xsd:string .
+
+:AdditiveMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat is subdivided into smaller, irregular groups"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Additive Meter"^^xsd:string .
+
+:FractionalMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature that has an upper numeral that is a fraction"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Fractional Meter"^^xsd:string .
+
+:IrrationalMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature that has a lower numeral that is not a power of 2"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Irrational Meter"^^xsd:string .

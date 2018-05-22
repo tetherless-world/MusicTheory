@@ -1,0 +1,217 @@
+Column,Code,Label,Class
+Note,A,A,mto-kb:A
+Note,A# / Bb,A# / Bb,"mto-kb:ASharp, mto-kb:BFlat"
+Note,B,B,mto-kb:B
+Note,C,C,mto-kb:C
+Note,C# / Db,C# / Db,"mto-kb:CSharp, mto-kb:DFlat"
+Note,D,D,mto-kb:D
+Note,D# / Eb,D# / Eb,"mto-kb:DSharp, mto-kb:EFlat"
+Note,E,E,mto-kb:E
+Note,F,F,mto-kb:F
+Note,F# / Gb,F# / Gb,"mto-kb:FSharp, mto-kb:GFlat"
+Note,G,G,mto-kb:G
+Note,G# / Ab,G# / Ab,"mto-kb:GSharp, mto-kb:AFlat"
+Chord,C Major,C Major,mto:MajorChord
+Chord,C# / Db Major,C# / Db Major,mto:MajorChord
+Chord,D Major,D Major,mto:MajorChord
+Chord,D# / Eb Major,D# / Eb Major,mto:MajorChord
+Chord,E Major,E Major,mto:MajorChord
+Chord,F Major,F Major,mto:MajorChord
+Chord,F# / Gb Major,F# / Gb Major,mto:MajorChord
+Chord,G Major,G Major,mto:MajorChord
+Chord,G# / Ab Major,G# / Ab Major,mto:MajorChord
+Chord,A Major,A Major,mto:MajorChord
+Chord,A# / Bb Major,A# / Bb Major,mto:MajorChord
+Chord,B Major,B Major,mto:MajorChord
+Chord,C Minor,C Minor,mto:MinorChord
+Chord,C# / Db Minor,C# / Db Minor,mto:MinorChord
+Chord,D Minor,D Minor,mto:MinorChord
+Chord,D# / Eb Minor,D# / Eb Minor,mto:MinorChord
+Chord,E Minor,E Minor,mto:MinorChord
+Chord,F Minor,F Minor,mto:MinorChord
+Chord,F# / Gb Minor,F# / Gb Minor,mto:MinorChord
+Chord,G Minor,G Minor,mto:MinorChord
+Chord,G# / Ab Minor,G# / Ab Minor,mto:MinorChord
+Chord,A Minor,A Minor,mto:MinorChord
+Chord,A# / Bb Minor,A# / Bb Minor,mto:MinorChord
+Chord,B Minor,B Minor,mto:MinorChord
+Chord,C Augmented,C Augmented,mto:AugmentedChord
+Chord,C# / Db Augmented,C# / Db Augmented,mto:AugmentedChord
+Chord,D Augmented,D Augmented,mto:AugmentedChord
+Chord,D# / Eb Augmented,D# / Eb Augmented,mto:AugmentedChord
+Chord,E Augmented,E Augmented,mto:AugmentedChord
+Chord,F Augmented,F Augmented,mto:AugmentedChord
+Chord,F# / Gb Augmented,F# / Gb Augmented,mto:AugmentedChord
+Chord,G Augmented,G Augmented,mto:AugmentedChord
+Chord,G# / Ab Augmented,G# / Ab Augmented,mto:AugmentedChord
+Chord,A Augmented,A Augmented,mto:AugmentedChord
+Chord,A# / Bb Augmented,A# / Bb Augmented,mto:AugmentedChord
+Chord,B Augmented,B Augmented,mto:AugmentedChord
+Chord,C Diminished,C Diminished,mto:DiminishedChord
+Chord,C# / Db Diminished,C# / Db Diminished,mto:DiminishedChord
+Chord,D Diminished,D Diminished,mto:DiminishedChord
+Chord,D# / Eb Diminished,D# / Eb Diminished,mto:DiminishedChord
+Chord,E Diminished,E Diminished,mto:DiminishedChord
+Chord,F Diminished,F Diminished,mto:DiminishedChord
+Chord,F# / Gb Diminished,F# / Gb Diminished,mto:DiminishedChord
+Chord,G Diminished,G Diminished,mto:DiminishedChord
+Chord,G# / Ab Diminished,G# / Ab Diminished,mto:DiminishedChord
+Chord,A Diminished,A Diminished,mto:DiminishedChord
+Chord,A# / Bb Diminished,A# / Bb Diminished,mto:DiminishedChord
+Chord,B Diminished,B Diminished,mto:DiminishedChord
+Chord,C Suspended Second,C Suspended Second,mto:SuspendedSecondChord
+Chord,C# / Db Suspended Second,C# / Db Suspended Second,mto:SuspendedSecondChord
+Chord,D Suspended Second,D Suspended Second,mto:SuspendedSecondChord
+Chord,D# / Eb Suspended Second,D# / Eb Suspended Second,mto:SuspendedSecondChord
+Chord,E Suspended Second,E Suspended Second,mto:SuspendedSecondChord
+Chord,F Suspended Second,F Suspended Second,mto:SuspendedSecondChord
+Chord,F# / Gb Suspended Second,F# / Gb Suspended Second,mto:SuspendedSecondChord
+Chord,G Suspended Second,G Suspended Second,mto:SuspendedSecondChord
+Chord,G# / Ab Suspended Second,G# / Ab Suspended Second,mto:SuspendedSecondChord
+Chord,A Suspended Second,A Suspended Second,mto:SuspendedSecondChord
+Chord,A# / Bb Suspended Second,A# / Bb Suspended Second,mto:SuspendedSecondChord
+Chord,B Suspended Second,B Suspended Second,mto:SuspendedSecondChord
+Chord,C Suspended Fourth,C Suspended Fourth,mto:SuspendedFourthChord
+Chord,C# / Db Suspended Fourth,C# / Db Suspended Fourth,mto:SuspendedFourthChord
+Chord,D Suspended Fourth,D Suspended Fourth,mto:SuspendedFourthChord
+Chord,D# / Eb Suspended Fourth,D# / Eb Suspended Fourth,mto:SuspendedFourthChord
+Chord,E Suspended Fourth,E Suspended Fourth,mto:SuspendedFourthChord
+Chord,F Suspended Fourth,F Suspended Fourth,mto:SuspendedFourthChord
+Chord,F# / Gb Suspended Fourth,F# / Gb Suspended Fourth,mto:SuspendedFourthChord
+Chord,G Suspended Fourth,G Suspended Fourth,mto:SuspendedFourthChord
+Chord,G# / Ab Suspended Fourth,G# / Ab Suspended Fourth,mto:SuspendedFourthChord
+Chord,A Suspended Fourth,A Suspended Fourth,mto:SuspendedFourthChord
+Chord,A# / Bb Suspended Fourth,A# / Bb Suspended Fourth,mto:SuspendedFourthChord
+Chord,B Suspended Fourth,B Suspended Fourth,mto:SuspendedFourthChord
+Chord,C Major Sixth,C Major Sixth,mto:MajorSixthChord
+Chord,C# / Db Major Sixth,C# / Db Major Sixth,mto:MajorSixthChord
+Chord,D Major Sixth,D Major Sixth,mto:MajorSixthChord
+Chord,D# / Eb Major Sixth,D# / Eb Major Sixth,mto:MajorSixthChord
+Chord,E Major Sixth,E Major Sixth,mto:MajorSixthChord
+Chord,F Major Sixth,F Major Sixth,mto:MajorSixthChord
+Chord,F# / Gb Major Sixth,F# / Gb Major Sixth,mto:MajorSixthChord
+Chord,G Major Sixth,G Major Sixth,mto:MajorSixthChord
+Chord,G# / Ab Major Sixth,G# / Ab Major Sixth,mto:MajorSixthChord
+Chord,A Major Sixth,A Major Sixth,mto:MajorSixthChord
+Chord,A# / Bb Major Sixth,A# / Bb Major Sixth,mto:MajorSixthChord
+Chord,B Major Sixth,B Major Sixth,mto:MajorSixthChord
+Chord,C Minor Sixth,C Minor Sixth,mto:MinorSixthChord
+Chord,C# / Db Minor Sixth,C# / Db Minor Sixth,mto:MinorSixthChord
+Chord,D Minor Sixth,D Minor Sixth,mto:MinorSixthChord
+Chord,D# / Eb Minor Sixth,D# / Eb Minor Sixth,mto:MinorSixthChord
+Chord,E Minor Sixth,E Minor Sixth,mto:MinorSixthChord
+Chord,F Minor Sixth,F Minor Sixth,mto:MinorSixthChord
+Chord,F# / Gb Minor Sixth,F# / Gb Minor Sixth,mto:MinorSixthChord
+Chord,G Minor Sixth,G Minor Sixth,mto:MinorSixthChord
+Chord,G# / Ab Minor Sixth,G# / Ab Minor Sixth,mto:MinorSixthChord
+Chord,A Minor Sixth,A Minor Sixth,mto:MinorSixthChord
+Chord,A# / Bb Minor Sixth,A# / Bb Minor Sixth,mto:MinorSixthChord
+Chord,B Minor Sixth,B Minor Sixth,mto:MinorSixthChord
+Chord,C Major Seventh,C Major Seventh,mto:MajorSeventhChord
+Chord,C# / Db Major Seventh,C# / Db Major Seventh,mto:MajorSeventhChord
+Chord,D Major Seventh,D Major Seventh,mto:MajorSeventhChord
+Chord,D# / Eb Major Seventh,D# / Eb Major Seventh,mto:MajorSeventhChord
+Chord,E Major Seventh,E Major Seventh,mto:MajorSeventhChord
+Chord,F Major Seventh,F Major Seventh,mto:MajorSeventhChord
+Chord,F# / Gb Major Seventh,F# / Gb Major Seventh,mto:MajorSeventhChord
+Chord,G Major Seventh,G Major Seventh,mto:MajorSeventhChord
+Chord,G# / Ab Major Seventh,G# / Ab Major Seventh,mto:MajorSeventhChord
+Chord,A Major Seventh,A Major Seventh,mto:MajorSeventhChord
+Chord,A# / Bb Major Seventh,A# / Bb Major Seventh,mto:MajorSeventhChord
+Chord,B Major Seventh,B Major Seventh,mto:MajorSeventhChord
+Chord,C Minor Seventh,C Minor Seventh,mto:MinorSeventhChord
+Chord,C# / Db Minor Seventh,C# / Db Minor Seventh,mto:MinorSeventhChord
+Chord,D Minor Seventh,D Minor Seventh,mto:MinorSeventhChord
+Chord,D# / Eb Minor Seventh,D# / Eb Minor Seventh,mto:MinorSeventhChord
+Chord,E Minor Seventh,E Minor Seventh,mto:MinorSeventhChord
+Chord,F Minor Seventh,F Minor Seventh,mto:MinorSeventhChord
+Chord,F# / Gb Minor Seventh,F# / Gb Minor Seventh,mto:MinorSeventhChord
+Chord,G Minor Seventh,G Minor Seventh,mto:MinorSeventhChord
+Chord,G# / Ab Minor Seventh,G# / Ab Minor Seventh,mto:MinorSeventhChord
+Chord,A Minor Seventh,A Minor Seventh,mto:MinorSeventhChord
+Chord,A# / Bb Minor Seventh,A# / Bb Minor Seventh,mto:MinorSeventhChord
+Chord,B Minor Seventh,B Minor Seventh,mto:MinorSeventhChord
+Chord,C Dominant Seventh,C Dominant Seventh,mto:DominantSeventhChord
+Chord,C# / Db Dominant Seventh,C# / Db Dominant Seventh,mto:DominantSeventhChord
+Chord,D Dominant Seventh,D Dominant Seventh,mto:DominantSeventhChord
+Chord,D# / Eb Dominant Seventh,D# / Eb Dominant Seventh,mto:DominantSeventhChord
+Chord,E Dominant Seventh,E Dominant Seventh,mto:DominantSeventhChord
+Chord,F Dominant Seventh,F Dominant Seventh,mto:DominantSeventhChord
+Chord,F# / Gb Dominant Seventh,F# / Gb Dominant Seventh,mto:DominantSeventhChord
+Chord,G Dominant Seventh,G Dominant Seventh,mto:DominantSeventhChord
+Chord,G# / Ab Dominant Seventh,G# / Ab Dominant Seventh,mto:DominantSeventhChord
+Chord,A Dominant Seventh,A Dominant Seventh,mto:DominantSeventhChord
+Chord,A# / Bb Dominant Seventh,A# / Bb Dominant Seventh,mto:DominantSeventhChord
+Chord,B Dominant Seventh,B Dominant Seventh,mto:DominantSeventhChord
+Chord,C Diminished Seventh,C Diminished Seventh,mto:DiminishedSeventhChord
+Chord,C# / Db Diminished Seventh,C# / Db Diminished Seventh,mto:DiminishedSeventhChord
+Chord,D Diminished Seventh,D Diminished Seventh,mto:DiminishedSeventhChord
+Chord,D# / Eb Diminished Seventh,D# / Eb Diminished Seventh,mto:DiminishedSeventhChord
+Chord,E Diminished Seventh,E Diminished Seventh,mto:DiminishedSeventhChord
+Chord,F Diminished Seventh,F Diminished Seventh,mto:DiminishedSeventhChord
+Chord,F# / Gb Diminished Seventh,F# / Gb Diminished Seventh,mto:DiminishedSeventhChord
+Chord,G Diminished Seventh,G Diminished Seventh,mto:DiminishedSeventhChord
+Chord,G# / Ab Diminished Seventh,G# / Ab Diminished Seventh,mto:DiminishedSeventhChord
+Chord,A Diminished Seventh,A Diminished Seventh,mto:DiminishedSeventhChord
+Chord,A# / Bb Diminished Seventh,A# / Bb Diminished Seventh,mto:DiminishedSeventhChord
+Chord,B Diminished Seventh,B Diminished Seventh,mto:DiminishedSeventhChord
+Chord,C Half Diminished Seventh,C Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,C# / Db Half Diminished Seventh,C# / Db Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,D Half Diminished Seventh,D Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,D# / Eb Half Diminished Seventh,D# / Eb Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,E Half Diminished Seventh,E Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,F Half Diminished Seventh,F Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,F# / Gb Half Diminished Seventh,F# / Gb Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,G Half Diminished Seventh,G Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,G# / Ab Half Diminished Seventh,G# / Ab Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,A Half Diminished Seventh,A Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,A# / Bb Half Diminished Seventh,A# / Bb Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,B Half Diminished Seventh,B Half Diminished Seventh,mto:HalfDiminishedSeventhChord
+Chord,C Minor Major Seventh,C Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,C# / Db Minor Major Seventh,C# / Db Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,D Minor Major Seventh,D Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,D# / Eb Minor Major Seventh,D# / Eb Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,E Minor Major Seventh,E Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,F Minor Major Seventh,F Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,F# / Gb Minor Major Seventh,F# / Gb Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,G Minor Major Seventh,G Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,G# / Ab Minor Major Seventh,G# / Ab Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,A Minor Major Seventh,A Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,A# / Bb Minor Major Seventh,A# / Bb Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,B Minor Major Seventh,B Minor Major Seventh,mto:MinorMajorSeventhChord
+Chord,C Major Ninth,C Major Ninth,mto:MajorNinthChord
+Chord,C# / Db Major Ninth,C# / Db Major Ninth,mto:MajorNinthChord
+Chord,D Major Ninth,D Major Ninth,mto:MajorNinthChord
+Chord,D# / Eb Major Ninth,D# / Eb Major Ninth,mto:MajorNinthChord
+Chord,E Major Ninth,E Major Ninth,mto:MajorNinthChord
+Chord,F Major Ninth,F Major Ninth,mto:MajorNinthChord
+Chord,F# / Gb Major Ninth,F# / Gb Major Ninth,mto:MajorNinthChord
+Chord,G Major Ninth,G Major Ninth,mto:MajorNinthChord
+Chord,G# / Ab Major Ninth,G# / Ab Major Ninth,mto:MajorNinthChord
+Chord,A Major Ninth,A Major Ninth,mto:MajorNinthChord
+Chord,A# / Bb Major Ninth,A# / Bb Major Ninth,mto:MajorNinthChord
+Chord,B Major Ninth,B Major Ninth,mto:MajorNinthChord
+Chord,C Minor Ninth,C Minor Ninth,mto:MinorNinthChord
+Chord,C# / Db Minor Ninth,C# / Db Minor Ninth,mto:MinorNinthChord
+Chord,D Minor Ninth,D Minor Ninth,mto:MinorNinthChord
+Chord,D# / Eb Minor Ninth,D# / Eb Minor Ninth,mto:MinorNinthChord
+Chord,E Minor Ninth,E Minor Ninth,mto:MinorNinthChord
+Chord,F Minor Ninth,F Minor Ninth,mto:MinorNinthChord
+Chord,F# / Gb Minor Ninth,F# / Gb Minor Ninth,mto:MinorNinthChord
+Chord,G Minor Ninth,G Minor Ninth,mto:MinorNinthChord
+Chord,G# / Ab Minor Ninth,G# / Ab Minor Ninth,mto:MinorNinthChord
+Chord,A Minor Ninth,A Minor Ninth,mto:MinorNinthChord
+Chord,A# / Bb Minor Ninth,A# / Bb Minor Ninth,mto:MinorNinthChord
+Chord,B Minor Ninth,B Minor Ninth,mto:MinorNinthChord
+Chord,C Dominant Ninth,C Dominant Ninth,mto:DominantNinthChord
+Chord,C# / Db Dominant Ninth,C# / Db Dominant Ninth,mto:DominantNinthChord
+Chord,D Dominant Ninth,D Dominant Ninth,mto:DominantNinthChord
+Chord,D# / Eb Dominant Ninth,D# / Eb Dominant Ninth,mto:DominantNinthChord
+Chord,E Dominant Ninth,E Dominant Ninth,mto:DominantNinthChord
+Chord,F Dominant Ninth,F Dominant Ninth,mto:DominantNinthChord
+Chord,F# / Gb Dominant Ninth,F# / Gb Dominant Ninth,mto:DominantNinthChord
+Chord,G Dominant Ninth,G Dominant Ninth,mto:DominantNinthChord
+Chord,G# / Ab Dominant Ninth,G# / Ab Dominant Ninth,mto:DominantNinthChord
+Chord,A Dominant Ninth,A Dominant Ninth,mto:DominantNinthChord
+Chord,A# / Bb Dominant Ninth,A# / Bb Dominant Ninth,mto:DominantNinthChord
+Chord,B Dominant Ninth,B Dominant Ninth,mto:DominantNinthChord

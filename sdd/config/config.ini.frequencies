@@ -1,0 +1,14 @@
+[Prefixes]
+# Specify a file with the prefixes for existing ontologies used in your translation
+prefixes = Music/config/prefixes.txt
+# Specify the base uri to be associated with all triples minted by the script
+base_uri = mto-kb
+
+[Source Files]
+dictionary = Music/frequencyDM.csv
+codebook = Music/frequencyCB.csv
+code_mappings = code_mappings.csv
+data_file = Music/NoteFrequencies.csv
+
+[Output Files]
+out_file = Music/output/frequencies-out.trig

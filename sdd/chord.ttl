@@ -1,0 +1,117 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+
+:Interval rdf:type owl:Class ;
+    rdfs:comment "The difference between two pitches"^^xsd:string ;
+    rdfs:label "Interval"^^xsd:string .
+
+:HarmonicInterval rdf:type owl:Class;
+    rdfs:subClassOf :Interval ;
+    rdfs:comment "Occurs when multiple notes are played at the same time"^^xsd:string ;
+    rdfs:label "Harmonic Interval"^^xsd:string .
+
+:Chord rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicInterval ;
+    rdfs:comment "Any harmonic set of pitches consisting of two or more notes sounded simultaneously"^^xsd:string ;
+    rdfs:label "Chord"^^xsd:string .
+
+:MajorChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a note a major third above the root, and a note a perfect fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    rdfs:label "Major Chord"^^xsd:string .
+
+:MinorChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a note a minor third above the root, and a note a perfect fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    rdfs:label "Minor Chord"^^xsd:string .
+
+:AugmentedChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a note a major third above the root, and a note an augmented fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    rdfs:label "Augmented Chord"^^xsd:string .
+
+:DiminishedChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a note a minor third above the root, and a note a diminished fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    rdfs:label "Diminished Chord"^^xsd:string .
+
+:Monad rdf:type owl:Class ;
+    rdfs:subClassOf :Chord ;
+    rdfs:comment "A single note or pitch"^^xsd:string ;
+    :hasNoteCount "1"^^xsd:integer ;
+    rdfs:label "Monad"^^xsd:string ;
+    skos:altLabel "Monochord"^^xsd:string .
+
+:Dyad rdf:type owl:Class ;
+    rdfs:comment "A set of two notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "2"^^xsd:integer ;
+    rdfs:label "Dyad"^^xsd:string ;
+    skos:altLabel "Dichord"^^xsd:string .
+
+:Triad rdf:type owl:Class ;
+    rdfs:comment "A set of three notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "3"^^xsd:integer ;
+    rdfs:label "Triad"^^xsd:string ;
+    skos:altLabel "Trichord"^^xsd:string .
+
+:Tetrad rdf:type owl:Class ;
+    rdfs:comment "A set of four notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "4"^^xsd:integer ;
+    rdfs:label "Tetrad"^^xsd:string ;
+    skos:altLabel "Tetrachord"^^xsd:string .
+
+:Pentad rdf:type owl:Class ;
+    rdfs:comment "A set of five notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "5"^^xsd:integer ;
+    rdfs:label "Pentad"^^xsd:string ;
+    skos:altLabel "Pentachord"^^xsd:string .
+
+:Hexad rdf:type owl:Class ;
+    rdfs:comment "A set of six notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "6"^^xsd:integer ;
+    rdfs:label "Hexad"^^xsd:string ;
+    skos:altLabel "Hexachord"^^xsd:string .
+
+:Heptad rdf:type owl:Class ;
+    rdfs:comment "A set of seven notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "7"^^xsd:integer ;
+    rdfs:label "Heptad"^^xsd:string ;
+    skos:altLabel "Heptachord"^^xsd:string .
+
+:Octad rdf:type owl:Class ;
+    rdfs:comment "A set of eight notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "8"^^xsd:integer ;
+    rdfs:label "Octad"^^xsd:string ;
+    skos:altLabel "Octachord"^^xsd:string .
+
+:Ennead rdf:type owl:Class ;
+    rdfs:comment "A set of nine notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "9"^^xsd:integer ;
+    rdfs:label "Ennead"^^xsd:string ;
+    skos:altLabel "Nonachord"^^xsd:string .
+
+:Decad rdf:type owl:Class ;
+    rdfs:comment "A set of ten notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "10"^^xsd:integer ;
+    rdfs:label "Decad"^^xsd:string ;
+    skos:altLabel "Decachord"^^xsd:string .

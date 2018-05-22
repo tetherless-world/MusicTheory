@@ -1,0 +1,2197 @@
+@prefix np: <http://www.nanopub.org/nschema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+
+
+mto-kb:head-explicit_entry { 
+	mto-kb:nanoPub-explicit_entry	rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-explicit_entry ;
+		np:hasProvenance mto-kb:provenance-explicit_entry ;
+		np:hasPublicationInfo mto-kb:pubInfo-explicit_entry .
+}
+
+mto-kb:assertion-explicit_entry {
+	mto-kb:Note	rdf:type	owl:Class ;
+		rdfs:subClassOf mto:Note .
+
+	mto-kb:Scale	rdf:type	owl:Class ;
+		rdfs:subClassOf mto:DiatonicScale ;
+		mto:hasTonic mto-kb:Note .
+
+}
+
+mto-kb:provenance-explicit_entry {
+	mto-kb:assertion-explicit_entry	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-explicit_entry {
+	mto-kb:nanoPub-explicit_entry	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime .
+}
+
+mto-kb:head-virtual_entry { 
+	mto-kb:nanoPub-virtual_entry	rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-virtual_entry ;
+		np:hasProvenance mto-kb:provenance-virtual_entry ;
+		np:hasPublicationInfo mto-kb:pubInfo-virtual_entry .
+}
+
+mto-kb:assertion-virtual_entry {
+}
+
+mto-kb:provenance-virtual_entry {
+	mto-kb:assertion-virtual_entry	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+}
+
+mto-kb:pubInfo-virtual_entry {
+	mto-kb:nanoPub-virtual_entry	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime .
+}
+
+mto-kb:head-8d0b00d91aa6f2544d21937f15a5ad62 {
+	mto-kb:nanoPub-8d0b00d91aa6f2544d21937f15a5ad62
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-8d0b00d91aa6f2544d21937f15a5ad62 ;
+		np:hasProvenance mto-kb:provenance-8d0b00d91aa6f2544d21937f15a5ad62 ;
+		np:hasPublicationInfo mto-kb:pubInfo-8d0b00d91aa6f2544d21937f15a5ad62 .
+}
+
+mto-kb:assertion-8d0b00d91aa6f2544d21937f15a5ad62 {
+	mto-kb:Note-8d0b00d91aa6f2544d21937f15a5ad62	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:C ;
+		rdfs:label	"C"^^xsd:string ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Scale-8d0b00d91aa6f2544d21937f15a5ad62	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-8d0b00d91aa6f2544d21937f15a5ad62 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"C Major"^^xsd:string ;
+		sio:hasValue	"C Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-8d0b00d91aa6f2544d21937f15a5ad62 {
+	mto-kb:assertion-8d0b00d91aa6f2544d21937f15a5ad62 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8d0b00d91aa6f2544d21937f15a5ad62	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8d0b00d91aa6f2544d21937f15a5ad62	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-8d0b00d91aa6f2544d21937f15a5ad62 {
+	mto-kb:nanoPub-8d0b00d91aa6f2544d21937f15a5ad62 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8d0b00d91aa6f2544d21937f15a5ad62
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8d0b00d91aa6f2544d21937f15a5ad62
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-3d1995b93995f14a4f3fa51f5d6680bd {
+	mto-kb:nanoPub-3d1995b93995f14a4f3fa51f5d6680bd
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-3d1995b93995f14a4f3fa51f5d6680bd ;
+		np:hasProvenance mto-kb:provenance-3d1995b93995f14a4f3fa51f5d6680bd ;
+		np:hasPublicationInfo mto-kb:pubInfo-3d1995b93995f14a4f3fa51f5d6680bd .
+}
+
+mto-kb:assertion-3d1995b93995f14a4f3fa51f5d6680bd {
+	mto-kb:Note-3d1995b93995f14a4f3fa51f5d6680bd	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:CSharp ;
+		rdf:type	mto:DFlat ;
+		rdfs:label	"C# / Db"^^xsd:string ;
+		sio:hasValue	"C# / Db"^^xsd:string .
+
+	mto-kb:Scale-3d1995b93995f14a4f3fa51f5d6680bd	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-3d1995b93995f14a4f3fa51f5d6680bd ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"C# / Db Major"^^xsd:string ;
+		sio:hasValue	"C# / Db Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-3d1995b93995f14a4f3fa51f5d6680bd {
+	mto-kb:assertion-3d1995b93995f14a4f3fa51f5d6680bd prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3d1995b93995f14a4f3fa51f5d6680bd	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3d1995b93995f14a4f3fa51f5d6680bd	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-3d1995b93995f14a4f3fa51f5d6680bd {
+	mto-kb:nanoPub-3d1995b93995f14a4f3fa51f5d6680bd prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3d1995b93995f14a4f3fa51f5d6680bd
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3d1995b93995f14a4f3fa51f5d6680bd
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-17973aca5091d7f2030562799e942944 {
+	mto-kb:nanoPub-17973aca5091d7f2030562799e942944
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-17973aca5091d7f2030562799e942944 ;
+		np:hasProvenance mto-kb:provenance-17973aca5091d7f2030562799e942944 ;
+		np:hasPublicationInfo mto-kb:pubInfo-17973aca5091d7f2030562799e942944 .
+}
+
+mto-kb:assertion-17973aca5091d7f2030562799e942944 {
+	mto-kb:Note-17973aca5091d7f2030562799e942944	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:D ;
+		rdfs:label	"D"^^xsd:string ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Scale-17973aca5091d7f2030562799e942944	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-17973aca5091d7f2030562799e942944 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"D Major"^^xsd:string ;
+		sio:hasValue	"D Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-17973aca5091d7f2030562799e942944 {
+	mto-kb:assertion-17973aca5091d7f2030562799e942944 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-17973aca5091d7f2030562799e942944	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-17973aca5091d7f2030562799e942944	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-17973aca5091d7f2030562799e942944 {
+	mto-kb:nanoPub-17973aca5091d7f2030562799e942944 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-17973aca5091d7f2030562799e942944
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-17973aca5091d7f2030562799e942944
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-3c3947cbdf80c0b84c046ff82942823f {
+	mto-kb:nanoPub-3c3947cbdf80c0b84c046ff82942823f
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-3c3947cbdf80c0b84c046ff82942823f ;
+		np:hasProvenance mto-kb:provenance-3c3947cbdf80c0b84c046ff82942823f ;
+		np:hasPublicationInfo mto-kb:pubInfo-3c3947cbdf80c0b84c046ff82942823f .
+}
+
+mto-kb:assertion-3c3947cbdf80c0b84c046ff82942823f {
+	mto-kb:Note-3c3947cbdf80c0b84c046ff82942823f	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:DSharp ;
+		rdf:type	mto:EFlat ;
+		rdfs:label	"D# / Eb"^^xsd:string ;
+		sio:hasValue	"D# / Eb"^^xsd:string .
+
+	mto-kb:Scale-3c3947cbdf80c0b84c046ff82942823f	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-3c3947cbdf80c0b84c046ff82942823f ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"D# / Eb Major"^^xsd:string ;
+		sio:hasValue	"D# / Eb Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-3c3947cbdf80c0b84c046ff82942823f {
+	mto-kb:assertion-3c3947cbdf80c0b84c046ff82942823f prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3c3947cbdf80c0b84c046ff82942823f	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3c3947cbdf80c0b84c046ff82942823f	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-3c3947cbdf80c0b84c046ff82942823f {
+	mto-kb:nanoPub-3c3947cbdf80c0b84c046ff82942823f prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3c3947cbdf80c0b84c046ff82942823f
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3c3947cbdf80c0b84c046ff82942823f
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-e2e239af3c2f62fdc7dcef53461a1714 {
+	mto-kb:nanoPub-e2e239af3c2f62fdc7dcef53461a1714
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-e2e239af3c2f62fdc7dcef53461a1714 ;
+		np:hasProvenance mto-kb:provenance-e2e239af3c2f62fdc7dcef53461a1714 ;
+		np:hasPublicationInfo mto-kb:pubInfo-e2e239af3c2f62fdc7dcef53461a1714 .
+}
+
+mto-kb:assertion-e2e239af3c2f62fdc7dcef53461a1714 {
+	mto-kb:Note-e2e239af3c2f62fdc7dcef53461a1714	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:E ;
+		rdfs:label	"E"^^xsd:string ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Scale-e2e239af3c2f62fdc7dcef53461a1714	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-e2e239af3c2f62fdc7dcef53461a1714 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"E Major"^^xsd:string ;
+		sio:hasValue	"E Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-e2e239af3c2f62fdc7dcef53461a1714 {
+	mto-kb:assertion-e2e239af3c2f62fdc7dcef53461a1714 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-e2e239af3c2f62fdc7dcef53461a1714	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-e2e239af3c2f62fdc7dcef53461a1714	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-e2e239af3c2f62fdc7dcef53461a1714 {
+	mto-kb:nanoPub-e2e239af3c2f62fdc7dcef53461a1714 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-e2e239af3c2f62fdc7dcef53461a1714
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-e2e239af3c2f62fdc7dcef53461a1714
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-829d13bc60ff207e34fe1c6fac6697d3 {
+	mto-kb:nanoPub-829d13bc60ff207e34fe1c6fac6697d3
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-829d13bc60ff207e34fe1c6fac6697d3 ;
+		np:hasProvenance mto-kb:provenance-829d13bc60ff207e34fe1c6fac6697d3 ;
+		np:hasPublicationInfo mto-kb:pubInfo-829d13bc60ff207e34fe1c6fac6697d3 .
+}
+
+mto-kb:assertion-829d13bc60ff207e34fe1c6fac6697d3 {
+	mto-kb:Note-829d13bc60ff207e34fe1c6fac6697d3	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:F ;
+		rdfs:label	"F"^^xsd:string ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Scale-829d13bc60ff207e34fe1c6fac6697d3	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-829d13bc60ff207e34fe1c6fac6697d3 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"F Major"^^xsd:string ;
+		sio:hasValue	"F Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-829d13bc60ff207e34fe1c6fac6697d3 {
+	mto-kb:assertion-829d13bc60ff207e34fe1c6fac6697d3 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-829d13bc60ff207e34fe1c6fac6697d3	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-829d13bc60ff207e34fe1c6fac6697d3	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-829d13bc60ff207e34fe1c6fac6697d3 {
+	mto-kb:nanoPub-829d13bc60ff207e34fe1c6fac6697d3 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-829d13bc60ff207e34fe1c6fac6697d3
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-829d13bc60ff207e34fe1c6fac6697d3
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-f4417e9f546591208e9fab54ab31c2a1 {
+	mto-kb:nanoPub-f4417e9f546591208e9fab54ab31c2a1
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-f4417e9f546591208e9fab54ab31c2a1 ;
+		np:hasProvenance mto-kb:provenance-f4417e9f546591208e9fab54ab31c2a1 ;
+		np:hasPublicationInfo mto-kb:pubInfo-f4417e9f546591208e9fab54ab31c2a1 .
+}
+
+mto-kb:assertion-f4417e9f546591208e9fab54ab31c2a1 {
+	mto-kb:Note-f4417e9f546591208e9fab54ab31c2a1	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:FSharp ;
+		rdf:type	mto:GFlat ;
+		rdfs:label	"F# / Gb"^^xsd:string ;
+		sio:hasValue	"F# / Gb"^^xsd:string .
+
+	mto-kb:Scale-f4417e9f546591208e9fab54ab31c2a1	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-f4417e9f546591208e9fab54ab31c2a1 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"F# / Gb Major"^^xsd:string ;
+		sio:hasValue	"F# / Gb Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-f4417e9f546591208e9fab54ab31c2a1 {
+	mto-kb:assertion-f4417e9f546591208e9fab54ab31c2a1 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-f4417e9f546591208e9fab54ab31c2a1	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-f4417e9f546591208e9fab54ab31c2a1	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-f4417e9f546591208e9fab54ab31c2a1 {
+	mto-kb:nanoPub-f4417e9f546591208e9fab54ab31c2a1 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-f4417e9f546591208e9fab54ab31c2a1
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-f4417e9f546591208e9fab54ab31c2a1
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-286001c9a7dee0118f57fe9465b71f07 {
+	mto-kb:nanoPub-286001c9a7dee0118f57fe9465b71f07
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-286001c9a7dee0118f57fe9465b71f07 ;
+		np:hasProvenance mto-kb:provenance-286001c9a7dee0118f57fe9465b71f07 ;
+		np:hasPublicationInfo mto-kb:pubInfo-286001c9a7dee0118f57fe9465b71f07 .
+}
+
+mto-kb:assertion-286001c9a7dee0118f57fe9465b71f07 {
+	mto-kb:Note-286001c9a7dee0118f57fe9465b71f07	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:G ;
+		rdfs:label	"G"^^xsd:string ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Scale-286001c9a7dee0118f57fe9465b71f07	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-286001c9a7dee0118f57fe9465b71f07 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"G Major"^^xsd:string ;
+		sio:hasValue	"G Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-286001c9a7dee0118f57fe9465b71f07 {
+	mto-kb:assertion-286001c9a7dee0118f57fe9465b71f07 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-286001c9a7dee0118f57fe9465b71f07	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-286001c9a7dee0118f57fe9465b71f07	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-286001c9a7dee0118f57fe9465b71f07 {
+	mto-kb:nanoPub-286001c9a7dee0118f57fe9465b71f07 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-286001c9a7dee0118f57fe9465b71f07
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-286001c9a7dee0118f57fe9465b71f07
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-8916f0280cebde63d70bee8c94d50ce2 {
+	mto-kb:nanoPub-8916f0280cebde63d70bee8c94d50ce2
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-8916f0280cebde63d70bee8c94d50ce2 ;
+		np:hasProvenance mto-kb:provenance-8916f0280cebde63d70bee8c94d50ce2 ;
+		np:hasPublicationInfo mto-kb:pubInfo-8916f0280cebde63d70bee8c94d50ce2 .
+}
+
+mto-kb:assertion-8916f0280cebde63d70bee8c94d50ce2 {
+	mto-kb:Note-8916f0280cebde63d70bee8c94d50ce2	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:GSharp ;
+		rdf:type	mto:AFlat ;
+		rdfs:label	"G# / Ab"^^xsd:string ;
+		sio:hasValue	"G# / Ab"^^xsd:string .
+
+	mto-kb:Scale-8916f0280cebde63d70bee8c94d50ce2	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-8916f0280cebde63d70bee8c94d50ce2 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"G# / Ab Major"^^xsd:string ;
+		sio:hasValue	"G# / Ab Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-8916f0280cebde63d70bee8c94d50ce2 {
+	mto-kb:assertion-8916f0280cebde63d70bee8c94d50ce2 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8916f0280cebde63d70bee8c94d50ce2	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8916f0280cebde63d70bee8c94d50ce2	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-8916f0280cebde63d70bee8c94d50ce2 {
+	mto-kb:nanoPub-8916f0280cebde63d70bee8c94d50ce2 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8916f0280cebde63d70bee8c94d50ce2
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8916f0280cebde63d70bee8c94d50ce2
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-9402f31ea7b637197c2c17970de4658e {
+	mto-kb:nanoPub-9402f31ea7b637197c2c17970de4658e
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-9402f31ea7b637197c2c17970de4658e ;
+		np:hasProvenance mto-kb:provenance-9402f31ea7b637197c2c17970de4658e ;
+		np:hasPublicationInfo mto-kb:pubInfo-9402f31ea7b637197c2c17970de4658e .
+}
+
+mto-kb:assertion-9402f31ea7b637197c2c17970de4658e {
+	mto-kb:Note-9402f31ea7b637197c2c17970de4658e	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:A ;
+		rdfs:label	"A"^^xsd:string ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Scale-9402f31ea7b637197c2c17970de4658e	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-9402f31ea7b637197c2c17970de4658e ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"A Major"^^xsd:string ;
+		sio:hasValue	"A Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-9402f31ea7b637197c2c17970de4658e {
+	mto-kb:assertion-9402f31ea7b637197c2c17970de4658e prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-9402f31ea7b637197c2c17970de4658e	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-9402f31ea7b637197c2c17970de4658e	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-9402f31ea7b637197c2c17970de4658e {
+	mto-kb:nanoPub-9402f31ea7b637197c2c17970de4658e prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-9402f31ea7b637197c2c17970de4658e
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-9402f31ea7b637197c2c17970de4658e
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-1aa2e288ea57624e1d98b452919de884 {
+	mto-kb:nanoPub-1aa2e288ea57624e1d98b452919de884
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-1aa2e288ea57624e1d98b452919de884 ;
+		np:hasProvenance mto-kb:provenance-1aa2e288ea57624e1d98b452919de884 ;
+		np:hasPublicationInfo mto-kb:pubInfo-1aa2e288ea57624e1d98b452919de884 .
+}
+
+mto-kb:assertion-1aa2e288ea57624e1d98b452919de884 {
+	mto-kb:Note-1aa2e288ea57624e1d98b452919de884	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:ASharp ;
+		rdf:type	mto:BFlat ;
+		rdfs:label	"A# / Bb"^^xsd:string ;
+		sio:hasValue	"A# / Bb"^^xsd:string .
+
+	mto-kb:Scale-1aa2e288ea57624e1d98b452919de884	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-1aa2e288ea57624e1d98b452919de884 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"A# / Bb Major"^^xsd:string ;
+		sio:hasValue	"A# / Bb Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-1aa2e288ea57624e1d98b452919de884 {
+	mto-kb:assertion-1aa2e288ea57624e1d98b452919de884 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-1aa2e288ea57624e1d98b452919de884	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-1aa2e288ea57624e1d98b452919de884	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-1aa2e288ea57624e1d98b452919de884 {
+	mto-kb:nanoPub-1aa2e288ea57624e1d98b452919de884 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-1aa2e288ea57624e1d98b452919de884
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-1aa2e288ea57624e1d98b452919de884
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-59d7988fadf79b1605c4091b0ea7b851 {
+	mto-kb:nanoPub-59d7988fadf79b1605c4091b0ea7b851
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-59d7988fadf79b1605c4091b0ea7b851 ;
+		np:hasProvenance mto-kb:provenance-59d7988fadf79b1605c4091b0ea7b851 ;
+		np:hasPublicationInfo mto-kb:pubInfo-59d7988fadf79b1605c4091b0ea7b851 .
+}
+
+mto-kb:assertion-59d7988fadf79b1605c4091b0ea7b851 {
+	mto-kb:Note-59d7988fadf79b1605c4091b0ea7b851	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:B ;
+		rdfs:label	"B"^^xsd:string ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Scale-59d7988fadf79b1605c4091b0ea7b851	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-59d7988fadf79b1605c4091b0ea7b851 ;
+		rdf:type	mto:MajorScale ;
+		rdfs:label	"B Major"^^xsd:string ;
+		sio:hasValue	"B Major"^^xsd:string .
+
+}
+
+mto-kb:provenance-59d7988fadf79b1605c4091b0ea7b851 {
+	mto-kb:assertion-59d7988fadf79b1605c4091b0ea7b851 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-59d7988fadf79b1605c4091b0ea7b851	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-59d7988fadf79b1605c4091b0ea7b851	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-59d7988fadf79b1605c4091b0ea7b851 {
+	mto-kb:nanoPub-59d7988fadf79b1605c4091b0ea7b851 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-59d7988fadf79b1605c4091b0ea7b851
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-59d7988fadf79b1605c4091b0ea7b851
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-d4be533a35f70e164bc8fc117a65c1e6 {
+	mto-kb:nanoPub-d4be533a35f70e164bc8fc117a65c1e6
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-d4be533a35f70e164bc8fc117a65c1e6 ;
+		np:hasProvenance mto-kb:provenance-d4be533a35f70e164bc8fc117a65c1e6 ;
+		np:hasPublicationInfo mto-kb:pubInfo-d4be533a35f70e164bc8fc117a65c1e6 .
+}
+
+mto-kb:assertion-d4be533a35f70e164bc8fc117a65c1e6 {
+	mto-kb:Note-d4be533a35f70e164bc8fc117a65c1e6	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:C ;
+		rdfs:label	"C"^^xsd:string ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Scale-d4be533a35f70e164bc8fc117a65c1e6	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-d4be533a35f70e164bc8fc117a65c1e6 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"C Natural Minor"^^xsd:string ;
+		sio:hasValue	"C Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-d4be533a35f70e164bc8fc117a65c1e6 {
+	mto-kb:assertion-d4be533a35f70e164bc8fc117a65c1e6 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-d4be533a35f70e164bc8fc117a65c1e6	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-d4be533a35f70e164bc8fc117a65c1e6	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-d4be533a35f70e164bc8fc117a65c1e6 {
+	mto-kb:nanoPub-d4be533a35f70e164bc8fc117a65c1e6 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-d4be533a35f70e164bc8fc117a65c1e6
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-d4be533a35f70e164bc8fc117a65c1e6
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-55e4a8f6e907a75f05962b62b49e36de {
+	mto-kb:nanoPub-55e4a8f6e907a75f05962b62b49e36de
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-55e4a8f6e907a75f05962b62b49e36de ;
+		np:hasProvenance mto-kb:provenance-55e4a8f6e907a75f05962b62b49e36de ;
+		np:hasPublicationInfo mto-kb:pubInfo-55e4a8f6e907a75f05962b62b49e36de .
+}
+
+mto-kb:assertion-55e4a8f6e907a75f05962b62b49e36de {
+	mto-kb:Note-55e4a8f6e907a75f05962b62b49e36de	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:CSharp ;
+		rdf:type	mto:DFlat ;
+		rdfs:label	"C# / Db"^^xsd:string ;
+		sio:hasValue	"C# / Db"^^xsd:string .
+
+	mto-kb:Scale-55e4a8f6e907a75f05962b62b49e36de	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-55e4a8f6e907a75f05962b62b49e36de ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"C# / Db Natural Minor"^^xsd:string ;
+		sio:hasValue	"C# / Db Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-55e4a8f6e907a75f05962b62b49e36de {
+	mto-kb:assertion-55e4a8f6e907a75f05962b62b49e36de prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-55e4a8f6e907a75f05962b62b49e36de	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-55e4a8f6e907a75f05962b62b49e36de	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-55e4a8f6e907a75f05962b62b49e36de {
+	mto-kb:nanoPub-55e4a8f6e907a75f05962b62b49e36de prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-55e4a8f6e907a75f05962b62b49e36de
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-55e4a8f6e907a75f05962b62b49e36de
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-41c0e32637749d4d56c3fc3323e18fd4 {
+	mto-kb:nanoPub-41c0e32637749d4d56c3fc3323e18fd4
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-41c0e32637749d4d56c3fc3323e18fd4 ;
+		np:hasProvenance mto-kb:provenance-41c0e32637749d4d56c3fc3323e18fd4 ;
+		np:hasPublicationInfo mto-kb:pubInfo-41c0e32637749d4d56c3fc3323e18fd4 .
+}
+
+mto-kb:assertion-41c0e32637749d4d56c3fc3323e18fd4 {
+	mto-kb:Note-41c0e32637749d4d56c3fc3323e18fd4	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:D ;
+		rdfs:label	"D"^^xsd:string ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Scale-41c0e32637749d4d56c3fc3323e18fd4	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-41c0e32637749d4d56c3fc3323e18fd4 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"D Natural Minor"^^xsd:string ;
+		sio:hasValue	"D Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-41c0e32637749d4d56c3fc3323e18fd4 {
+	mto-kb:assertion-41c0e32637749d4d56c3fc3323e18fd4 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-41c0e32637749d4d56c3fc3323e18fd4	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-41c0e32637749d4d56c3fc3323e18fd4	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-41c0e32637749d4d56c3fc3323e18fd4 {
+	mto-kb:nanoPub-41c0e32637749d4d56c3fc3323e18fd4 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-41c0e32637749d4d56c3fc3323e18fd4
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-41c0e32637749d4d56c3fc3323e18fd4
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-c38b4a4289bdf18c943fc1d464041e11 {
+	mto-kb:nanoPub-c38b4a4289bdf18c943fc1d464041e11
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-c38b4a4289bdf18c943fc1d464041e11 ;
+		np:hasProvenance mto-kb:provenance-c38b4a4289bdf18c943fc1d464041e11 ;
+		np:hasPublicationInfo mto-kb:pubInfo-c38b4a4289bdf18c943fc1d464041e11 .
+}
+
+mto-kb:assertion-c38b4a4289bdf18c943fc1d464041e11 {
+	mto-kb:Note-c38b4a4289bdf18c943fc1d464041e11	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:DSharp ;
+		rdf:type	mto:EFlat ;
+		rdfs:label	"D# / Eb"^^xsd:string ;
+		sio:hasValue	"D# / Eb"^^xsd:string .
+
+	mto-kb:Scale-c38b4a4289bdf18c943fc1d464041e11	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-c38b4a4289bdf18c943fc1d464041e11 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"D# / Eb Natural Minor"^^xsd:string ;
+		sio:hasValue	"D# / Eb Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-c38b4a4289bdf18c943fc1d464041e11 {
+	mto-kb:assertion-c38b4a4289bdf18c943fc1d464041e11 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-c38b4a4289bdf18c943fc1d464041e11	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-c38b4a4289bdf18c943fc1d464041e11	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-c38b4a4289bdf18c943fc1d464041e11 {
+	mto-kb:nanoPub-c38b4a4289bdf18c943fc1d464041e11 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-c38b4a4289bdf18c943fc1d464041e11
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-c38b4a4289bdf18c943fc1d464041e11
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-36681c69dbd7cc82225d20615c4ab508 {
+	mto-kb:nanoPub-36681c69dbd7cc82225d20615c4ab508
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-36681c69dbd7cc82225d20615c4ab508 ;
+		np:hasProvenance mto-kb:provenance-36681c69dbd7cc82225d20615c4ab508 ;
+		np:hasPublicationInfo mto-kb:pubInfo-36681c69dbd7cc82225d20615c4ab508 .
+}
+
+mto-kb:assertion-36681c69dbd7cc82225d20615c4ab508 {
+	mto-kb:Note-36681c69dbd7cc82225d20615c4ab508	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:E ;
+		rdfs:label	"E"^^xsd:string ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Scale-36681c69dbd7cc82225d20615c4ab508	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-36681c69dbd7cc82225d20615c4ab508 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"E Natural Minor"^^xsd:string ;
+		sio:hasValue	"E Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-36681c69dbd7cc82225d20615c4ab508 {
+	mto-kb:assertion-36681c69dbd7cc82225d20615c4ab508 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-36681c69dbd7cc82225d20615c4ab508	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-36681c69dbd7cc82225d20615c4ab508	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-36681c69dbd7cc82225d20615c4ab508 {
+	mto-kb:nanoPub-36681c69dbd7cc82225d20615c4ab508 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-36681c69dbd7cc82225d20615c4ab508
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-36681c69dbd7cc82225d20615c4ab508
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-dfe8428206e57bfd8e3c814865ce08aa {
+	mto-kb:nanoPub-dfe8428206e57bfd8e3c814865ce08aa
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-dfe8428206e57bfd8e3c814865ce08aa ;
+		np:hasProvenance mto-kb:provenance-dfe8428206e57bfd8e3c814865ce08aa ;
+		np:hasPublicationInfo mto-kb:pubInfo-dfe8428206e57bfd8e3c814865ce08aa .
+}
+
+mto-kb:assertion-dfe8428206e57bfd8e3c814865ce08aa {
+	mto-kb:Note-dfe8428206e57bfd8e3c814865ce08aa	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:F ;
+		rdfs:label	"F"^^xsd:string ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Scale-dfe8428206e57bfd8e3c814865ce08aa	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-dfe8428206e57bfd8e3c814865ce08aa ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"F Natural Minor"^^xsd:string ;
+		sio:hasValue	"F Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-dfe8428206e57bfd8e3c814865ce08aa {
+	mto-kb:assertion-dfe8428206e57bfd8e3c814865ce08aa prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-dfe8428206e57bfd8e3c814865ce08aa	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-dfe8428206e57bfd8e3c814865ce08aa	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-dfe8428206e57bfd8e3c814865ce08aa {
+	mto-kb:nanoPub-dfe8428206e57bfd8e3c814865ce08aa prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-dfe8428206e57bfd8e3c814865ce08aa
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-dfe8428206e57bfd8e3c814865ce08aa
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-2d7667322e7bb6941c112abd3fdd2ca9 {
+	mto-kb:nanoPub-2d7667322e7bb6941c112abd3fdd2ca9
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-2d7667322e7bb6941c112abd3fdd2ca9 ;
+		np:hasProvenance mto-kb:provenance-2d7667322e7bb6941c112abd3fdd2ca9 ;
+		np:hasPublicationInfo mto-kb:pubInfo-2d7667322e7bb6941c112abd3fdd2ca9 .
+}
+
+mto-kb:assertion-2d7667322e7bb6941c112abd3fdd2ca9 {
+	mto-kb:Note-2d7667322e7bb6941c112abd3fdd2ca9	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:FSharp ;
+		rdf:type	mto:GFlat ;
+		rdfs:label	"F# / Gb"^^xsd:string ;
+		sio:hasValue	"F# / Gb"^^xsd:string .
+
+	mto-kb:Scale-2d7667322e7bb6941c112abd3fdd2ca9	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-2d7667322e7bb6941c112abd3fdd2ca9 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"F# / Gb Natural Minor"^^xsd:string ;
+		sio:hasValue	"F# / Gb Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-2d7667322e7bb6941c112abd3fdd2ca9 {
+	mto-kb:assertion-2d7667322e7bb6941c112abd3fdd2ca9 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-2d7667322e7bb6941c112abd3fdd2ca9	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-2d7667322e7bb6941c112abd3fdd2ca9	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-2d7667322e7bb6941c112abd3fdd2ca9 {
+	mto-kb:nanoPub-2d7667322e7bb6941c112abd3fdd2ca9 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-2d7667322e7bb6941c112abd3fdd2ca9
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-2d7667322e7bb6941c112abd3fdd2ca9
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-3e429387c20a8182dc9ac2cf67901d91 {
+	mto-kb:nanoPub-3e429387c20a8182dc9ac2cf67901d91
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-3e429387c20a8182dc9ac2cf67901d91 ;
+		np:hasProvenance mto-kb:provenance-3e429387c20a8182dc9ac2cf67901d91 ;
+		np:hasPublicationInfo mto-kb:pubInfo-3e429387c20a8182dc9ac2cf67901d91 .
+}
+
+mto-kb:assertion-3e429387c20a8182dc9ac2cf67901d91 {
+	mto-kb:Note-3e429387c20a8182dc9ac2cf67901d91	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:G ;
+		rdfs:label	"G"^^xsd:string ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Scale-3e429387c20a8182dc9ac2cf67901d91	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-3e429387c20a8182dc9ac2cf67901d91 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"G Natural Minor"^^xsd:string ;
+		sio:hasValue	"G Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-3e429387c20a8182dc9ac2cf67901d91 {
+	mto-kb:assertion-3e429387c20a8182dc9ac2cf67901d91 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3e429387c20a8182dc9ac2cf67901d91	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3e429387c20a8182dc9ac2cf67901d91	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-3e429387c20a8182dc9ac2cf67901d91 {
+	mto-kb:nanoPub-3e429387c20a8182dc9ac2cf67901d91 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-3e429387c20a8182dc9ac2cf67901d91
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-3e429387c20a8182dc9ac2cf67901d91
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-4bc29120e63d322fe281129c18b84f48 {
+	mto-kb:nanoPub-4bc29120e63d322fe281129c18b84f48
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-4bc29120e63d322fe281129c18b84f48 ;
+		np:hasProvenance mto-kb:provenance-4bc29120e63d322fe281129c18b84f48 ;
+		np:hasPublicationInfo mto-kb:pubInfo-4bc29120e63d322fe281129c18b84f48 .
+}
+
+mto-kb:assertion-4bc29120e63d322fe281129c18b84f48 {
+	mto-kb:Note-4bc29120e63d322fe281129c18b84f48	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:GSharp ;
+		rdf:type	mto:AFlat ;
+		rdfs:label	"G# / Ab"^^xsd:string ;
+		sio:hasValue	"G# / Ab"^^xsd:string .
+
+	mto-kb:Scale-4bc29120e63d322fe281129c18b84f48	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-4bc29120e63d322fe281129c18b84f48 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"G# / Ab Natural Minor"^^xsd:string ;
+		sio:hasValue	"G# / Ab Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-4bc29120e63d322fe281129c18b84f48 {
+	mto-kb:assertion-4bc29120e63d322fe281129c18b84f48 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-4bc29120e63d322fe281129c18b84f48	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-4bc29120e63d322fe281129c18b84f48	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-4bc29120e63d322fe281129c18b84f48 {
+	mto-kb:nanoPub-4bc29120e63d322fe281129c18b84f48 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-4bc29120e63d322fe281129c18b84f48
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-4bc29120e63d322fe281129c18b84f48
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-8f56c6fcff18bc22777d26432fe439ef {
+	mto-kb:nanoPub-8f56c6fcff18bc22777d26432fe439ef
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-8f56c6fcff18bc22777d26432fe439ef ;
+		np:hasProvenance mto-kb:provenance-8f56c6fcff18bc22777d26432fe439ef ;
+		np:hasPublicationInfo mto-kb:pubInfo-8f56c6fcff18bc22777d26432fe439ef .
+}
+
+mto-kb:assertion-8f56c6fcff18bc22777d26432fe439ef {
+	mto-kb:Note-8f56c6fcff18bc22777d26432fe439ef	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:A ;
+		rdfs:label	"A"^^xsd:string ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Scale-8f56c6fcff18bc22777d26432fe439ef	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-8f56c6fcff18bc22777d26432fe439ef ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"A Natural Minor"^^xsd:string ;
+		sio:hasValue	"A Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-8f56c6fcff18bc22777d26432fe439ef {
+	mto-kb:assertion-8f56c6fcff18bc22777d26432fe439ef prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8f56c6fcff18bc22777d26432fe439ef	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8f56c6fcff18bc22777d26432fe439ef	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-8f56c6fcff18bc22777d26432fe439ef {
+	mto-kb:nanoPub-8f56c6fcff18bc22777d26432fe439ef prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-8f56c6fcff18bc22777d26432fe439ef
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-8f56c6fcff18bc22777d26432fe439ef
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-cda8b76d7e69c53f18e31c3c24df2de4 {
+	mto-kb:nanoPub-cda8b76d7e69c53f18e31c3c24df2de4
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-cda8b76d7e69c53f18e31c3c24df2de4 ;
+		np:hasProvenance mto-kb:provenance-cda8b76d7e69c53f18e31c3c24df2de4 ;
+		np:hasPublicationInfo mto-kb:pubInfo-cda8b76d7e69c53f18e31c3c24df2de4 .
+}
+
+mto-kb:assertion-cda8b76d7e69c53f18e31c3c24df2de4 {
+	mto-kb:Note-cda8b76d7e69c53f18e31c3c24df2de4	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:ASharp ;
+		rdf:type	mto:BFlat ;
+		rdfs:label	"A# / Bb"^^xsd:string ;
+		sio:hasValue	"A# / Bb"^^xsd:string .
+
+	mto-kb:Scale-cda8b76d7e69c53f18e31c3c24df2de4	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-cda8b76d7e69c53f18e31c3c24df2de4 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"A# / Bb Natural Minor"^^xsd:string ;
+		sio:hasValue	"A# / Bb Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-cda8b76d7e69c53f18e31c3c24df2de4 {
+	mto-kb:assertion-cda8b76d7e69c53f18e31c3c24df2de4 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-cda8b76d7e69c53f18e31c3c24df2de4	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-cda8b76d7e69c53f18e31c3c24df2de4	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-cda8b76d7e69c53f18e31c3c24df2de4 {
+	mto-kb:nanoPub-cda8b76d7e69c53f18e31c3c24df2de4 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-cda8b76d7e69c53f18e31c3c24df2de4
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-cda8b76d7e69c53f18e31c3c24df2de4
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-c5263d90677ab76b6397a244be737710 {
+	mto-kb:nanoPub-c5263d90677ab76b6397a244be737710
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-c5263d90677ab76b6397a244be737710 ;
+		np:hasProvenance mto-kb:provenance-c5263d90677ab76b6397a244be737710 ;
+		np:hasPublicationInfo mto-kb:pubInfo-c5263d90677ab76b6397a244be737710 .
+}
+
+mto-kb:assertion-c5263d90677ab76b6397a244be737710 {
+	mto-kb:Note-c5263d90677ab76b6397a244be737710	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:B ;
+		rdfs:label	"B"^^xsd:string ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Scale-c5263d90677ab76b6397a244be737710	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-c5263d90677ab76b6397a244be737710 ;
+		rdf:type	mto:NaturalMinorScale ;
+		rdfs:label	"B Natural Minor"^^xsd:string ;
+		sio:hasValue	"B Natural Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-c5263d90677ab76b6397a244be737710 {
+	mto-kb:assertion-c5263d90677ab76b6397a244be737710 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-c5263d90677ab76b6397a244be737710	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-c5263d90677ab76b6397a244be737710	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-c5263d90677ab76b6397a244be737710 {
+	mto-kb:nanoPub-c5263d90677ab76b6397a244be737710 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-c5263d90677ab76b6397a244be737710
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-c5263d90677ab76b6397a244be737710
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-6a8495305a17b7e8f468a4b119cf4ce0 {
+	mto-kb:nanoPub-6a8495305a17b7e8f468a4b119cf4ce0
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-6a8495305a17b7e8f468a4b119cf4ce0 ;
+		np:hasProvenance mto-kb:provenance-6a8495305a17b7e8f468a4b119cf4ce0 ;
+		np:hasPublicationInfo mto-kb:pubInfo-6a8495305a17b7e8f468a4b119cf4ce0 .
+}
+
+mto-kb:assertion-6a8495305a17b7e8f468a4b119cf4ce0 {
+	mto-kb:Note-6a8495305a17b7e8f468a4b119cf4ce0	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:C ;
+		rdfs:label	"C"^^xsd:string ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Scale-6a8495305a17b7e8f468a4b119cf4ce0	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-6a8495305a17b7e8f468a4b119cf4ce0 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"C Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"C Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-6a8495305a17b7e8f468a4b119cf4ce0 {
+	mto-kb:assertion-6a8495305a17b7e8f468a4b119cf4ce0 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6a8495305a17b7e8f468a4b119cf4ce0	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6a8495305a17b7e8f468a4b119cf4ce0	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-6a8495305a17b7e8f468a4b119cf4ce0 {
+	mto-kb:nanoPub-6a8495305a17b7e8f468a4b119cf4ce0 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6a8495305a17b7e8f468a4b119cf4ce0
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6a8495305a17b7e8f468a4b119cf4ce0
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-88106950060ef91725c8be2f8c00e1b8 {
+	mto-kb:nanoPub-88106950060ef91725c8be2f8c00e1b8
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-88106950060ef91725c8be2f8c00e1b8 ;
+		np:hasProvenance mto-kb:provenance-88106950060ef91725c8be2f8c00e1b8 ;
+		np:hasPublicationInfo mto-kb:pubInfo-88106950060ef91725c8be2f8c00e1b8 .
+}
+
+mto-kb:assertion-88106950060ef91725c8be2f8c00e1b8 {
+	mto-kb:Note-88106950060ef91725c8be2f8c00e1b8	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:CSharp ;
+		rdf:type	mto:DFlat ;
+		rdfs:label	"C# / Db"^^xsd:string ;
+		sio:hasValue	"C# / Db"^^xsd:string .
+
+	mto-kb:Scale-88106950060ef91725c8be2f8c00e1b8	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-88106950060ef91725c8be2f8c00e1b8 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"C# / Db Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"C# / Db Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-88106950060ef91725c8be2f8c00e1b8 {
+	mto-kb:assertion-88106950060ef91725c8be2f8c00e1b8 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-88106950060ef91725c8be2f8c00e1b8	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-88106950060ef91725c8be2f8c00e1b8	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-88106950060ef91725c8be2f8c00e1b8 {
+	mto-kb:nanoPub-88106950060ef91725c8be2f8c00e1b8 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-88106950060ef91725c8be2f8c00e1b8
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-88106950060ef91725c8be2f8c00e1b8
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-df183f0ae2e2fd11df1cd46a7d410679 {
+	mto-kb:nanoPub-df183f0ae2e2fd11df1cd46a7d410679
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-df183f0ae2e2fd11df1cd46a7d410679 ;
+		np:hasProvenance mto-kb:provenance-df183f0ae2e2fd11df1cd46a7d410679 ;
+		np:hasPublicationInfo mto-kb:pubInfo-df183f0ae2e2fd11df1cd46a7d410679 .
+}
+
+mto-kb:assertion-df183f0ae2e2fd11df1cd46a7d410679 {
+	mto-kb:Note-df183f0ae2e2fd11df1cd46a7d410679	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:D ;
+		rdfs:label	"D"^^xsd:string ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Scale-df183f0ae2e2fd11df1cd46a7d410679	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-df183f0ae2e2fd11df1cd46a7d410679 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"D Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"D Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-df183f0ae2e2fd11df1cd46a7d410679 {
+	mto-kb:assertion-df183f0ae2e2fd11df1cd46a7d410679 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-df183f0ae2e2fd11df1cd46a7d410679	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-df183f0ae2e2fd11df1cd46a7d410679	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-df183f0ae2e2fd11df1cd46a7d410679 {
+	mto-kb:nanoPub-df183f0ae2e2fd11df1cd46a7d410679 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-df183f0ae2e2fd11df1cd46a7d410679
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-df183f0ae2e2fd11df1cd46a7d410679
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-0aeb814e0bca12c85000496c1f3be9d8 {
+	mto-kb:nanoPub-0aeb814e0bca12c85000496c1f3be9d8
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-0aeb814e0bca12c85000496c1f3be9d8 ;
+		np:hasProvenance mto-kb:provenance-0aeb814e0bca12c85000496c1f3be9d8 ;
+		np:hasPublicationInfo mto-kb:pubInfo-0aeb814e0bca12c85000496c1f3be9d8 .
+}
+
+mto-kb:assertion-0aeb814e0bca12c85000496c1f3be9d8 {
+	mto-kb:Note-0aeb814e0bca12c85000496c1f3be9d8	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:DSharp ;
+		rdf:type	mto:EFlat ;
+		rdfs:label	"D# / Eb"^^xsd:string ;
+		sio:hasValue	"D# / Eb"^^xsd:string .
+
+	mto-kb:Scale-0aeb814e0bca12c85000496c1f3be9d8	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-0aeb814e0bca12c85000496c1f3be9d8 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"D# / Eb Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"D# / Eb Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-0aeb814e0bca12c85000496c1f3be9d8 {
+	mto-kb:assertion-0aeb814e0bca12c85000496c1f3be9d8 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-0aeb814e0bca12c85000496c1f3be9d8	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-0aeb814e0bca12c85000496c1f3be9d8	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-0aeb814e0bca12c85000496c1f3be9d8 {
+	mto-kb:nanoPub-0aeb814e0bca12c85000496c1f3be9d8 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-0aeb814e0bca12c85000496c1f3be9d8
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-0aeb814e0bca12c85000496c1f3be9d8
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-68e58c5a9df9c64faebdc805345169d9 {
+	mto-kb:nanoPub-68e58c5a9df9c64faebdc805345169d9
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-68e58c5a9df9c64faebdc805345169d9 ;
+		np:hasProvenance mto-kb:provenance-68e58c5a9df9c64faebdc805345169d9 ;
+		np:hasPublicationInfo mto-kb:pubInfo-68e58c5a9df9c64faebdc805345169d9 .
+}
+
+mto-kb:assertion-68e58c5a9df9c64faebdc805345169d9 {
+	mto-kb:Note-68e58c5a9df9c64faebdc805345169d9	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:E ;
+		rdfs:label	"E"^^xsd:string ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Scale-68e58c5a9df9c64faebdc805345169d9	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-68e58c5a9df9c64faebdc805345169d9 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"E Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"E Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-68e58c5a9df9c64faebdc805345169d9 {
+	mto-kb:assertion-68e58c5a9df9c64faebdc805345169d9 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-68e58c5a9df9c64faebdc805345169d9	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-68e58c5a9df9c64faebdc805345169d9	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-68e58c5a9df9c64faebdc805345169d9 {
+	mto-kb:nanoPub-68e58c5a9df9c64faebdc805345169d9 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-68e58c5a9df9c64faebdc805345169d9
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-68e58c5a9df9c64faebdc805345169d9
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-d48d507a4870584ef7471c73840c3712 {
+	mto-kb:nanoPub-d48d507a4870584ef7471c73840c3712
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-d48d507a4870584ef7471c73840c3712 ;
+		np:hasProvenance mto-kb:provenance-d48d507a4870584ef7471c73840c3712 ;
+		np:hasPublicationInfo mto-kb:pubInfo-d48d507a4870584ef7471c73840c3712 .
+}
+
+mto-kb:assertion-d48d507a4870584ef7471c73840c3712 {
+	mto-kb:Note-d48d507a4870584ef7471c73840c3712	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:F ;
+		rdfs:label	"F"^^xsd:string ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Scale-d48d507a4870584ef7471c73840c3712	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-d48d507a4870584ef7471c73840c3712 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"F Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"F Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-d48d507a4870584ef7471c73840c3712 {
+	mto-kb:assertion-d48d507a4870584ef7471c73840c3712 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-d48d507a4870584ef7471c73840c3712	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-d48d507a4870584ef7471c73840c3712	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-d48d507a4870584ef7471c73840c3712 {
+	mto-kb:nanoPub-d48d507a4870584ef7471c73840c3712 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-d48d507a4870584ef7471c73840c3712
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-d48d507a4870584ef7471c73840c3712
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-6363a8039bbc54ebe49125ec70806d22 {
+	mto-kb:nanoPub-6363a8039bbc54ebe49125ec70806d22
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-6363a8039bbc54ebe49125ec70806d22 ;
+		np:hasProvenance mto-kb:provenance-6363a8039bbc54ebe49125ec70806d22 ;
+		np:hasPublicationInfo mto-kb:pubInfo-6363a8039bbc54ebe49125ec70806d22 .
+}
+
+mto-kb:assertion-6363a8039bbc54ebe49125ec70806d22 {
+	mto-kb:Note-6363a8039bbc54ebe49125ec70806d22	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:FSharp ;
+		rdf:type	mto:GFlat ;
+		rdfs:label	"F# / Gb"^^xsd:string ;
+		sio:hasValue	"F# / Gb"^^xsd:string .
+
+	mto-kb:Scale-6363a8039bbc54ebe49125ec70806d22	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-6363a8039bbc54ebe49125ec70806d22 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"F# / Gb Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"F# / Gb Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-6363a8039bbc54ebe49125ec70806d22 {
+	mto-kb:assertion-6363a8039bbc54ebe49125ec70806d22 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6363a8039bbc54ebe49125ec70806d22	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6363a8039bbc54ebe49125ec70806d22	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-6363a8039bbc54ebe49125ec70806d22 {
+	mto-kb:nanoPub-6363a8039bbc54ebe49125ec70806d22 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6363a8039bbc54ebe49125ec70806d22
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6363a8039bbc54ebe49125ec70806d22
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-42bce6a03021c041cae4d1a09acc8014 {
+	mto-kb:nanoPub-42bce6a03021c041cae4d1a09acc8014
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-42bce6a03021c041cae4d1a09acc8014 ;
+		np:hasProvenance mto-kb:provenance-42bce6a03021c041cae4d1a09acc8014 ;
+		np:hasPublicationInfo mto-kb:pubInfo-42bce6a03021c041cae4d1a09acc8014 .
+}
+
+mto-kb:assertion-42bce6a03021c041cae4d1a09acc8014 {
+	mto-kb:Note-42bce6a03021c041cae4d1a09acc8014	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:G ;
+		rdfs:label	"G"^^xsd:string ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Scale-42bce6a03021c041cae4d1a09acc8014	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-42bce6a03021c041cae4d1a09acc8014 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"G Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"G Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-42bce6a03021c041cae4d1a09acc8014 {
+	mto-kb:assertion-42bce6a03021c041cae4d1a09acc8014 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-42bce6a03021c041cae4d1a09acc8014	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-42bce6a03021c041cae4d1a09acc8014	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-42bce6a03021c041cae4d1a09acc8014 {
+	mto-kb:nanoPub-42bce6a03021c041cae4d1a09acc8014 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-42bce6a03021c041cae4d1a09acc8014
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-42bce6a03021c041cae4d1a09acc8014
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-74ca8255dd9e5227b61132f660ad89d7 {
+	mto-kb:nanoPub-74ca8255dd9e5227b61132f660ad89d7
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-74ca8255dd9e5227b61132f660ad89d7 ;
+		np:hasProvenance mto-kb:provenance-74ca8255dd9e5227b61132f660ad89d7 ;
+		np:hasPublicationInfo mto-kb:pubInfo-74ca8255dd9e5227b61132f660ad89d7 .
+}
+
+mto-kb:assertion-74ca8255dd9e5227b61132f660ad89d7 {
+	mto-kb:Note-74ca8255dd9e5227b61132f660ad89d7	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:GSharp ;
+		rdf:type	mto:AFlat ;
+		rdfs:label	"G# / Ab"^^xsd:string ;
+		sio:hasValue	"G# / Ab"^^xsd:string .
+
+	mto-kb:Scale-74ca8255dd9e5227b61132f660ad89d7	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-74ca8255dd9e5227b61132f660ad89d7 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"G# / Ab Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"G# / Ab Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-74ca8255dd9e5227b61132f660ad89d7 {
+	mto-kb:assertion-74ca8255dd9e5227b61132f660ad89d7 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-74ca8255dd9e5227b61132f660ad89d7	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-74ca8255dd9e5227b61132f660ad89d7	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-74ca8255dd9e5227b61132f660ad89d7 {
+	mto-kb:nanoPub-74ca8255dd9e5227b61132f660ad89d7 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-74ca8255dd9e5227b61132f660ad89d7
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-74ca8255dd9e5227b61132f660ad89d7
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-ad6c75edcbdb732112a5ecf82b3bdd57 {
+	mto-kb:nanoPub-ad6c75edcbdb732112a5ecf82b3bdd57
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-ad6c75edcbdb732112a5ecf82b3bdd57 ;
+		np:hasProvenance mto-kb:provenance-ad6c75edcbdb732112a5ecf82b3bdd57 ;
+		np:hasPublicationInfo mto-kb:pubInfo-ad6c75edcbdb732112a5ecf82b3bdd57 .
+}
+
+mto-kb:assertion-ad6c75edcbdb732112a5ecf82b3bdd57 {
+	mto-kb:Note-ad6c75edcbdb732112a5ecf82b3bdd57	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:A ;
+		rdfs:label	"A"^^xsd:string ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Scale-ad6c75edcbdb732112a5ecf82b3bdd57	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-ad6c75edcbdb732112a5ecf82b3bdd57 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"A Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"A Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-ad6c75edcbdb732112a5ecf82b3bdd57 {
+	mto-kb:assertion-ad6c75edcbdb732112a5ecf82b3bdd57 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-ad6c75edcbdb732112a5ecf82b3bdd57	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-ad6c75edcbdb732112a5ecf82b3bdd57	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-ad6c75edcbdb732112a5ecf82b3bdd57 {
+	mto-kb:nanoPub-ad6c75edcbdb732112a5ecf82b3bdd57 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-ad6c75edcbdb732112a5ecf82b3bdd57
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-ad6c75edcbdb732112a5ecf82b3bdd57
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-5b0b5477403ce09947e16a9e67dc2a39 {
+	mto-kb:nanoPub-5b0b5477403ce09947e16a9e67dc2a39
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-5b0b5477403ce09947e16a9e67dc2a39 ;
+		np:hasProvenance mto-kb:provenance-5b0b5477403ce09947e16a9e67dc2a39 ;
+		np:hasPublicationInfo mto-kb:pubInfo-5b0b5477403ce09947e16a9e67dc2a39 .
+}
+
+mto-kb:assertion-5b0b5477403ce09947e16a9e67dc2a39 {
+	mto-kb:Note-5b0b5477403ce09947e16a9e67dc2a39	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:ASharp ;
+		rdf:type	mto:BFlat ;
+		rdfs:label	"A# / Bb"^^xsd:string ;
+		sio:hasValue	"A# / Bb"^^xsd:string .
+
+	mto-kb:Scale-5b0b5477403ce09947e16a9e67dc2a39	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-5b0b5477403ce09947e16a9e67dc2a39 ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"A# / Bb Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"A# / Bb Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-5b0b5477403ce09947e16a9e67dc2a39 {
+	mto-kb:assertion-5b0b5477403ce09947e16a9e67dc2a39 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-5b0b5477403ce09947e16a9e67dc2a39	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-5b0b5477403ce09947e16a9e67dc2a39	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-5b0b5477403ce09947e16a9e67dc2a39 {
+	mto-kb:nanoPub-5b0b5477403ce09947e16a9e67dc2a39 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-5b0b5477403ce09947e16a9e67dc2a39
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-5b0b5477403ce09947e16a9e67dc2a39
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-4de66f6feb071537408deed7e98b5e8b {
+	mto-kb:nanoPub-4de66f6feb071537408deed7e98b5e8b
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-4de66f6feb071537408deed7e98b5e8b ;
+		np:hasProvenance mto-kb:provenance-4de66f6feb071537408deed7e98b5e8b ;
+		np:hasPublicationInfo mto-kb:pubInfo-4de66f6feb071537408deed7e98b5e8b .
+}
+
+mto-kb:assertion-4de66f6feb071537408deed7e98b5e8b {
+	mto-kb:Note-4de66f6feb071537408deed7e98b5e8b	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:B ;
+		rdfs:label	"B"^^xsd:string ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Scale-4de66f6feb071537408deed7e98b5e8b	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-4de66f6feb071537408deed7e98b5e8b ;
+		rdf:type	mto:HarmonicMinorScale ;
+		rdfs:label	"B Harmonic Minor"^^xsd:string ;
+		sio:hasValue	"B Harmonic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-4de66f6feb071537408deed7e98b5e8b {
+	mto-kb:assertion-4de66f6feb071537408deed7e98b5e8b prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-4de66f6feb071537408deed7e98b5e8b	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-4de66f6feb071537408deed7e98b5e8b	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-4de66f6feb071537408deed7e98b5e8b {
+	mto-kb:nanoPub-4de66f6feb071537408deed7e98b5e8b prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-4de66f6feb071537408deed7e98b5e8b
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-4de66f6feb071537408deed7e98b5e8b
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-571657d630ef1aee5b2a107c65165ab5 {
+	mto-kb:nanoPub-571657d630ef1aee5b2a107c65165ab5
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-571657d630ef1aee5b2a107c65165ab5 ;
+		np:hasProvenance mto-kb:provenance-571657d630ef1aee5b2a107c65165ab5 ;
+		np:hasPublicationInfo mto-kb:pubInfo-571657d630ef1aee5b2a107c65165ab5 .
+}
+
+mto-kb:assertion-571657d630ef1aee5b2a107c65165ab5 {
+	mto-kb:Note-571657d630ef1aee5b2a107c65165ab5	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:C ;
+		rdfs:label	"C"^^xsd:string ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Scale-571657d630ef1aee5b2a107c65165ab5	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-571657d630ef1aee5b2a107c65165ab5 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"C Melodic Minor"^^xsd:string ;
+		sio:hasValue	"C Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-571657d630ef1aee5b2a107c65165ab5 {
+	mto-kb:assertion-571657d630ef1aee5b2a107c65165ab5 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-571657d630ef1aee5b2a107c65165ab5	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-571657d630ef1aee5b2a107c65165ab5	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-571657d630ef1aee5b2a107c65165ab5 {
+	mto-kb:nanoPub-571657d630ef1aee5b2a107c65165ab5 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-571657d630ef1aee5b2a107c65165ab5
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-571657d630ef1aee5b2a107c65165ab5
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-13bacdf531dec0380d6bcf0f4471bd14 {
+	mto-kb:nanoPub-13bacdf531dec0380d6bcf0f4471bd14
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-13bacdf531dec0380d6bcf0f4471bd14 ;
+		np:hasProvenance mto-kb:provenance-13bacdf531dec0380d6bcf0f4471bd14 ;
+		np:hasPublicationInfo mto-kb:pubInfo-13bacdf531dec0380d6bcf0f4471bd14 .
+}
+
+mto-kb:assertion-13bacdf531dec0380d6bcf0f4471bd14 {
+	mto-kb:Note-13bacdf531dec0380d6bcf0f4471bd14	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:CSharp ;
+		rdf:type	mto:DFlat ;
+		rdfs:label	"C# / Db"^^xsd:string ;
+		sio:hasValue	"C# / Db"^^xsd:string .
+
+	mto-kb:Scale-13bacdf531dec0380d6bcf0f4471bd14	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-13bacdf531dec0380d6bcf0f4471bd14 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"C# / Db Melodic Minor"^^xsd:string ;
+		sio:hasValue	"C# / Db Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-13bacdf531dec0380d6bcf0f4471bd14 {
+	mto-kb:assertion-13bacdf531dec0380d6bcf0f4471bd14 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-13bacdf531dec0380d6bcf0f4471bd14	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-13bacdf531dec0380d6bcf0f4471bd14	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-13bacdf531dec0380d6bcf0f4471bd14 {
+	mto-kb:nanoPub-13bacdf531dec0380d6bcf0f4471bd14 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-13bacdf531dec0380d6bcf0f4471bd14
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-13bacdf531dec0380d6bcf0f4471bd14
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-43335db4e68576dd9df217e539ce259d {
+	mto-kb:nanoPub-43335db4e68576dd9df217e539ce259d
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-43335db4e68576dd9df217e539ce259d ;
+		np:hasProvenance mto-kb:provenance-43335db4e68576dd9df217e539ce259d ;
+		np:hasPublicationInfo mto-kb:pubInfo-43335db4e68576dd9df217e539ce259d .
+}
+
+mto-kb:assertion-43335db4e68576dd9df217e539ce259d {
+	mto-kb:Note-43335db4e68576dd9df217e539ce259d	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:D ;
+		rdfs:label	"D"^^xsd:string ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Scale-43335db4e68576dd9df217e539ce259d	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-43335db4e68576dd9df217e539ce259d ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"D Melodic Minor"^^xsd:string ;
+		sio:hasValue	"D Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-43335db4e68576dd9df217e539ce259d {
+	mto-kb:assertion-43335db4e68576dd9df217e539ce259d prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-43335db4e68576dd9df217e539ce259d	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-43335db4e68576dd9df217e539ce259d	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-43335db4e68576dd9df217e539ce259d {
+	mto-kb:nanoPub-43335db4e68576dd9df217e539ce259d prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-43335db4e68576dd9df217e539ce259d
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-43335db4e68576dd9df217e539ce259d
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-77543d7ef1acd0df646c39442b72fc58 {
+	mto-kb:nanoPub-77543d7ef1acd0df646c39442b72fc58
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-77543d7ef1acd0df646c39442b72fc58 ;
+		np:hasProvenance mto-kb:provenance-77543d7ef1acd0df646c39442b72fc58 ;
+		np:hasPublicationInfo mto-kb:pubInfo-77543d7ef1acd0df646c39442b72fc58 .
+}
+
+mto-kb:assertion-77543d7ef1acd0df646c39442b72fc58 {
+	mto-kb:Note-77543d7ef1acd0df646c39442b72fc58	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:DSharp ;
+		rdf:type	mto:EFlat ;
+		rdfs:label	"D# / Eb"^^xsd:string ;
+		sio:hasValue	"D# / Eb"^^xsd:string .
+
+	mto-kb:Scale-77543d7ef1acd0df646c39442b72fc58	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-77543d7ef1acd0df646c39442b72fc58 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"D# / Eb Melodic Minor"^^xsd:string ;
+		sio:hasValue	"D# / Eb Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-77543d7ef1acd0df646c39442b72fc58 {
+	mto-kb:assertion-77543d7ef1acd0df646c39442b72fc58 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-77543d7ef1acd0df646c39442b72fc58	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-77543d7ef1acd0df646c39442b72fc58	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-77543d7ef1acd0df646c39442b72fc58 {
+	mto-kb:nanoPub-77543d7ef1acd0df646c39442b72fc58 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-77543d7ef1acd0df646c39442b72fc58
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-77543d7ef1acd0df646c39442b72fc58
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-a51e3e7a57037f2c318c4aa575aacb73 {
+	mto-kb:nanoPub-a51e3e7a57037f2c318c4aa575aacb73
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-a51e3e7a57037f2c318c4aa575aacb73 ;
+		np:hasProvenance mto-kb:provenance-a51e3e7a57037f2c318c4aa575aacb73 ;
+		np:hasPublicationInfo mto-kb:pubInfo-a51e3e7a57037f2c318c4aa575aacb73 .
+}
+
+mto-kb:assertion-a51e3e7a57037f2c318c4aa575aacb73 {
+	mto-kb:Note-a51e3e7a57037f2c318c4aa575aacb73	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:E ;
+		rdfs:label	"E"^^xsd:string ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Scale-a51e3e7a57037f2c318c4aa575aacb73	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-a51e3e7a57037f2c318c4aa575aacb73 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"E Melodic Minor"^^xsd:string ;
+		sio:hasValue	"E Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-a51e3e7a57037f2c318c4aa575aacb73 {
+	mto-kb:assertion-a51e3e7a57037f2c318c4aa575aacb73 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-a51e3e7a57037f2c318c4aa575aacb73	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-a51e3e7a57037f2c318c4aa575aacb73	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-a51e3e7a57037f2c318c4aa575aacb73 {
+	mto-kb:nanoPub-a51e3e7a57037f2c318c4aa575aacb73 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-a51e3e7a57037f2c318c4aa575aacb73
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-a51e3e7a57037f2c318c4aa575aacb73
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-6728ed2663d491d74067033bde7fe101 {
+	mto-kb:nanoPub-6728ed2663d491d74067033bde7fe101
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-6728ed2663d491d74067033bde7fe101 ;
+		np:hasProvenance mto-kb:provenance-6728ed2663d491d74067033bde7fe101 ;
+		np:hasPublicationInfo mto-kb:pubInfo-6728ed2663d491d74067033bde7fe101 .
+}
+
+mto-kb:assertion-6728ed2663d491d74067033bde7fe101 {
+	mto-kb:Note-6728ed2663d491d74067033bde7fe101	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:F ;
+		rdfs:label	"F"^^xsd:string ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Scale-6728ed2663d491d74067033bde7fe101	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-6728ed2663d491d74067033bde7fe101 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"F Melodic Minor"^^xsd:string ;
+		sio:hasValue	"F Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-6728ed2663d491d74067033bde7fe101 {
+	mto-kb:assertion-6728ed2663d491d74067033bde7fe101 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6728ed2663d491d74067033bde7fe101	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6728ed2663d491d74067033bde7fe101	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-6728ed2663d491d74067033bde7fe101 {
+	mto-kb:nanoPub-6728ed2663d491d74067033bde7fe101 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-6728ed2663d491d74067033bde7fe101
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-6728ed2663d491d74067033bde7fe101
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-cf83c4810f85dd4e4dcac66d5d49372b {
+	mto-kb:nanoPub-cf83c4810f85dd4e4dcac66d5d49372b
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-cf83c4810f85dd4e4dcac66d5d49372b ;
+		np:hasProvenance mto-kb:provenance-cf83c4810f85dd4e4dcac66d5d49372b ;
+		np:hasPublicationInfo mto-kb:pubInfo-cf83c4810f85dd4e4dcac66d5d49372b .
+}
+
+mto-kb:assertion-cf83c4810f85dd4e4dcac66d5d49372b {
+	mto-kb:Note-cf83c4810f85dd4e4dcac66d5d49372b	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:FSharp ;
+		rdf:type	mto:GFlat ;
+		rdfs:label	"F# / Gb"^^xsd:string ;
+		sio:hasValue	"F# / Gb"^^xsd:string .
+
+	mto-kb:Scale-cf83c4810f85dd4e4dcac66d5d49372b	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-cf83c4810f85dd4e4dcac66d5d49372b ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"F# / Gb Melodic Minor"^^xsd:string ;
+		sio:hasValue	"F# / Gb Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-cf83c4810f85dd4e4dcac66d5d49372b {
+	mto-kb:assertion-cf83c4810f85dd4e4dcac66d5d49372b prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-cf83c4810f85dd4e4dcac66d5d49372b	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-cf83c4810f85dd4e4dcac66d5d49372b	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-cf83c4810f85dd4e4dcac66d5d49372b {
+	mto-kb:nanoPub-cf83c4810f85dd4e4dcac66d5d49372b prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-cf83c4810f85dd4e4dcac66d5d49372b
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-cf83c4810f85dd4e4dcac66d5d49372b
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-5cc1602d49af16b70445786e065b27b2 {
+	mto-kb:nanoPub-5cc1602d49af16b70445786e065b27b2
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-5cc1602d49af16b70445786e065b27b2 ;
+		np:hasProvenance mto-kb:provenance-5cc1602d49af16b70445786e065b27b2 ;
+		np:hasPublicationInfo mto-kb:pubInfo-5cc1602d49af16b70445786e065b27b2 .
+}
+
+mto-kb:assertion-5cc1602d49af16b70445786e065b27b2 {
+	mto-kb:Note-5cc1602d49af16b70445786e065b27b2	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:G ;
+		rdfs:label	"G"^^xsd:string ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Scale-5cc1602d49af16b70445786e065b27b2	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-5cc1602d49af16b70445786e065b27b2 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"G Melodic Minor"^^xsd:string ;
+		sio:hasValue	"G Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-5cc1602d49af16b70445786e065b27b2 {
+	mto-kb:assertion-5cc1602d49af16b70445786e065b27b2 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-5cc1602d49af16b70445786e065b27b2	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-5cc1602d49af16b70445786e065b27b2	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-5cc1602d49af16b70445786e065b27b2 {
+	mto-kb:nanoPub-5cc1602d49af16b70445786e065b27b2 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-5cc1602d49af16b70445786e065b27b2
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-5cc1602d49af16b70445786e065b27b2
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-166ed3a85726439428da953236902b34 {
+	mto-kb:nanoPub-166ed3a85726439428da953236902b34
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-166ed3a85726439428da953236902b34 ;
+		np:hasProvenance mto-kb:provenance-166ed3a85726439428da953236902b34 ;
+		np:hasPublicationInfo mto-kb:pubInfo-166ed3a85726439428da953236902b34 .
+}
+
+mto-kb:assertion-166ed3a85726439428da953236902b34 {
+	mto-kb:Note-166ed3a85726439428da953236902b34	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:GSharp ;
+		rdf:type	mto:AFlat ;
+		rdfs:label	"G# / Ab"^^xsd:string ;
+		sio:hasValue	"G# / Ab"^^xsd:string .
+
+	mto-kb:Scale-166ed3a85726439428da953236902b34	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-166ed3a85726439428da953236902b34 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"G# / Ab Melodic Minor"^^xsd:string ;
+		sio:hasValue	"G# / Ab Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-166ed3a85726439428da953236902b34 {
+	mto-kb:assertion-166ed3a85726439428da953236902b34 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-166ed3a85726439428da953236902b34	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-166ed3a85726439428da953236902b34	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-166ed3a85726439428da953236902b34 {
+	mto-kb:nanoPub-166ed3a85726439428da953236902b34 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-166ed3a85726439428da953236902b34
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-166ed3a85726439428da953236902b34
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-ef176fa811b31fa8382675da7f31c066 {
+	mto-kb:nanoPub-ef176fa811b31fa8382675da7f31c066
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-ef176fa811b31fa8382675da7f31c066 ;
+		np:hasProvenance mto-kb:provenance-ef176fa811b31fa8382675da7f31c066 ;
+		np:hasPublicationInfo mto-kb:pubInfo-ef176fa811b31fa8382675da7f31c066 .
+}
+
+mto-kb:assertion-ef176fa811b31fa8382675da7f31c066 {
+	mto-kb:Note-ef176fa811b31fa8382675da7f31c066	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:A ;
+		rdfs:label	"A"^^xsd:string ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Scale-ef176fa811b31fa8382675da7f31c066	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-ef176fa811b31fa8382675da7f31c066 ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"A Melodic Minor"^^xsd:string ;
+		sio:hasValue	"A Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-ef176fa811b31fa8382675da7f31c066 {
+	mto-kb:assertion-ef176fa811b31fa8382675da7f31c066 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-ef176fa811b31fa8382675da7f31c066	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-ef176fa811b31fa8382675da7f31c066	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-ef176fa811b31fa8382675da7f31c066 {
+	mto-kb:nanoPub-ef176fa811b31fa8382675da7f31c066 prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-ef176fa811b31fa8382675da7f31c066
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-ef176fa811b31fa8382675da7f31c066
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-f0ff28045652536d916a1f9f785b392e {
+	mto-kb:nanoPub-f0ff28045652536d916a1f9f785b392e
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-f0ff28045652536d916a1f9f785b392e ;
+		np:hasProvenance mto-kb:provenance-f0ff28045652536d916a1f9f785b392e ;
+		np:hasPublicationInfo mto-kb:pubInfo-f0ff28045652536d916a1f9f785b392e .
+}
+
+mto-kb:assertion-f0ff28045652536d916a1f9f785b392e {
+	mto-kb:Note-f0ff28045652536d916a1f9f785b392e	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:ASharp ;
+		rdf:type	mto:BFlat ;
+		rdfs:label	"A# / Bb"^^xsd:string ;
+		sio:hasValue	"A# / Bb"^^xsd:string .
+
+	mto-kb:Scale-f0ff28045652536d916a1f9f785b392e	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-f0ff28045652536d916a1f9f785b392e ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"A# / Bb Melodic Minor"^^xsd:string ;
+		sio:hasValue	"A# / Bb Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-f0ff28045652536d916a1f9f785b392e {
+	mto-kb:assertion-f0ff28045652536d916a1f9f785b392e prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-f0ff28045652536d916a1f9f785b392e	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-f0ff28045652536d916a1f9f785b392e	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-f0ff28045652536d916a1f9f785b392e {
+	mto-kb:nanoPub-f0ff28045652536d916a1f9f785b392e prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-f0ff28045652536d916a1f9f785b392e
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-f0ff28045652536d916a1f9f785b392e
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-077a4a457c38666a522ec09080ba4bae {
+	mto-kb:nanoPub-077a4a457c38666a522ec09080ba4bae
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-077a4a457c38666a522ec09080ba4bae ;
+		np:hasProvenance mto-kb:provenance-077a4a457c38666a522ec09080ba4bae ;
+		np:hasPublicationInfo mto-kb:pubInfo-077a4a457c38666a522ec09080ba4bae .
+}
+
+mto-kb:assertion-077a4a457c38666a522ec09080ba4bae {
+	mto-kb:Note-077a4a457c38666a522ec09080ba4bae	rdf:type	mto-kb:Note ;
+		rdf:type	mto:Note ;
+		rdf:type	mto:B ;
+		rdfs:label	"B"^^xsd:string ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Scale-077a4a457c38666a522ec09080ba4bae	rdf:type	mto-kb:Scale ;
+		rdf:type	mto:DiatonicScale ;
+		mto:hasTonic	mto-kb:Note-077a4a457c38666a522ec09080ba4bae ;
+		rdf:type	mto:MelodicMinorScale ;
+		rdfs:label	"B Melodic Minor"^^xsd:string ;
+		sio:hasValue	"B Melodic Minor"^^xsd:string .
+
+}
+
+mto-kb:provenance-077a4a457c38666a522ec09080ba4bae {
+	mto-kb:assertion-077a4a457c38666a522ec09080ba4bae prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-077a4a457c38666a522ec09080ba4bae	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-077a4a457c38666a522ec09080ba4bae	prov:generatedAtTime	"2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-077a4a457c38666a522ec09080ba4bae {
+	mto-kb:nanoPub-077a4a457c38666a522ec09080ba4bae prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime .
+
+	mto-kb:Note-077a4a457c38666a522ec09080ba4bae
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+	mto-kb:Scale-077a4a457c38666a522ec09080ba4bae
+		prov:generatedAtTime "2018-05-16T16:05:27Z"^^xsd:dateTime  .
+
+}
+

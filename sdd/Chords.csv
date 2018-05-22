@@ -1,0 +1,205 @@
+Note,Chord
+C,C Major
+C# / Db,C# / Db Major
+D,D Major
+D# / Eb,D# / Eb Major
+E,E Major
+F,F Major
+F# / Gb,F# / Gb Major
+G,G Major
+G# / Ab,G# / Ab Major
+A,A Major
+A# / Bb,A# / Bb Major
+B,B Major
+C,C Minor
+C# / Db,C# / Db Minor
+D,D Minor
+D# / Eb,D# / Eb Minor
+E,E Minor
+F,F Minor
+F# / Gb,F# / Gb Minor
+G,G Minor
+G# / Ab,G# / Ab Minor
+A,A Minor
+A# / Bb,A# / Bb Minor
+B,B Minor
+C,C Augmented
+C# / Db,C# / Db Augmented
+D,D Augmented
+D# / Eb,D# / Eb Augmented
+E,E Augmented
+F,F Augmented
+F# / Gb,F# / Gb Augmented
+G,G Augmented
+G# / Ab,G# / Ab Augmented
+A,A Augmented
+A# / Bb,A# / Bb Augmented
+B,B Augmented
+C,C Diminished
+C# / Db,C# / Db Diminished
+D,D Diminished
+D# / Eb,D# / Eb Diminished
+E,E Diminished
+F,F Diminished
+F# / Gb,F# / Gb Diminished
+G,G Diminished
+G# / Ab,G# / Ab Diminished
+A,A Diminished
+A# / Bb,A# / Bb Diminished
+B,B Diminished
+C,C Suspended Second
+C# / Db,C# / Db Suspended Second
+D,D Suspended Second
+D# / Eb,D# / Eb Suspended Second
+E,E Suspended Second
+F,F Suspended Second
+F# / Gb,F# / Gb Suspended Second
+G,G Suspended Second
+G# / Ab,G# / Ab Suspended Second
+A,A Suspended Second
+A# / Bb,A# / Bb Suspended Second
+B,B Suspended Second
+C,C Suspended Fourth
+C# / Db,C# / Db Suspended Fourth
+D,D Suspended Fourth
+D# / Eb,D# / Eb Suspended Fourth
+E,E Suspended Fourth
+F,F Suspended Fourth
+F# / Gb,F# / Gb Suspended Fourth
+G,G Suspended Fourth
+G# / Ab,G# / Ab Suspended Fourth
+A,A Suspended Fourth
+A# / Bb,A# / Bb Suspended Fourth
+B,B Suspended Fourth
+C,C Major Sixth
+C# / Db,C# / Db Major Sixth
+D,D Major Sixth
+D# / Eb,D# / Eb Major Sixth
+E,E Major Sixth
+F,F Major Sixth
+F# / Gb,F# / Gb Major Sixth
+G,G Major Sixth
+G# / Ab,G# / Ab Major Sixth
+A,A Major Sixth
+A# / Bb,A# / Bb Major Sixth
+B,B Major Sixth
+C,C Minor Sixth
+C# / Db,C# / Db Minor Sixth
+D,D Minor Sixth
+D# / Eb,D# / Eb Minor Sixth
+E,E Minor Sixth
+F,F Minor Sixth
+F# / Gb,F# / Gb Minor Sixth
+G,G Minor Sixth
+G# / Ab,G# / Ab Minor Sixth
+A,A Minor Sixth
+A# / Bb,A# / Bb Minor Sixth
+B,B Minor Sixth
+C,C Major Seventh
+C# / Db,C# / Db Major Seventh
+D,D Major Seventh
+D# / Eb,D# / Eb Major Seventh
+E,E Major Seventh
+F,F Major Seventh
+F# / Gb,F# / Gb Major Seventh
+G,G Major Seventh
+G# / Ab,G# / Ab Major Seventh
+A,A Major Seventh
+A# / Bb,A# / Bb Major Seventh
+B,B Major Seventh
+C,C Minor Seventh
+C# / Db,C# / Db Minor Seventh
+D,D Minor Seventh
+D# / Eb,D# / Eb Minor Seventh
+E,E Minor Seventh
+F,F Minor Seventh
+F# / Gb,F# / Gb Minor Seventh
+G,G Minor Seventh
+G# / Ab,G# / Ab Minor Seventh
+A,A Minor Seventh
+A# / Bb,A# / Bb Minor Seventh
+B,B Minor Seventh
+C,C Dominant Seventh
+C# / Db,C# / Db Dominant Seventh
+D,D Dominant Seventh
+D# / Eb,D# / Eb Dominant Seventh
+E,E Dominant Seventh
+F,F Dominant Seventh
+F# / Gb,F# / Gb Dominant Seventh
+G,G Dominant Seventh
+G# / Ab,G# / Ab Dominant Seventh
+A,A Dominant Seventh
+A# / Bb,A# / Bb Dominant Seventh
+B,B Dominant Seventh
+C,C Diminished Seventh
+C# / Db,C# / Db Diminished Seventh
+D,D Diminished Seventh
+D# / Eb,D# / Eb Diminished Seventh
+E,E Diminished Seventh
+F,F Diminished Seventh
+F# / Gb,F# / Gb Diminished Seventh
+G,G Diminished Seventh
+G# / Ab,G# / Ab Diminished Seventh
+A,A Diminished Seventh
+A# / Bb,A# / Bb Diminished Seventh
+B,B Diminished Seventh
+C,C Half Diminished Seventh
+C# / Db,C# / Db Half Diminished Seventh
+D,D Half Diminished Seventh
+D# / Eb,D# / Eb Half Diminished Seventh
+E,E Half Diminished Seventh
+F,F Half Diminished Seventh
+F# / Gb,F# / Gb Half Diminished Seventh
+G,G Half Diminished Seventh
+G# / Ab,G# / Ab Half Diminished Seventh
+A,A Half Diminished Seventh
+A# / Bb,A# / Bb Half Diminished Seventh
+B,B Half Diminished Seventh
+C,C Minor Major Seventh
+C# / Db,C# / Db Minor Major Seventh
+D,D Minor Major Seventh
+D# / Eb,D# / Eb Minor Major Seventh
+E,E Minor Major Seventh
+F,F Minor Major Seventh
+F# / Gb,F# / Gb Minor Major Seventh
+G,G Minor Major Seventh
+G# / Ab,G# / Ab Minor Major Seventh
+A,A Minor Major Seventh
+A# / Bb,A# / Bb Minor Major Seventh
+B,B Minor Major Seventh
+C,C Major Ninth
+C# / Db,C# / Db Major Ninth
+D,D Major Ninth
+D# / Eb,D# / Eb Major Ninth
+E,E Major Ninth
+F,F Major Ninth
+F# / Gb,F# / Gb Major Ninth
+G,G Major Ninth
+G# / Ab,G# / Ab Major Ninth
+A,A Major Ninth
+A# / Bb,A# / Bb Major Ninth
+B,B Major Ninth
+C,C Minor Ninth
+C# / Db,C# / Db Minor Ninth
+D,D Minor Ninth
+D# / Eb,D# / Eb Minor Ninth
+E,E Minor Ninth
+F,F Minor Ninth
+F# / Gb,F# / Gb Minor Ninth
+G,G Minor Ninth
+G# / Ab,G# / Ab Minor Ninth
+A,A Minor Ninth
+A# / Bb,A# / Bb Minor Ninth
+B,B Minor Ninth
+C,C Dominant Ninth
+C# / Db,C# / Db Dominant Ninth
+D,D Dominant Ninth
+D# / Eb,D# / Eb Dominant Ninth
+E,E Dominant Ninth
+F,F Dominant Ninth
+F# / Gb,F# / Gb Dominant Ninth
+G,G Dominant Ninth
+G# / Ab,G# / Ab Dominant Ninth
+A,A Dominant Ninth
+A# / Bb,A# / Bb Dominant Ninth
+B,B Dominant Ninth

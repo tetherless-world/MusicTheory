@@ -1,0 +1,1254 @@
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+
+mto-kb:head-explicit_entry { 
+	mto-kb:nanoPub-explicit_entry	rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-explicit_entry ;
+		np:hasProvenance mto-kb:provenance-explicit_entry ;
+		np:hasPublicationInfo mto-kb:pubInfo-explicit_entry .
+}
+
+mto-kb:assertion-explicit_entry {
+	mto-kb:Major_Key	rdf:type	owl:Class ;
+		rdfs:subClassOf mto:MajorKey .
+
+	mto-kb:Minor_Key	rdf:type	owl:Class ;
+		rdfs:subClassOf mto:MinorKey .
+
+	mto-kb:Number_of_Flats	rdf:type	owl:Class ;
+		rdfs:subClassOf sio:Count ;
+		sio:isAttributeOf mto-kb:flat .
+
+	mto-kb:Number_of_Sharps	rdf:type	owl:Class ;
+		rdfs:subClassOf sio:Count ;
+		sio:isAttributeOf mto-kb:sharp .
+
+}
+
+mto-kb:provenance-explicit_entry {
+	mto-kb:assertion-explicit_entry	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-explicit_entry {
+	mto-kb:nanoPub-explicit_entry	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime .
+}
+
+mto-kb:head-virtual_entry { 
+	mto-kb:nanoPub-virtual_entry	rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-virtual_entry ;
+		np:hasProvenance mto-kb:provenance-virtual_entry ;
+		np:hasPublicationInfo mto-kb:pubInfo-virtual_entry .
+}
+
+mto-kb:assertion-virtual_entry {
+	mto-kb:key_signature	rdf:type	owl:Class ;
+		rdfs:label "key_signature" ;
+		rdfs:subClassOf mto:KeySignature .
+
+	mto-kb:flat	rdf:type	owl:Class ;
+		rdfs:label "flat" ;
+		rdfs:subClassOf mto:Sharp .
+
+	mto-kb:sharp	rdf:type	owl:Class ;
+		rdfs:label "sharp" ;
+		rdfs:subClassOf mto:Flat .
+
+}
+
+mto-kb:provenance-virtual_entry {
+	mto-kb:assertion-virtual_entry	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:key_signature
+		prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat
+		prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp
+		prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-virtual_entry {
+	mto-kb:nanoPub-virtual_entry	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime .
+}
+
+mto-kb:head-bbb7005f3484ebff32cff2d99b1d590e {
+	mto-kb:nanoPub-bbb7005f3484ebff32cff2d99b1d590e
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-bbb7005f3484ebff32cff2d99b1d590e ;
+		np:hasProvenance mto-kb:provenance-bbb7005f3484ebff32cff2d99b1d590e ;
+		np:hasPublicationInfo mto-kb:pubInfo-bbb7005f3484ebff32cff2d99b1d590e .
+}
+
+mto-kb:assertion-bbb7005f3484ebff32cff2d99b1d590e {
+	mto-kb:Major_Key-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Minor_Key-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Number_of_Flats-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:inRelationTo	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:hasValue	"0"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:inRelationTo	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e ;
+		sio:hasValue	"0"^^xsd:integer .
+
+	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-bbb7005f3484ebff32cff2d99b1d590e	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-bbb7005f3484ebff32cff2d99b1d590e {
+	mto-kb:assertion-bbb7005f3484ebff32cff2d99b1d590e prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-bbb7005f3484ebff32cff2d99b1d590e	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-bbb7005f3484ebff32cff2d99b1d590e {
+	mto-kb:nanoPub-bbb7005f3484ebff32cff2d99b1d590e prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-bbb7005f3484ebff32cff2d99b1d590e
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-bbb7005f3484ebff32cff2d99b1d590e
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-bbb7005f3484ebff32cff2d99b1d590e
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-bbb7005f3484ebff32cff2d99b1d590e
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-8c20eb79412d0cfd751024064269c5c0 {
+	mto-kb:nanoPub-8c20eb79412d0cfd751024064269c5c0
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-8c20eb79412d0cfd751024064269c5c0 ;
+		np:hasProvenance mto-kb:provenance-8c20eb79412d0cfd751024064269c5c0 ;
+		np:hasPublicationInfo mto-kb:pubInfo-8c20eb79412d0cfd751024064269c5c0 .
+}
+
+mto-kb:assertion-8c20eb79412d0cfd751024064269c5c0 {
+	mto-kb:Major_Key-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0 ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Minor_Key-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0 ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Number_of_Flats-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-8c20eb79412d0cfd751024064269c5c0 ;
+		sio:inRelationTo	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0 .
+
+	mto-kb:Number_of_Sharps-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-8c20eb79412d0cfd751024064269c5c0 ;
+		sio:inRelationTo	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0 ;
+		sio:hasValue	"1"^^xsd:integer .
+
+	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-8c20eb79412d0cfd751024064269c5c0	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-8c20eb79412d0cfd751024064269c5c0 {
+	mto-kb:assertion-8c20eb79412d0cfd751024064269c5c0 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-8c20eb79412d0cfd751024064269c5c0	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-8c20eb79412d0cfd751024064269c5c0 {
+	mto-kb:nanoPub-8c20eb79412d0cfd751024064269c5c0 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-8c20eb79412d0cfd751024064269c5c0
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-8c20eb79412d0cfd751024064269c5c0
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-8c20eb79412d0cfd751024064269c5c0
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-8c20eb79412d0cfd751024064269c5c0
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd {
+	mto-kb:nanoPub-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		np:hasProvenance mto-kb:provenance-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		np:hasPublicationInfo mto-kb:pubInfo-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd .
+}
+
+mto-kb:assertion-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd {
+	mto-kb:Major_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Minor_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Number_of_Flats-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		sio:inRelationTo	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd .
+
+	mto-kb:Number_of_Sharps-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		sio:inRelationTo	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd ;
+		sio:hasValue	"2"^^xsd:integer .
+
+	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd {
+	mto-kb:assertion-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd {
+	mto-kb:nanoPub-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e1c6537ee2f0b4ef5ec17ee0fc0a5dbd
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-ed9ed9d8edb0ef3986bd27fbd327878b {
+	mto-kb:nanoPub-ed9ed9d8edb0ef3986bd27fbd327878b
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		np:hasProvenance mto-kb:provenance-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		np:hasPublicationInfo mto-kb:pubInfo-ed9ed9d8edb0ef3986bd27fbd327878b .
+}
+
+mto-kb:assertion-ed9ed9d8edb0ef3986bd27fbd327878b {
+	mto-kb:Major_Key-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		sio:hasValue	"A"^^xsd:string .
+
+	mto-kb:Minor_Key-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		sio:hasValue	"F#"^^xsd:string .
+
+	mto-kb:Number_of_Flats-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		sio:inRelationTo	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b .
+
+	mto-kb:Number_of_Sharps-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		sio:inRelationTo	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b ;
+		sio:hasValue	"3"^^xsd:integer .
+
+	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-ed9ed9d8edb0ef3986bd27fbd327878b	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-ed9ed9d8edb0ef3986bd27fbd327878b {
+	mto-kb:assertion-ed9ed9d8edb0ef3986bd27fbd327878b prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-ed9ed9d8edb0ef3986bd27fbd327878b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-ed9ed9d8edb0ef3986bd27fbd327878b {
+	mto-kb:nanoPub-ed9ed9d8edb0ef3986bd27fbd327878b prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ed9ed9d8edb0ef3986bd27fbd327878b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ed9ed9d8edb0ef3986bd27fbd327878b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ed9ed9d8edb0ef3986bd27fbd327878b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ed9ed9d8edb0ef3986bd27fbd327878b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-e1b0e45b8fd0fd66ff6baaef3ce423af {
+	mto-kb:nanoPub-e1b0e45b8fd0fd66ff6baaef3ce423af
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		np:hasProvenance mto-kb:provenance-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		np:hasPublicationInfo mto-kb:pubInfo-e1b0e45b8fd0fd66ff6baaef3ce423af .
+}
+
+mto-kb:assertion-e1b0e45b8fd0fd66ff6baaef3ce423af {
+	mto-kb:Major_Key-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		sio:hasValue	"E"^^xsd:string .
+
+	mto-kb:Minor_Key-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		sio:hasValue	"C#"^^xsd:string .
+
+	mto-kb:Number_of_Flats-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		sio:inRelationTo	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af .
+
+	mto-kb:Number_of_Sharps-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		sio:inRelationTo	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af ;
+		sio:hasValue	"4"^^xsd:integer .
+
+	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-e1b0e45b8fd0fd66ff6baaef3ce423af	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-e1b0e45b8fd0fd66ff6baaef3ce423af {
+	mto-kb:assertion-e1b0e45b8fd0fd66ff6baaef3ce423af prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-e1b0e45b8fd0fd66ff6baaef3ce423af	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-e1b0e45b8fd0fd66ff6baaef3ce423af {
+	mto-kb:nanoPub-e1b0e45b8fd0fd66ff6baaef3ce423af prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e1b0e45b8fd0fd66ff6baaef3ce423af
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e1b0e45b8fd0fd66ff6baaef3ce423af
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e1b0e45b8fd0fd66ff6baaef3ce423af
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e1b0e45b8fd0fd66ff6baaef3ce423af
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-1c5da9a365ab2917a0930a6f270af5cb {
+	mto-kb:nanoPub-1c5da9a365ab2917a0930a6f270af5cb
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-1c5da9a365ab2917a0930a6f270af5cb ;
+		np:hasProvenance mto-kb:provenance-1c5da9a365ab2917a0930a6f270af5cb ;
+		np:hasPublicationInfo mto-kb:pubInfo-1c5da9a365ab2917a0930a6f270af5cb .
+}
+
+mto-kb:assertion-1c5da9a365ab2917a0930a6f270af5cb {
+	mto-kb:Major_Key-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb ;
+		sio:hasValue	"B"^^xsd:string .
+
+	mto-kb:Minor_Key-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb ;
+		sio:hasValue	"G#"^^xsd:string .
+
+	mto-kb:Number_of_Flats-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-1c5da9a365ab2917a0930a6f270af5cb ;
+		sio:inRelationTo	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb .
+
+	mto-kb:Number_of_Sharps-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-1c5da9a365ab2917a0930a6f270af5cb ;
+		sio:inRelationTo	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb ;
+		sio:hasValue	"5"^^xsd:integer .
+
+	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-1c5da9a365ab2917a0930a6f270af5cb	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-1c5da9a365ab2917a0930a6f270af5cb {
+	mto-kb:assertion-1c5da9a365ab2917a0930a6f270af5cb prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-1c5da9a365ab2917a0930a6f270af5cb	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-1c5da9a365ab2917a0930a6f270af5cb {
+	mto-kb:nanoPub-1c5da9a365ab2917a0930a6f270af5cb prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-1c5da9a365ab2917a0930a6f270af5cb
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-1c5da9a365ab2917a0930a6f270af5cb
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-1c5da9a365ab2917a0930a6f270af5cb
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-1c5da9a365ab2917a0930a6f270af5cb
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-e9e711f018be5fce8dfe24bc4bcdae31 {
+	mto-kb:nanoPub-e9e711f018be5fce8dfe24bc4bcdae31
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		np:hasProvenance mto-kb:provenance-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		np:hasPublicationInfo mto-kb:pubInfo-e9e711f018be5fce8dfe24bc4bcdae31 .
+}
+
+mto-kb:assertion-e9e711f018be5fce8dfe24bc4bcdae31 {
+	mto-kb:Major_Key-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		sio:hasValue	"F#"^^xsd:string .
+
+	mto-kb:Minor_Key-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		sio:hasValue	"D#"^^xsd:string .
+
+	mto-kb:Number_of_Flats-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		sio:inRelationTo	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31 .
+
+	mto-kb:Number_of_Sharps-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		sio:inRelationTo	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31 ;
+		sio:hasValue	"6"^^xsd:integer .
+
+	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-e9e711f018be5fce8dfe24bc4bcdae31	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-e9e711f018be5fce8dfe24bc4bcdae31 {
+	mto-kb:assertion-e9e711f018be5fce8dfe24bc4bcdae31 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-e9e711f018be5fce8dfe24bc4bcdae31	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-e9e711f018be5fce8dfe24bc4bcdae31 {
+	mto-kb:nanoPub-e9e711f018be5fce8dfe24bc4bcdae31 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-e9e711f018be5fce8dfe24bc4bcdae31
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-e9e711f018be5fce8dfe24bc4bcdae31
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-e9e711f018be5fce8dfe24bc4bcdae31
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-e9e711f018be5fce8dfe24bc4bcdae31
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-85bcc20017ccab0d20e68e5e7ee4a331 {
+	mto-kb:nanoPub-85bcc20017ccab0d20e68e5e7ee4a331
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		np:hasProvenance mto-kb:provenance-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		np:hasPublicationInfo mto-kb:pubInfo-85bcc20017ccab0d20e68e5e7ee4a331 .
+}
+
+mto-kb:assertion-85bcc20017ccab0d20e68e5e7ee4a331 {
+	mto-kb:Major_Key-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		sio:hasValue	"C#"^^xsd:string .
+
+	mto-kb:Minor_Key-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		sio:hasValue	"A#"^^xsd:string .
+
+	mto-kb:Number_of_Flats-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		sio:inRelationTo	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331 .
+
+	mto-kb:Number_of_Sharps-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		sio:inRelationTo	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331 ;
+		sio:hasValue	"7"^^xsd:integer .
+
+	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-85bcc20017ccab0d20e68e5e7ee4a331	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-85bcc20017ccab0d20e68e5e7ee4a331 {
+	mto-kb:assertion-85bcc20017ccab0d20e68e5e7ee4a331 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-85bcc20017ccab0d20e68e5e7ee4a331	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-85bcc20017ccab0d20e68e5e7ee4a331 {
+	mto-kb:nanoPub-85bcc20017ccab0d20e68e5e7ee4a331 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-85bcc20017ccab0d20e68e5e7ee4a331
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-85bcc20017ccab0d20e68e5e7ee4a331
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-85bcc20017ccab0d20e68e5e7ee4a331
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-85bcc20017ccab0d20e68e5e7ee4a331
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-3874a0ebc0e6f6047ff4f25cad7303c9 {
+	mto-kb:nanoPub-3874a0ebc0e6f6047ff4f25cad7303c9
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		np:hasProvenance mto-kb:provenance-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		np:hasPublicationInfo mto-kb:pubInfo-3874a0ebc0e6f6047ff4f25cad7303c9 .
+}
+
+mto-kb:assertion-3874a0ebc0e6f6047ff4f25cad7303c9 {
+	mto-kb:Major_Key-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Minor_Key-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		sio:hasValue	"D"^^xsd:string .
+
+	mto-kb:Number_of_Flats-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		sio:inRelationTo	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		sio:hasValue	"1"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-3874a0ebc0e6f6047ff4f25cad7303c9 ;
+		sio:inRelationTo	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9 .
+
+	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-3874a0ebc0e6f6047ff4f25cad7303c9	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-3874a0ebc0e6f6047ff4f25cad7303c9 {
+	mto-kb:assertion-3874a0ebc0e6f6047ff4f25cad7303c9 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-3874a0ebc0e6f6047ff4f25cad7303c9	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-3874a0ebc0e6f6047ff4f25cad7303c9 {
+	mto-kb:nanoPub-3874a0ebc0e6f6047ff4f25cad7303c9 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-3874a0ebc0e6f6047ff4f25cad7303c9
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-3874a0ebc0e6f6047ff4f25cad7303c9
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-3874a0ebc0e6f6047ff4f25cad7303c9
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-3874a0ebc0e6f6047ff4f25cad7303c9
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-9a3d72ca01a44561f5ff0ff42172919b {
+	mto-kb:nanoPub-9a3d72ca01a44561f5ff0ff42172919b
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-9a3d72ca01a44561f5ff0ff42172919b ;
+		np:hasProvenance mto-kb:provenance-9a3d72ca01a44561f5ff0ff42172919b ;
+		np:hasPublicationInfo mto-kb:pubInfo-9a3d72ca01a44561f5ff0ff42172919b .
+}
+
+mto-kb:assertion-9a3d72ca01a44561f5ff0ff42172919b {
+	mto-kb:Major_Key-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b ;
+		sio:hasValue	"Bb"^^xsd:string .
+
+	mto-kb:Minor_Key-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b ;
+		sio:hasValue	"G"^^xsd:string .
+
+	mto-kb:Number_of_Flats-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-9a3d72ca01a44561f5ff0ff42172919b ;
+		sio:inRelationTo	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b ;
+		sio:hasValue	"2"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-9a3d72ca01a44561f5ff0ff42172919b ;
+		sio:inRelationTo	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b .
+
+	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-9a3d72ca01a44561f5ff0ff42172919b	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-9a3d72ca01a44561f5ff0ff42172919b {
+	mto-kb:assertion-9a3d72ca01a44561f5ff0ff42172919b prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-9a3d72ca01a44561f5ff0ff42172919b	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-9a3d72ca01a44561f5ff0ff42172919b {
+	mto-kb:nanoPub-9a3d72ca01a44561f5ff0ff42172919b prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-9a3d72ca01a44561f5ff0ff42172919b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-9a3d72ca01a44561f5ff0ff42172919b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-9a3d72ca01a44561f5ff0ff42172919b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-9a3d72ca01a44561f5ff0ff42172919b
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-ee0218c99a879981d1182c533832e8da {
+	mto-kb:nanoPub-ee0218c99a879981d1182c533832e8da
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-ee0218c99a879981d1182c533832e8da ;
+		np:hasProvenance mto-kb:provenance-ee0218c99a879981d1182c533832e8da ;
+		np:hasPublicationInfo mto-kb:pubInfo-ee0218c99a879981d1182c533832e8da .
+}
+
+mto-kb:assertion-ee0218c99a879981d1182c533832e8da {
+	mto-kb:Major_Key-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da ;
+		sio:hasValue	"Eb"^^xsd:string .
+
+	mto-kb:Minor_Key-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da ;
+		sio:hasValue	"C"^^xsd:string .
+
+	mto-kb:Number_of_Flats-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-ee0218c99a879981d1182c533832e8da ;
+		sio:inRelationTo	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da ;
+		sio:hasValue	"3"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-ee0218c99a879981d1182c533832e8da ;
+		sio:inRelationTo	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da .
+
+	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-ee0218c99a879981d1182c533832e8da	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-ee0218c99a879981d1182c533832e8da {
+	mto-kb:assertion-ee0218c99a879981d1182c533832e8da prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-ee0218c99a879981d1182c533832e8da	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-ee0218c99a879981d1182c533832e8da {
+	mto-kb:nanoPub-ee0218c99a879981d1182c533832e8da prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ee0218c99a879981d1182c533832e8da
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ee0218c99a879981d1182c533832e8da
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ee0218c99a879981d1182c533832e8da
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ee0218c99a879981d1182c533832e8da
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-d07b4a7112ab94bcca905f2f6d96b795 {
+	mto-kb:nanoPub-d07b4a7112ab94bcca905f2f6d96b795
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-d07b4a7112ab94bcca905f2f6d96b795 ;
+		np:hasProvenance mto-kb:provenance-d07b4a7112ab94bcca905f2f6d96b795 ;
+		np:hasPublicationInfo mto-kb:pubInfo-d07b4a7112ab94bcca905f2f6d96b795 .
+}
+
+mto-kb:assertion-d07b4a7112ab94bcca905f2f6d96b795 {
+	mto-kb:Major_Key-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795 ;
+		sio:hasValue	"Ab"^^xsd:string .
+
+	mto-kb:Minor_Key-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795 ;
+		sio:hasValue	"F"^^xsd:string .
+
+	mto-kb:Number_of_Flats-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-d07b4a7112ab94bcca905f2f6d96b795 ;
+		sio:inRelationTo	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795 ;
+		sio:hasValue	"4"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-d07b4a7112ab94bcca905f2f6d96b795 ;
+		sio:inRelationTo	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795 .
+
+	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-d07b4a7112ab94bcca905f2f6d96b795	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-d07b4a7112ab94bcca905f2f6d96b795 {
+	mto-kb:assertion-d07b4a7112ab94bcca905f2f6d96b795 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-d07b4a7112ab94bcca905f2f6d96b795	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-d07b4a7112ab94bcca905f2f6d96b795 {
+	mto-kb:nanoPub-d07b4a7112ab94bcca905f2f6d96b795 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-d07b4a7112ab94bcca905f2f6d96b795
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-d07b4a7112ab94bcca905f2f6d96b795
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-d07b4a7112ab94bcca905f2f6d96b795
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-d07b4a7112ab94bcca905f2f6d96b795
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-ce3ebd64801bf2a5401ec215a76607e1 {
+	mto-kb:nanoPub-ce3ebd64801bf2a5401ec215a76607e1
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-ce3ebd64801bf2a5401ec215a76607e1 ;
+		np:hasProvenance mto-kb:provenance-ce3ebd64801bf2a5401ec215a76607e1 ;
+		np:hasPublicationInfo mto-kb:pubInfo-ce3ebd64801bf2a5401ec215a76607e1 .
+}
+
+mto-kb:assertion-ce3ebd64801bf2a5401ec215a76607e1 {
+	mto-kb:Major_Key-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1 ;
+		sio:hasValue	"Db"^^xsd:string .
+
+	mto-kb:Minor_Key-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1 ;
+		sio:hasValue	"Bb"^^xsd:string .
+
+	mto-kb:Number_of_Flats-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-ce3ebd64801bf2a5401ec215a76607e1 ;
+		sio:inRelationTo	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1 ;
+		sio:hasValue	"5"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-ce3ebd64801bf2a5401ec215a76607e1 ;
+		sio:inRelationTo	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1 .
+
+	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-ce3ebd64801bf2a5401ec215a76607e1	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-ce3ebd64801bf2a5401ec215a76607e1 {
+	mto-kb:assertion-ce3ebd64801bf2a5401ec215a76607e1 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-ce3ebd64801bf2a5401ec215a76607e1	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-ce3ebd64801bf2a5401ec215a76607e1 {
+	mto-kb:nanoPub-ce3ebd64801bf2a5401ec215a76607e1 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-ce3ebd64801bf2a5401ec215a76607e1
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-ce3ebd64801bf2a5401ec215a76607e1
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-ce3ebd64801bf2a5401ec215a76607e1
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-ce3ebd64801bf2a5401ec215a76607e1
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-db83af0482dcc815b4bd6bd6246e979c {
+	mto-kb:nanoPub-db83af0482dcc815b4bd6bd6246e979c
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-db83af0482dcc815b4bd6bd6246e979c ;
+		np:hasProvenance mto-kb:provenance-db83af0482dcc815b4bd6bd6246e979c ;
+		np:hasPublicationInfo mto-kb:pubInfo-db83af0482dcc815b4bd6bd6246e979c .
+}
+
+mto-kb:assertion-db83af0482dcc815b4bd6bd6246e979c {
+	mto-kb:Major_Key-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c ;
+		sio:hasValue	"Gb"^^xsd:string .
+
+	mto-kb:Minor_Key-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c ;
+		sio:hasValue	"Eb"^^xsd:string .
+
+	mto-kb:Number_of_Flats-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-db83af0482dcc815b4bd6bd6246e979c ;
+		sio:inRelationTo	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c ;
+		sio:hasValue	"6"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-db83af0482dcc815b4bd6bd6246e979c ;
+		sio:inRelationTo	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c .
+
+	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-db83af0482dcc815b4bd6bd6246e979c	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-db83af0482dcc815b4bd6bd6246e979c {
+	mto-kb:assertion-db83af0482dcc815b4bd6bd6246e979c prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-db83af0482dcc815b4bd6bd6246e979c	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-db83af0482dcc815b4bd6bd6246e979c {
+	mto-kb:nanoPub-db83af0482dcc815b4bd6bd6246e979c prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-db83af0482dcc815b4bd6bd6246e979c
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-db83af0482dcc815b4bd6bd6246e979c
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-db83af0482dcc815b4bd6bd6246e979c
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-db83af0482dcc815b4bd6bd6246e979c
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:head-223cf66aa67e3a3af8076e94c720e446 {
+	mto-kb:nanoPub-223cf66aa67e3a3af8076e94c720e446
+		rdf:type np:Nanopublication ;
+		np:hasAssertion mto-kb:assertion-223cf66aa67e3a3af8076e94c720e446 ;
+		np:hasProvenance mto-kb:provenance-223cf66aa67e3a3af8076e94c720e446 ;
+		np:hasPublicationInfo mto-kb:pubInfo-223cf66aa67e3a3af8076e94c720e446 .
+}
+
+mto-kb:assertion-223cf66aa67e3a3af8076e94c720e446 {
+	mto-kb:Major_Key-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:Major_Key ;
+		rdf:type	mto:MajorKey ;
+		sio:inRelationTo	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446 ;
+		sio:hasValue	"Cb"^^xsd:string .
+
+	mto-kb:Minor_Key-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:Minor_Key ;
+		rdf:type	mto:MinorKey ;
+		sio:inRelationTo	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446 ;
+		sio:hasValue	"Ab"^^xsd:string .
+
+	mto-kb:Number_of_Flats-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:Number_of_Flats ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:flat-223cf66aa67e3a3af8076e94c720e446 ;
+		sio:inRelationTo	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446 ;
+		sio:hasValue	"7"^^xsd:integer .
+
+	mto-kb:Number_of_Sharps-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:Number_of_Sharps ;
+		rdf:type	sio:Count ;
+		sio:isAttributeOf mto-kb:sharp-223cf66aa67e3a3af8076e94c720e446 ;
+		sio:inRelationTo	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446 .
+
+	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:key_signature;
+		rdf:type	mto:KeySignature .
+
+	mto-kb:flat-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:flat;
+		rdf:type	mto:Sharp .
+
+	mto-kb:sharp-223cf66aa67e3a3af8076e94c720e446	rdf:type	mto-kb:sharp;
+		rdf:type	mto:Flat .
+
+}
+
+mto-kb:provenance-223cf66aa67e3a3af8076e94c720e446 {
+	mto-kb:assertion-223cf66aa67e3a3af8076e94c720e446 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:key_signature-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:flat-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:sharp-223cf66aa67e3a3af8076e94c720e446	prov:generatedAtTime	"2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+
+mto-kb:pubInfo-223cf66aa67e3a3af8076e94c720e446 {
+	mto-kb:nanoPub-223cf66aa67e3a3af8076e94c720e446 prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime .
+
+	mto-kb:Major_Key-223cf66aa67e3a3af8076e94c720e446
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Minor_Key-223cf66aa67e3a3af8076e94c720e446
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Flats-223cf66aa67e3a3af8076e94c720e446
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+	mto-kb:Number_of_Sharps-223cf66aa67e3a3af8076e94c720e446
+		prov:generatedAtTime "2018-05-12T23:27:48Z"^^xsd:dateTime  .
+
+}
+

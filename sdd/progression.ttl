@@ -1,0 +1,155 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+
+:Progression rdf:type owl:Class ;
+    rdfs:comment "A succession or series"^^xsd:string ;
+    rdfs:label "Progression"^^xsd:string .
+
+:HarmonicProgression rdf:type owl:Class ;
+    rdfs:subClassOf :Progression ;
+    rdfs:comment "A succession of musical chords"^^xsd:string ;
+    skos:altLabel "Chord Progression"^^xsd:string ;
+    rdfs:label "Harmonic Progression"^^xsd:string .
+
+:MajorProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a major scale"^^xsd:string ;
+    rdfs:label "Major Progression"^^xsd:string .
+
+:MinorProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a minor scale"^^xsd:string ;
+    rdfs:label "Minor Progression"^^xsd:string .
+
+:BluesProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a Blues scale"^^xsd:string ;
+    rdfs:label "Blues Progression"^^xsd:string .
+
+:MelodicProgression rdf:type owl:Class ;
+    rdfs:subClassOf :Progression ;
+    rdfs:comment "A succession of musical notes"^^xsd:string ;
+    rdfs:label "Melodic Progression"^^xsd:string .
+
+:Scale rdf:type owl:Class ;
+    rdfs:subClassOf :MelodicProgression ;
+    rdfs:comment "A set of musical notes ordered by fundamental frequency or pitch"^^xsd:string ;
+    rdfs:label "Scale"^^xsd:string .
+
+:ChromaticScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "12"^^xsd:integer ;
+    rdfs:comment "A musical scale with twelve pitches each seperated by a semitone"^^xsd:string ;
+    rdfs:label "Chromatic Scale"^^xsd:string .
+
+:OctatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "8"^^xsd:integer ;
+    rdfs:comment "A musical scale with eight pitches"^^xsd:string ;
+    rdfs:label "Octatonic Scale"^^xsd:string .
+
+:HeptatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "7"^^xsd:integer ;
+    rdfs:comment "A musical scale with seven pitches"^^xsd:string ;
+    rdfs:label "Heptatonic Scale"^^xsd:string .
+
+:DiatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale consisting of five whole tones and two semitones"^^xsd:string ;
+    rdfs:label "Diatonic Scale"^^xsd:string .
+
+:MajorScale rdf:type owl:Class ;
+    rdfs:subClassOf :DiatonicScale ;
+    rdfs:comment "A diatonic scale following a T-T-S-T-T-T-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-T-S-T-T-T-S"^^xsd:string ;
+    rdfs:label "Major Scale"^^xsd:string .
+
+:NaturalMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :DiatonicScale ;
+    rdfs:comment "A diatonic scale following a T-S-T-T-S-T-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-S-T-T"^^xsd:string ;
+    rdfs:label "Natural Minor Scale"^^xsd:string .
+
+:HarmonicMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale following a T-S-T-T-S-[T+S]-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-S-[T+S]-S"^^xsd:string ;
+    rdfs:label "Harmonic Minor Scale"^^xsd:string .
+
+:MelodicMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale following a T-S-T-T-T-T-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-T-T-S"^^xsd:string ;
+    rdfs:label "Melodic Minor Scale"^^xsd:string .
+
+:HexatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "6"^^xsd:integer ;
+    rdfs:comment "A musical scale with six pitches"^^xsd:string ;
+    rdfs:label "Hexatonic Scale"^^xsd:string .
+
+:MinorBluesScale rdf:type owl:Class ;
+    rdfs:subClassOf :HexatonicScale ;
+    rdfs:comment "A hexatonic scale following a [T+S]-T-S-S-[T+S]-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "[T+S]-T-S-S-[T+S]-T"^^xsd:string ;
+    rdfs:label "Blues Scale"^^xsd:string .
+
+:MajorBluesScale rdf:type owl:Class ;
+    rdfs:subClassOf :HexatonicScale ;
+    rdfs:comment "A hexatonic scale following a T-S-S-[T+S]-T-[T+S] interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-S-[T+S]-T-[T+S]"^^xsd:string ;
+    rdfs:label "Blues Scale"^^xsd:string .
+
+:PentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "5"^^xsd:integer ;
+    rdfs:comment "A musical scale with five pitches"^^xsd:string ;
+    rdfs:label "Pentatonic Scale"^^xsd:string .
+
+:MajorPentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :PentatonicScale ;
+    rdfs:comment "A pentatonic scale following a T-T-[T+S]-T-[T+S] interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-T-[T+S]-T-[T+S]"^^xsd:string ;
+    rdfs:label "Major Pentatonic Scale"^^xsd:string .
+
+:MinorPentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :PentatonicScale ;
+    rdfs:comment "A pentatonic scale following a [T+S]-T-T-[T+S]-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "[T+S]-T-T-[T+S]-T"^^xsd:string ;
+    rdfs:label "Minor Pentatonic Scale"^^xsd:string .
+
+:TetratonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "4"^^xsd:integer ;
+    rdfs:comment "A musical scale with four pitches"^^xsd:string ;
+    rdfs:label "Tetratonic Scale"^^xsd:string .
+
+:TritonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "3"^^xsd:integer ;
+    rdfs:comment "A musical scale with three pitches"^^xsd:string ;
+    rdfs:label "Tritonic Scale"^^xsd:string .
+
+:DitonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "2"^^xsd:integer ;
+    rdfs:comment "A musical scale with two pitches"^^xsd:string ;
+    rdfs:label "Ditonic Scale"^^xsd:string .
+
+:MonotonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "1"^^xsd:integer ;
+    rdfs:comment "A musical scale with a single pitch"^^xsd:string ;
+    rdfs:label "Monotonic Scale"^^xsd:string .

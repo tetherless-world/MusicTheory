@@ -1,0 +1,1214 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
+@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix chord: <http://purl.org/ontology/chord/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+
+<http://idea.rpi.edu/ontologies/mto.ttl>
+    rdf:type owl:Ontology ;
+    dct:creator "Sabbir M. Rashid"^^xsd:string ;
+    dct:created "2018-05-15T12:00:00"^^xsd:dateTime ;
+    dct:modified "2018-05-19T14:30:00"^^xsd:dateTime ;
+    dct:contributor "David C. De Roure"^^xsd:string, "Deborah L. McGuinness"^^xsd:string;
+    dct:description "The Music Theory Ontology was designed to be able to formally represent rudimentary concepts used to describe music. Included are classes for musical notation, such as accidentals or time signatures; duration, describing how long a note is or is not played; intervals, representing tonal difference between pitches; and progressions, which involve the succession of notes or chords."^^xsd:string ;
+    dct:title "Music Theory Ontology"^^xsd:string ;
+    #owl:imports <http://purl.org/ontology/mo/>, <http://semanticscience.org/resource/>, <http://purl.org/NET/c4dm/timeline.owl#>, <http://purl.org/ontology/chord/> ;
+    dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    owl:versionIRI <http://idea.rpi.edu/heals/ont/mto/0.9> .
+
+:hasSemitoneCount rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of half steps or semitones associated with a given interval"^^xsd:string ;
+    rdfs:label "has semitone count" ;
+    rdfs:domain :Interval ;
+    rdfs:range xsd:integer .
+
+:hasNoteCount rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of notes or pitches associated with a given chord or scale"^^xsd:string ;
+    rdfs:label "has note count" ;
+    rdfs:range xsd:integer .
+
+:hasFlatCount rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of flats associated with a given key"^^xsd:string ;
+    rdfs:label "has flat count" ;
+    rdfs:domain :KeySignature ;
+    rdfs:range xsd:integer .
+
+:hasSharpCount rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of sharps associated with a given key"^^xsd:string ;
+    rdfs:domain :KeySignature ;
+    rdfs:label "has sharp count" ;
+    rdfs:range xsd:integer .
+
+:hasTonic rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the tonic note associated with a given scale or chord"^^xsd:string ;
+    rdfs:label "has tonic" ;
+    owl:equivalentProperty :hasRootNote .
+
+:hasDominant rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the dominant note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has dominant" ;
+    rdfs:domain :DiatonicScale .
+
+:hasMediant rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the mediant note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has mediant" ;
+    rdfs:domain :DiatonicScale .
+
+:hasSubdominant rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the subdominant note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has subdominant" ;
+    rdfs:domain :DiatonicScale .
+
+:hasSubmediant rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the submediant note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has submediant" ;
+    rdfs:domain :DiatonicScale .
+
+:hasSubtonic rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the subtonic note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has subtonic" ;
+    rdfs:domain :DiatonicScale .
+
+:hasSupertonic rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the supertonic note associated with a given diatonic scale"^^xsd:string ;
+    rdfs:label "has supertonic" ;
+    rdfs:domain :DiatonicScale .
+
+:hasDegree rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign degree of a note in a scale or chord"^^xsd:string ;
+    rdfs:label "has degree" ;
+    rdfs:domain :Note ;
+    rdfs:range xsd:integer .
+
+:hasNote rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign a note of arbitary degree to a chord or scale"^^xsd:string ;
+    rdfs:label "has note" ;
+    rdfs:range :Note .
+
+:hasRootNote rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to the root note to a chord or scale"^^xsd:string ;
+    rdfs:label "has root note" ;
+    rdfs:range :Note ;
+    owl:equivalentProperty :hasTonic .
+
+:hasUpperNumeral rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of beats associated with the upper numeral of a time signature, representing the beats per measure"^^xsd:string ;
+    rdfs:label "has upper numeral" ;
+    rdfs:domain :TimeSignature .
+
+:hasLowerNumeral rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the number of beats associated with the lower numeral of a time signature, representing the time value of each beat"^^xsd:string ;
+    rdfs:label "has lower numeral" ;
+    rdfs:domain :TimeSignature .
+
+:hasDurationLength  rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to assign the length of a duration, where a single unit represents a sixteenth of a beat"^^xsd:string ;
+    rdfs:label "has duration length" ;
+    rdfs:domain :Duration ;
+    rdfs:range xsd:integer .
+
+:hasIntervalPattern rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to represent pattern of intervals"^^xsd:string ;
+    rdfs:label "has interval pattern" ;
+    rdfs:domain :Scale .
+
+:hasComponentsList rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property to represent components of a chord in terms of intervals from the root note"^^xsd:string ;
+    rdfs:label "has components list" ;
+    rdfs:domain :Chord .
+
+:MusicalNotation rdf:type owl:Class ;
+    rdfs:comment "Symbol used to represent a musical concept"^^xsd:string ;
+    rdfs:label "Musical Notation" .
+
+:Stave rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A set of five parallel, equally-spaced, lines and four spaces, each representing a different musical pitch"^^xsd:string ;
+    skos:altLabel "Staff"^^xsd:string ;
+    rdfs:label "Stave"^^xsd:string .
+
+:Bar rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A segment of time on a sheet of music corresponding to a specific number of beats"^^xsd:string ;
+    skos:altLabel "Measure"^^xsd:string ;
+    rdfs:label "Bar"^^xsd:string .
+
+:Clef rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A musical symbol used to indicate the pitch of notes on a stave"^^xsd:string ;
+    rdfs:label "Clef"^^xsd:string .
+
+:GClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note G4"^^xsd:string ;
+    rdfs:label "G-Clef"^^xsd:string .
+
+:CClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note C4"^^xsd:string ;
+    rdfs:label "C-Clef"^^xsd:string .
+
+:FClef rdf:type owl:Class ;
+    rdfs:subClassOf :Clef ;
+    rdfs:comment "A clef with reference note F3"^^xsd:string ;
+    rdfs:label "F-Clef"^^xsd:string .
+
+:Signature rdf:type owl:Class ;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A notational convention"^^xsd:string ;
+    rdfs:label "Signature"^^xsd:string .
+
+:KeySignature rdf:type owl:Class ;
+    rdfs:comment "A set of accidentals placed on a stave to determine which notes are flat, natural, or sharp"^^xsd:string ;
+    rdfs:subClassOf :Signature ;
+    rdfs:label "Key Signature"^^xsd:string .
+
+:TimeSignature rdf:type owl:Class ;
+    rdfs:comment "A notational convention comprised of an upper and a lower numeral used to signify the number of beats per measure and time value of each beat, respectively"^^xsd:string ;
+    rdfs:subClassOf :Signature ;
+    rdfs:label "Time Signature"^^xsd:string .
+
+:SimpleMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat can be broken down into two-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Simple Meter"^^xsd:string .
+
+:CompoundMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat can be broken down into three-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Compound Meter"^^xsd:string .
+
+:ComplexMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat is irregular in the sense that it cannot be broken down into two- or three-part rhythms"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Complex Meter"^^xsd:string .
+
+:MixedMeter rdf:type owl:Class ;
+    rdfs:comment "A notational convention representing multiple, often alternating time signatures"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Mixed Meter"^^xsd:string .
+
+:AdditiveMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature where the beat is subdivided into smaller, irregular groups"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Additive Meter"^^xsd:string .
+
+:FractionalMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature that has an upper numeral that is a fraction"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Fractional Meter"^^xsd:string .
+
+:IrrationalMeter rdf:type owl:Class ;
+    rdfs:comment "A time signature that has a lower numeral that is not a power of 2"^^xsd:string ;
+    rdfs:subClassOf :TimeSignature ;
+    rdfs:label "Irrational Meter"^^xsd:string .
+
+:Interval rdf:type owl:Class ;
+    rdfs:comment "The difference between two pitches"^^xsd:string ;
+    owl:equivalentClass chord:Interval ;
+    rdfs:label "Interval"^^xsd:string .
+
+:HarmonicInterval rdf:type owl:Class;
+    rdfs:subClassOf :Interval ;
+    rdfs:comment "Occurs when multiple notes are played at the same time"^^xsd:string ;
+    rdfs:label "Harmonic Interval"^^xsd:string .
+
+:Chord rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicInterval ;
+    owl:equivalentClass chord:Chord ;
+    rdfs:comment "Any harmonic set of pitches consisting of two or more notes sounded simultaneously"^^xsd:string ;
+    rdfs:label "Chord"^^xsd:string .
+
+:Monad rdf:type owl:Class ;
+    rdfs:subClassOf :Chord ;
+    rdfs:comment "A single note or pitch"^^xsd:string ;
+    :hasNoteCount "1"^^xsd:integer ;
+    rdfs:label "Monad"^^xsd:string ;
+    skos:altLabel "Monochord"^^xsd:string .
+
+:Dyad rdf:type owl:Class ;
+    rdfs:comment "A set of two notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "2"^^xsd:integer ;
+    rdfs:label "Dyad"^^xsd:string ;
+    skos:altLabel "Dichord"^^xsd:string .
+
+:Triad rdf:type owl:Class ;
+    rdfs:comment "A set of three notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "3"^^xsd:integer ;
+    rdfs:label "Triad"^^xsd:string ;
+    skos:altLabel "Trichord"^^xsd:string .
+
+:MajorChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, and a perfect fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Triad ;
+    :hasComponentsList "(3,5)"^^xsd:string ;
+    skos:altLabel "maj"^^xsd:string ;
+    rdfs:label "Major Chord"^^xsd:string .
+
+:MinorChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, and a perfect fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Triad ;
+    :hasComponentsList "(b3,5)"^^xsd:string ;
+    skos:altLabel "min"^^xsd:string ;
+    rdfs:label "Minor Chord"^^xsd:string .
+
+:AugmentedChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, and a note an augmented fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Triad ;
+    :hasComponentsList "(3,#5)"^^xsd:string ;
+    skos:altLabel "aug"^^xsd:string ;
+    rdfs:label "Augmented Chord"^^xsd:string .
+
+:DiminishedChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, and a diminished fifth above the root"^^xsd:string ;
+    rdfs:subClassOf :Triad ;
+    :hasComponentsList "(b3,b5)"^^xsd:string ;
+    skos:altLabel "dim"^^xsd:string ;
+    rdfs:label "Diminished Chord"^^xsd:string .
+
+:SuspendedChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the third is replaced"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    rdfs:label "Suspended Chord"^^xsd:string .
+
+:SuspendedSecondChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the third is replaced by the major second"^^xsd:string ;
+    rdfs:subClassOf :SuspendedChord, :Triad ;
+    :hasComponentsList "(2,5)"^^xsd:string ;
+    skos:altLabel "sus2"^^xsd:string ;
+    rdfs:label "Suspended Second Chord"^^xsd:string .
+
+:SuspendedFourthChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the third is replaced by the perfect fourth"^^xsd:string ;
+    rdfs:subClassOf :SuspendedChord, :Triad ;
+    :hasComponentsList "(4,5)"^^xsd:string ;
+    skos:altLabel "sus4"^^xsd:string ;
+    rdfs:label "Suspended Fourth Chord"^^xsd:string .
+
+:Tetrad rdf:type owl:Class ;
+    rdfs:comment "A set of four notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "4"^^xsd:integer ;
+    rdfs:label "Tetrad"^^xsd:string ;
+    skos:altLabel "Tetrachord"^^xsd:string .
+
+:SixthChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the sixth above the root is also included"^^xsd:string ;
+    rdfs:subClassOf :Tetrad ;
+    rdfs:label "Sixth Chord"^^xsd:string .
+
+:MajorSixthChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a major 6th above the root"^^xsd:string ;
+    rdfs:subClassOf :SixthChord ;
+    :hasComponentsList "(3,5,6)"^^xsd:string ;
+    skos:altLabel "maj6"^^xsd:string ;
+    rdfs:label "Major Sixth Chord"^^xsd:string .
+
+:MinorSixthChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a major 6th above the root"^^xsd:string ;
+    rdfs:subClassOf :SixthChord ;
+    :hasComponentsList "(b3,5,6)"^^xsd:string ;
+    skos:altLabel "min6"^^xsd:string ;
+    rdfs:label "Minor Sixth Chord"^^xsd:string .
+
+:SeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the seventh above the root is also included"^^xsd:string ;
+    rdfs:subClassOf :Tetrad ;
+    rdfs:label "Seventh Chord"^^xsd:string .
+
+:MajorSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a major 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(3,5,7)"^^xsd:string ;
+    skos:altLabel "maj7"^^xsd:string ;
+    rdfs:label "Major Seventh Chord"^^xsd:string .
+
+:MinorSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(b3,5,b7)"^^xsd:string ;
+    skos:altLabel "min7"^^xsd:string ;
+    rdfs:label "Minor Seventh Chord"^^xsd:string .
+
+:DominantSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(3,5,b7)"^^xsd:string ;
+    skos:altLabel "7"^^xsd:string ;
+    rdfs:label "Dominant Seventh Chord"^^xsd:string .
+
+:DiminishedSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a diminished fifth above the root, and a diminished minor 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(b3,b5,bb7)"^^xsd:string ;
+    skos:altLabel "dim7"^^xsd:string ;
+    rdfs:label "Diminished Seventh Chord"^^xsd:string .
+
+:HalfDiminishedSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a diminished fifth above the root, and a minor 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(b3,b5,b7)"^^xsd:string ;
+    skos:altLabel "dim7"^^xsd:string ;
+    rdfs:label "Half Diminished Seventh Chord"^^xsd:string .
+
+:MinorMajorSeventhChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a major 7th above the root"^^xsd:string ;
+    rdfs:subClassOf :SeventhChord ;
+    :hasComponentsList "(b3,5,7)"^^xsd:string ;
+    skos:altLabel "minmaj7"^^xsd:string ;
+    rdfs:label "Minor (Major Seventh) Chord"^^xsd:string .
+
+:Pentad rdf:type owl:Class ;
+    rdfs:comment "A set of five notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "5"^^xsd:integer ;
+    rdfs:label "Pentad"^^xsd:string ;
+    skos:altLabel "Pentachord"^^xsd:string .
+
+:NinthChord rdf:type owl:Class ;
+    rdfs:comment "A chord in which the seventh and ninth above the root are included"^^xsd:string ;
+    rdfs:subClassOf :Pentad ;
+    rdfs:label "Ninth Chord"^^xsd:string .
+
+:MajorNinthChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, a major 7th above the root, and a major 9th above the root"^^xsd:string ;
+    rdfs:subClassOf :NinthChord ;
+    :hasComponentsList "(3,5,7,9)"^^xsd:string ;
+    skos:altLabel "maj9"^^xsd:string ;
+    rdfs:label "Major Ninth Chord"^^xsd:string .
+
+:MinorNinthChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root, and a major 9th above the root"^^xsd:string ;
+    rdfs:subClassOf :NinthChord ;
+    :hasComponentsList "(b3,5,b7,9)"^^xsd:string ;
+    skos:altLabel "min9"^^xsd:string ;
+    rdfs:label "Minor Ninth Chord"^^xsd:string .
+
+:DominantNinthChord rdf:type owl:Class ;
+    rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a minor 7th above the root, and a major 9th above the root"^^xsd:string ;
+    rdfs:subClassOf :NinthChord ;
+    :hasComponentsList "(3,5,b7,9)"^^xsd:string ;
+    skos:altLabel "9"^^xsd:string ;
+    rdfs:label "Dominant Ninth Chord"^^xsd:string .
+
+:Hexad rdf:type owl:Class ;
+    rdfs:comment "A set of six notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "6"^^xsd:integer ;
+    rdfs:label "Hexad"^^xsd:string ;
+    skos:altLabel "Hexachord"^^xsd:string .
+
+:Heptad rdf:type owl:Class ;
+    rdfs:comment "A set of seven notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "7"^^xsd:integer ;
+    rdfs:label "Heptad"^^xsd:string ;
+    skos:altLabel "Heptachord"^^xsd:string .
+
+:Octad rdf:type owl:Class ;
+    rdfs:comment "A set of eight notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "8"^^xsd:integer ;
+    rdfs:label "Octad"^^xsd:string ;
+    skos:altLabel "Octachord"^^xsd:string .
+
+:Ennead rdf:type owl:Class ;
+    rdfs:comment "A set of nine notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "9"^^xsd:integer ;
+    rdfs:label "Ennead"^^xsd:string ;
+    skos:altLabel "Nonachord"^^xsd:string .
+
+:Decad rdf:type owl:Class ;
+    rdfs:comment "A set of ten notes or pitches"^^xsd:string ;
+    rdfs:subClassOf :Chord ;
+    :hasNoteCount "10"^^xsd:integer ;
+    rdfs:label "Decad"^^xsd:string ;
+    skos:altLabel "Decachord"^^xsd:string .
+
+:MelodicInterval rdf:type owl:Class;
+    rdfs:subClassOf :Interval ;
+    rdfs:comment "Occurs when multiple notes are played in sequence"^^xsd:string ;
+    rdfs:label "Melodic Interval"^^xsd:string .
+
+:DiatonicInterval rdf:type owl:Class;
+    rdfs:comment "Any interval where the first and last note are part of the same major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Diatonic Interval"^^xsd:string .
+
+:ChromaticInterval rdf:type owl:Class;
+    rdfs:comment "Any interval where the first and last note are not part of the same major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Chromatic Interval"^^xsd:string .
+
+:PerfectInterval rdf:type owl:Class ;
+    rdfs:comment "An interval with a high degree of consonance (traditionally considered perfectly consonant) that can be inverted to form other perfect intervals"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Perfect Interval"^^xsd:string .
+
+:MajorInterval rdf:type owl:Class ;
+    rdfs:comment "An interval corresponding to notes in a major scale"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Major Interval"^^xsd:string .
+
+:MinorInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which the corresponding major interval is narrowed by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Minor Interval"^^xsd:string .
+
+:AugmentedInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which a major or perfect interval is widened by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Augmented Interval"^^xsd:string .
+
+:DiminishedInterval rdf:type owl:Class ;
+    rdfs:comment "An interval in which a minor or perfect interval is narrowed by a chromatic semitone"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Diminished Interval"^^xsd:string .
+
+:PerfectUnisonInterval rdf:type owl:Class ;
+    rdfs:comment "An interval where two or more notes are playing the same pitch"^^xsd:string ;
+    :hasSemitoneCount "0"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Unison"^^xsd:string ;
+    skos:altLabel "P1"^^xsd:string ;
+    owl:equivalentClass :DiminishedSecondInterval .
+
+:DiminishedSecondInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor second by one chromatic semitone, enharmonically equivalent to a perfect unison"^^xsd:string ;
+    :hasSemitoneCount "0"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Second"^^xsd:string ;
+    skos:altLabel "d2"^^xsd:string ;
+    owl:equivalentClass :PerfectUnisonInterval .
+
+:MinorSecondInterval rdf:type owl:Class ;
+    rdfs:comment "An interval of a single chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Second"^^xsd:string ;
+    skos:altLabel "m2"^^xsd:string ;
+    owl:equivalentClass :AugmentedUnisonInterval, :Semitone, :HalfStep .
+
+:AugmentedUnisonInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect unison by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Unison"^^xsd:string ;
+    skos:altLabel "A1"^^xsd:string ;
+    owl:equivalentClass :MinorSecondInterval, :Semitone, :HalfStep .
+
+:MajorSecondInterval rdf:type owl:Class ;
+    rdfs:comment "An interval of a single chromatic whole tone"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Second"^^xsd:string ;
+    skos:altLabel "M2"^^xsd:string ;
+    owl:equivalentClass :DiminishedThirdInterval, :WholeTone, :WholeStep .
+
+:DiminishedThirdInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor third by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Third"^^xsd:string ;
+    skos:altLabel "d3"^^xsd:string ;
+    owl:equivalentClass :MajorSecondInterval, :WholeTone, :WholeStep  .
+
+:MinorThirdInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing three semitones"^^xsd:string ;
+    :hasSemitoneCount "3"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Third"^^xsd:string ;
+    skos:altLabel "m3"^^xsd:string ;
+    owl:equivalentClass :AugmentedSecondInterval .
+
+:AugmentedSecondInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major second by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "3"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Second"^^xsd:string ;
+    skos:altLabel "A2"^^xsd:string ;
+    owl:equivalentClass :MinorThirdInterval .
+
+:MajorThirdInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing four semitones"^^xsd:string ;
+    :hasSemitoneCount "4"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Third"^^xsd:string ;
+    skos:altLabel "M3"^^xsd:string ;
+    owl:equivalentClass :DiminishedFourthInterval .
+
+:DiminishedFourthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect fourth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "4"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Fourth"^^xsd:string ;
+    skos:altLabel "d4"^^xsd:string ;
+    owl:equivalentClass :MajorThirdInterval .
+
+:PerfectFourthInterval rdf:type owl:Class ;
+    rdfs:comment "An interval where the pair of pitches follow a frequency ratio of 4:3, encompassing a difference of five semitones"^^xsd:string ;
+    :hasSemitoneCount "5"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Fourth"^^xsd:string ;
+    skos:altLabel "P4"^^xsd:string ;
+    owl:equivalentClass :AugmentedThirdInterval .
+
+:AugmentedThirdInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major third by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "5"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Third"^^xsd:string ;
+    skos:altLabel "A3"^^xsd:string ;
+    owl:equivalentClass :PerfectFourthInterval .
+
+:DiminishedFifthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect fifth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Fifth"^^xsd:string ;
+    skos:altLabel "d5"^^xsd:string ;
+    owl:equivalentClass :AugmentedFourthInterval, :Tritone .
+
+:AugmentedFourthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect fourth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Fourth"^^xsd:string ;
+    skos:altLabel "A4"^^xsd:string ;
+    owl:equivalentClass :DiminishedFifthInterval, :Tritone .
+
+:PerfectFifthInterval rdf:type owl:Class ;
+    rdfs:comment "An interval where the pair of pitches follow a frequency ratio of 3:2, encompassing a difference of seven semitones"^^xsd:string ;
+    :hasSemitoneCount "7"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Fifth"^^xsd:string ;
+    skos:altLabel "P5"^^xsd:string ;
+    owl:equivalentClass :DiminishedSixthInterval .
+
+:DiminishedSixthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor sixth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "7"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Sixth"^^xsd:string ;
+    skos:altLabel "d6"^^xsd:string ;
+    owl:equivalentClass :PerfectFifthInterval .
+
+:MinorSixthInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing eight semitones"^^xsd:string ;
+    :hasSemitoneCount "8"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Sixth"^^xsd:string ;
+    skos:altLabel "m6"^^xsd:string ;
+    owl:equivalentClass :AugmentedFifthInterval .
+
+:AugmentedFifthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a perfect fifth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "8"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Fifth"^^xsd:string ;
+    skos:altLabel "A5"^^xsd:string ;
+    owl:equivalentClass :MinorSixthInterval .
+
+:MajorSixthInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing nine semitones"^^xsd:string ;
+    :hasSemitoneCount "9"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Sixth"^^xsd:string ;
+    skos:altLabel "M6"^^xsd:string ;
+    owl:equivalentClass :DiminishedSeventhInterval .
+
+:DiminishedSeventhInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a minor seventh by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "9"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Seventh"^^xsd:string ;
+    skos:altLabel "d7"^^xsd:string ;
+    owl:equivalentClass :MajorSixthInterval .
+
+:MinorSeventhInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing ten semitones"^^xsd:string ;
+    :hasSemitoneCount "10"^^xsd:integer ;
+    rdfs:subClassOf :MinorInterval ;
+    rdfs:label "Minor Seventh"^^xsd:string ;
+    skos:altLabel "m7"^^xsd:string ;
+    owl:equivalentClass :AugmentedSixthInterval .
+
+:AugmentedSixthInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major sixth by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "10"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Sixth"^^xsd:string ;
+    skos:altLabel "A6"^^xsd:string ;
+    owl:equivalentClass :MinorSeventhInterval .
+
+:MajorSeventhInterval rdf:type owl:Class ;
+    rdfs:comment "An interval encompassing eleven semitones"^^xsd:string ;
+    :hasSemitoneCount "11"^^xsd:integer ;
+    rdfs:subClassOf :MajorInterval ;
+    rdfs:label "Major Seventh"^^xsd:string ;
+    skos:altLabel "M7"^^xsd:string ;
+    owl:equivalentClass :DiminishedOctaveInterval .
+
+:DiminishedOctaveInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by diminishing a perfect octave by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "11"^^xsd:integer ;
+    rdfs:subClassOf :DiminishedInterval ;
+    rdfs:label "Diminished Seventh"^^xsd:string ;
+    skos:altLabel "d8"^^xsd:string ;
+    owl:equivalentClass :MajorSeventhInterval .
+
+:PerfectOctaveInterval rdf:type owl:Class ;
+    rdfs:comment "An interval where the starting (lower) note is half the frequency of the ending note"^^xsd:string ;
+    :hasSemitoneCount "12"^^xsd:integer ;
+    rdfs:subClassOf :PerfectInterval ;
+    rdfs:label "Perfect Octave"^^xsd:string ;
+    skos:altLabel "P8"^^xsd:string ;
+    owl:equivalentClass :AugmentedSeventhInterval .
+
+:AugmentedSeventhInterval rdf:type owl:Class ;
+    rdfs:comment "The interval produced by augmenting a major seventh by one chromatic semitone"^^xsd:string ;
+    :hasSemitoneCount "12"^^xsd:integer ;
+    rdfs:subClassOf :AugmentedInterval ;
+    rdfs:label "Augmented Seventh"^^xsd:string ;
+    skos:altLabel "A7"^^xsd:string ;
+    owl:equivalentClass :PerfectOctaveInterval .
+
+:Step rdf:type owl:Class;
+    rdfs:comment "A categorization of an interval"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Step"^^xsd:string ;
+    owl:equivalentClass :Tone .
+
+:HalfStep rdf:type owl:Class;
+    rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :Step ;
+    owl:equivalentClass :Semitone, :MinorSecondInterval, :AugmentedUnisonInterval ;
+    skos:altLabel "S"^^xsd:string ;
+    rdfs:label "Half Step"^^xsd:string .
+
+:WholeStep rdf:type owl:Class;
+    rdfs:comment "An interval of two half steps"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :Step ;
+    owl:equivalentClass :WholeTone, :MajorSecondInterval, :DiminishedThirdInterval ;
+    skos:altLabel "T"^^xsd:string ;
+    rdfs:label "Whole Step"^^xsd:string .
+
+:Tone rdf:type owl:Class;
+    rdfs:comment "A categorization of an interval"^^xsd:string ;
+    rdfs:subClassOf :Interval ;
+    rdfs:label "Tone"^^xsd:string ;
+    owl:equivalentClass :Step .
+
+:Microtone rdf:type owl:Class;
+    rdfs:comment "An interval smaller than a semitone"^^xsd:string ;
+    rdfs:subClassOf :Tone ;
+    rdfs:label "Microtone"^^xsd:string .
+
+:Semitone rdf:type owl:Class;
+    rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
+    :hasSemitoneCount "1"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :HalfStep, :MinorSecondInterval, :AugmentedUnisonInterval ;
+    skos:altLabel "S"^^xsd:string ;
+    rdfs:label "Semitone"^^xsd:string .
+
+:WholeTone rdf:type owl:Class;
+    rdfs:comment "An interval of two semitones"^^xsd:string ;
+    :hasSemitoneCount "2"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :WholeStep, :MajorSecondInterval, :DiminishedThirdInterval ;
+    skos:altLabel "T"^^xsd:string ;
+    rdfs:label "Whole Tone"^^xsd:string .
+
+:Tritone rdf:type owl:Class;
+    rdfs:comment "An interval of six semitones"^^xsd:string ;
+    :hasSemitoneCount "6"^^xsd:integer ;
+    rdfs:subClassOf :Tone ;
+    owl:equivalentClass :DiminishedFifthInterval, :AugmentedFourthInterval ;
+    skos:altLabel "TT"^^xsd:string ;
+    rdfs:label "Tritone"^^xsd:string .
+
+:Key rdf:type owl:Class ;
+    rdfs:comment "Group of pitches or scale"^^xsd:string ;
+    rdfs:label "Key"^^xsd:string .
+
+:MajorKey rdf:type owl:Class ;
+    rdfs:subClassOf :Key ;
+    rdfs:comment "A key where the third scale degree is major"^^xsd:string ;
+    rdfs:label "Major Key"^^xsd:string .
+
+:MinorKey rdf:type owl:Class ;
+    rdfs:subClassOf :Key ;
+    rdfs:comment "A key where the third scale degree is minor"^^xsd:string ;
+    rdfs:label "Minor Key"^^xsd:string .
+
+:Wavelength rdf:type owl:Class ;
+    rdfs:comment "The difference between to successive crests of a wave, mathematically the quotient of the wave velocity over frequency"^^xsd:string ;
+    rdfs:label "Wavelength"^^xsd:string .
+
+:Accidental rdf:type owl:Class;
+    rdfs:subClassOf :MusicalNotation ;
+    rdfs:comment "A notation symbol on a stave that represents a change in the pitch of a note"^^xsd:string ;
+    rdfs:label "Acidental"^^xsd:string .
+
+:Natural rdf:type owl:Class;
+    rdfs:subClassOf :Accidental ;
+    rdfs:comment "An accidental which represents the unaltered pitch of a note by canceling previous accidentals"^^xsd:string ;
+    rdfs:label "Natural"^^xsd:string .
+
+:Sharp rdf:type owl:Class;
+    rdfs:subClassOf :Accidental ;
+    rdfs:comment "An accidental which raises the pitch of a note by a half step"^^xsd:string ;
+    rdfs:label "Sharp"^^xsd:string .
+
+:DoubleSharp rdf:type owl:Class;
+    rdfs:subClassOf :Accidental ;
+    rdfs:comment "An accidental which raises the pitch of a note by a whole step"^^xsd:string ;
+    rdfs:label "Double Sharp"^^xsd:string .
+
+:Flat rdf:type owl:Class;
+    rdfs:subClassOf :Accidental ;
+    rdfs:comment "An accidental which lowers the pitch of a note by a half step"^^xsd:string ;
+    rdfs:label "Flat"^^xsd:string .
+
+:DoubleFlat rdf:type owl:Class;
+    rdfs:subClassOf :Accidental ;
+    rdfs:comment "An accidental which lowers the pitch of a note by a whole step"^^xsd:string ;
+    rdfs:label "Double Flat"^^xsd:string .
+
+:Note rdf:type owl:Class ;
+    rdfs:comment "A representation of sound in terms of a pitch and duration"^^xsd:string ;
+    rdfs:label "Note"^^xsd:string .
+
+:Pitch rdf:type owl:Class ;
+    rdfs:comment "A perceptual property of sound as related to the frequency of a note"^^xsd:string ;
+    rdfs:label "Pitch"^^xsd:string .
+
+:Duration rdf:type owl:Class ;
+    rdfs:subClassOf sio:TimeInterval ;
+    rdfs:comment "An amount of time in terms of beat length"^^xsd:string ;
+    rdfs:label "Duration"^^xsd:string .
+
+:NoteDuration rdf:type owl:Class ;
+    rdfs:subClassOf :Duration ;
+    rdfs:comment "The amount of time a note is played"^^xsd:string ;
+    rdfs:label "Note Duration"^^xsd:string .
+
+:Longa rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for sixteen times the length of a beat"^^xsd:string ;
+    skos:altLabel "Quadruple Whole Note"^^xsd:string ;
+    :hasDurationLength "256"^^xsd:integer ;
+    rdfs:label "Longa"^^xsd:string .
+
+:Breve rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for eight times the length of a beat"^^xsd:string ;
+    skos:altLabel "Double Whole Note"^^xsd:string ;
+    :hasDurationLength "128"^^xsd:integer ;
+    rdfs:label "Breve"^^xsd:string .
+
+:Semibreve rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for four times the length of a beat"^^xsd:string ;
+    skos:altLabel "Whole Note"^^xsd:string ;
+    :hasDurationLength "64"^^xsd:integer ;
+    rdfs:label "Semibreve"^^xsd:string .
+
+:Minim rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for twice the length of a beat"^^xsd:string ;
+    skos:altLabel "Half Note"^^xsd:string ;
+    :hasDurationLength "32"^^xsd:integer ;
+    rdfs:label "Minim"^^xsd:string .
+
+:Crotchet rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for the length of a beat"^^xsd:string ;
+    skos:altLabel "Quarter Note"^^xsd:string ;
+    :hasDurationLength "16"^^xsd:integer ;
+    rdfs:label "Crotchet"^^xsd:string .
+
+:Quaver rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for half the length of a beat"^^xsd:string ;
+    skos:altLabel "Eight Note"^^xsd:string ;
+    :hasDurationLength "8"^^xsd:integer ;
+    rdfs:label "Quaver"^^xsd:string .
+
+:Semiquaver rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for a quarter the length of a beat"^^xsd:string ;
+    skos:altLabel "Sixteenth Note"^^xsd:string ;
+    :hasDurationLength "4"^^xsd:integer ;
+    rdfs:label "Semiquaver"^^xsd:string .
+
+:Demisemiquaver rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for an eighth the length of a beat"^^xsd:string ;
+    skos:altLabel "Thirthy-Second Note"^^xsd:string ;
+    :hasDurationLength "2"^^xsd:integer ;
+    rdfs:label "Demisemiquaver"^^xsd:string .
+
+:Hemidemisemiquaver rdf:type owl:Class ;
+    rdfs:subClassOf :NoteDuration ;
+    rdfs:comment "Note played for a sixteenth the length of a beat"^^xsd:string ;
+    skos:altLabel "Sixty-Fourth Note"^^xsd:string ;
+    :hasDurationLength "1"^^xsd:integer ;
+    rdfs:label "Hemidemisemiquaver"^^xsd:string .
+
+:Rest rdf:type owl:Class;
+    rdfs:subClassOf :Duration ;
+    rdfs:comment "The amount of time that no note is played"^^xsd:string ;
+    rdfs:label "Rest"^^xsd:string .
+
+:LongaRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for sixteen times the length of a beat"^^xsd:string ;
+    skos:altLabel "Quadruple Whole Rest"^^xsd:string ;
+    :hasDurationLength "256"^^xsd:integer ;
+    rdfs:label "Longa Rest"^^xsd:string .
+
+:BreveRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for eight times the length of a beat"^^xsd:string ;
+    skos:altLabel "Double Whole Rest"^^xsd:string ;
+    :hasDurationLength "128"^^xsd:integer ;
+    rdfs:label "Breve Rest"^^xsd:string .
+
+:SemibreveRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for four times the length of a beat"^^xsd:string ;
+    skos:altLabel "Whole Rest"^^xsd:string ;
+    :hasDurationLength "64"^^xsd:integer ;
+    rdfs:label "Semibreve Rest"^^xsd:string .
+
+:MinimRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for twice the length of a beat"^^xsd:string ;
+    skos:altLabel "Half Rest"^^xsd:string ;
+    :hasDurationLength "32"^^xsd:integer ;
+    rdfs:label "Minim Rest"^^xsd:string .
+
+:CrotchetRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for the length of a beat"^^xsd:string ;
+    skos:altLabel "Quarter Rest"^^xsd:string ;
+    :hasDurationLength "16"^^xsd:integer ;
+    rdfs:label "Crotchet Rest"^^xsd:string .
+
+:QuaverRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for half the length of a beat"^^xsd:string ;
+    skos:altLabel "Eight Rest"^^xsd:string ;
+    :hasDurationLength "8"^^xsd:integer ;
+    rdfs:label "Quaver Rest"^^xsd:string .
+
+:SemiquaverRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for a quarter the length of a beat"^^xsd:string ;
+    skos:altLabel "Sixteenth Rest"^^xsd:string ;
+    :hasDurationLength "4"^^xsd:integer ;
+    rdfs:label "Semiquaver Rest"^^xsd:string .
+
+:DemisemiquaverRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for an eight the length of a beat"^^xsd:string ;
+    skos:altLabel "Thirthy-Second Rest"^^xsd:string ;
+    :hasDurationLength "2"^^xsd:integer ;
+    rdfs:label "Demisemiquaver Rest"^^xsd:string .
+
+:HemidemisemiquaverRest rdf:type owl:Class ;
+    rdfs:subClassOf :Rest ;
+    rdfs:comment "Rest for a sixteenth the length of a beat"^^xsd:string ;
+    skos:altLabel "Sixty-Fourth Rest"^^xsd:string ;
+    :hasDurationLength "1"^^xsd:integer ;
+    rdfs:label "Hemidemisemiquaver Rest"^^xsd:string .
+
+:Degree rdf:type owl:Class ;
+    rdfs:comment "The position of a particular note on a scale"^^xsd:string ;
+    rdfs:label "Degree"^^xsd:string .
+
+:DiatonicDegree rdf:type owl:Class ;
+    rdfs:comment "The position of a particular note on a diatonic scale"^^xsd:string ;
+    rdfs:subClassOf :Degree ;
+    rdfs:label "Diatonic Degree"^^xsd:string .
+
+:Tonic rdf:type owl:Class ;
+    rdfs:comment "Tonal center, or root note"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "I"^^xsd:string ;
+    rdfs:label "Tonic"^^xsd:string .
+
+:Supertonic rdf:type owl:Class ;
+    rdfs:comment "One whole step above the tonic"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "ii"^^xsd:string ;
+    rdfs:label "Supertonic"^^xsd:string .
+
+:Mediant rdf:type owl:Class ;
+    rdfs:comment "Midway between tonic and dominant"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "iii"^^xsd:string ;
+    rdfs:label "Mediant"^^xsd:string .
+
+:Subdominant rdf:type owl:Class ;
+    rdfs:comment "Lower dominant"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "IV"^^xsd:string ;
+    rdfs:label "Subdominant"^^xsd:string .
+
+:Dominant rdf:type owl:Class ;
+    rdfs:comment "A fifth above the tonic"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "V"^^xsd:string ;
+    rdfs:label "Dominant"^^xsd:string .
+
+:Submediant rdf:type owl:Class ;
+    rdfs:comment "Lower mediant, midway between tonic and subdominant"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "vi"^^xsd:string ;
+    rdfs:label "Submediant"^^xsd:string .
+
+:Subtonic rdf:type owl:Class ;
+    rdfs:comment "One half step below tonic"^^xsd:string ;
+    rdfs:subClassOf :DiatonicDegree ;
+    skos:altLabel "bVII"^^xsd:string ;
+    rdfs:label "Subtonic"^^xsd:string .
+
+mto-kb:A rdf:type :Note ;
+    rdfs:comment "A Named Note"^^xsd:string ;
+    rdfs:label "A"^^xsd:string .
+
+mto-kb:ASharp rdf:type :Note ;
+    rdfs:comment "A# Named Note"^^xsd:string ;
+    rdfs:label "A#"^^xsd:string ;
+    owl:sameAs :BFlat .
+
+mto-kb:BFlat rdf:type :Note ;
+    rdfs:comment "Bb Named Note"^^xsd:string ;
+    rdfs:label "Bb"^^xsd:string ;
+    owl:sameAs :ASharp .
+
+mto-kb:B rdf:type :Note ;
+    rdfs:comment "B Named Note"^^xsd:string ;
+    rdfs:label "B"^^xsd:string .
+
+mto-kb:C rdf:type :Note ;
+    rdfs:comment "C Named Note"^^xsd:string ;
+    rdfs:label "C"^^xsd:string .
+
+mto-kb:CSharp rdf:type :Note ;
+    rdfs:comment "C# Named Note"^^xsd:string ;
+    rdfs:label "C#"^^xsd:string ;
+    owl:sameAs :DFlat .
+
+mto-kb:DFlat rdf:type :Note ;
+    rdfs:comment "Db Named Note"^^xsd:string ;
+    rdfs:label "Db"^^xsd:string ;
+    owl:sameAs :CSharp .
+
+mto-kb:D rdf:type :Note ;
+    rdfs:comment "D Named Note"^^xsd:string ;
+    rdfs:label "D"^^xsd:string .
+
+mto-kb:DSharp rdf:type :Note ;
+    rdfs:comment "D# Named Note"^^xsd:string ;
+    rdfs:label "D#"^^xsd:string ;
+    owl:sameAs :EFlat .
+
+mto-kb:EFlat rdf:type :Note ;
+    rdfs:comment "Eb Named Note"^^xsd:string ;
+    rdfs:label "Eb"^^xsd:string ;
+    owl:sameAs :DSharp .
+
+mto-kb:E rdf:type :Note ;
+    rdfs:comment "E Named Note"^^xsd:string ;
+    rdfs:label "E"^^xsd:string .
+
+mto-kb:F rdf:type :Note ;
+    rdfs:comment "F Named Note"^^xsd:string ;
+    rdfs:label "F"^^xsd:string .
+
+mto-kb:FSharp rdf:type :Note ;
+    rdfs:comment "F# Named Note"^^xsd:string ;
+    rdfs:label "F#"^^xsd:string ;
+    owl:sameAs :GFlat .
+
+mto-kb:GFlat rdf:type :Note ;
+    rdfs:comment "Gb Named Note"^^xsd:string ;
+    rdfs:label "Gb"^^xsd:string ;
+    owl:sameAs :FSharp .
+
+mto-kb:G rdf:type :Note ;
+    rdfs:comment "G Named Note"^^xsd:string ;
+    rdfs:label "G"^^xsd:string .
+
+mto-kb:GSharp rdf:type :Note ;
+    rdfs:comment "G# Named Note"^^xsd:string ;
+    rdfs:label "G#"^^xsd:string ;
+    owl:sameAs :AFlat .
+
+mto-kb:AFlat rdf:type :Note  ;
+    rdfs:comment "Ab Named Note"^^xsd:string ;
+    rdfs:label "Ab"^^xsd:string ;
+    owl:sameAs mto-kb:GSharp .
+
+:Progression rdf:type owl:Class ;
+    rdfs:comment "A succession or series"^^xsd:string ;
+    rdfs:label "Progression"^^xsd:string .
+
+:HarmonicProgression rdf:type owl:Class ;
+    rdfs:subClassOf :Progression ;
+    rdfs:comment "A succession of musical chords"^^xsd:string ;
+    skos:altLabel "Chord Progression"^^xsd:string ;
+    rdfs:label "Harmonic Progression"^^xsd:string .
+
+:MajorProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a major scale"^^xsd:string ;
+    rdfs:label "Major Progression"^^xsd:string .
+
+:MinorProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a minor scale"^^xsd:string ;
+    rdfs:label "Minor Progression"^^xsd:string .
+
+:BluesProgression rdf:type owl:Class ;
+    rdfs:subClassOf :HarmonicProgression ;
+    rdfs:comment "A succession of musical chords in a Blues scale"^^xsd:string ;
+    rdfs:label "Blues Progression"^^xsd:string .
+
+:MelodicProgression rdf:type owl:Class ;
+    rdfs:subClassOf :Progression ;
+    rdfs:comment "A succession of musical notes"^^xsd:string ;
+    rdfs:label "Melodic Progression"^^xsd:string .
+
+:Scale rdf:type owl:Class ;
+    rdfs:subClassOf :MelodicProgression ;
+    rdfs:comment "A set of musical notes ordered by fundamental frequency or pitch"^^xsd:string ;
+    rdfs:label "Scale"^^xsd:string .
+
+:ChromaticScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "12"^^xsd:integer ;
+    rdfs:comment "A musical scale with twelve pitches each seperated by a semitone"^^xsd:string ;
+    rdfs:label "Chromatic Scale"^^xsd:string .
+
+:OctatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "8"^^xsd:integer ;
+    rdfs:comment "A musical scale with eight pitches"^^xsd:string ;
+    rdfs:label "Octatonic Scale"^^xsd:string .
+
+:HeptatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "7"^^xsd:integer ;
+    rdfs:comment "A musical scale with seven pitches"^^xsd:string ;
+    rdfs:label "Heptatonic Scale"^^xsd:string .
+
+:DiatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale consisting of five whole tones and two semitones"^^xsd:string ;
+    rdfs:label "Diatonic Scale"^^xsd:string .
+
+:MajorScale rdf:type owl:Class ;
+    rdfs:subClassOf :DiatonicScale ;
+    rdfs:comment "A diatonic scale following a T-T-S-T-T-T-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-T-S-T-T-T-S"^^xsd:string ;
+    rdfs:label "Major Scale"^^xsd:string .
+
+:NaturalMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :DiatonicScale ;
+    rdfs:comment "A diatonic scale following a T-S-T-T-S-T-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-S-T-T"^^xsd:string ;
+    rdfs:label "Natural Minor Scale"^^xsd:string .
+
+:HarmonicMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale following a T-S-T-T-S-[T+S]-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-S-[T+S]-S"^^xsd:string ;
+    rdfs:label "Harmonic Minor Scale"^^xsd:string .
+
+:MelodicMinorScale rdf:type owl:Class ;
+    rdfs:subClassOf :HeptatonicScale ;
+    rdfs:comment "A heptatonic scale following a T-S-T-T-T-T-S interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-T-T-T-T-S"^^xsd:string ;
+    rdfs:label "Melodic Minor Scale"^^xsd:string .
+
+:HexatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "6"^^xsd:integer ;
+    rdfs:comment "A musical scale with six pitches"^^xsd:string ;
+    rdfs:label "Hexatonic Scale"^^xsd:string .
+
+:MinorBluesScale rdf:type owl:Class ;
+    rdfs:subClassOf :HexatonicScale ;
+    rdfs:comment "A hexatonic scale following a [T+S]-T-S-S-[T+S]-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "[T+S]-T-S-S-[T+S]-T"^^xsd:string ;
+    rdfs:label "Minor Blues Scale"^^xsd:string .
+
+:MajorBluesScale rdf:type owl:Class ;
+    rdfs:subClassOf :HexatonicScale ;
+    rdfs:comment "A hexatonic scale following a T-S-S-[T+S]-T-[T+S] interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-S-S-[T+S]-T-[T+S]"^^xsd:string ;
+    rdfs:label "Major Blues Scale"^^xsd:string .
+
+:PentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "5"^^xsd:integer ;
+    rdfs:comment "A musical scale with five pitches"^^xsd:string ;
+    rdfs:label "Pentatonic Scale"^^xsd:string .
+
+:MinorPentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :PentatonicScale ;
+    rdfs:comment "A pentatonic scale following a [T+S]-T-T-[T+S]-T interval pattern"^^xsd:string ;
+    :hasIntervalPattern "[T+S]-T-T-[T+S]-T"^^xsd:string ;
+    rdfs:label "Minor Pentatonic Scale"^^xsd:string .
+
+:MajorPentatonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :PentatonicScale ;
+    rdfs:comment "A pentatonic scale following a T-T-[T+S]-T-[T+S] interval pattern"^^xsd:string ;
+    :hasIntervalPattern "T-T-[T+S]-T-[T+S]"^^xsd:string ;
+    rdfs:label "Major Pentatonic Scale"^^xsd:string .
+
+:TetratonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "4"^^xsd:integer ;
+    rdfs:comment "A musical scale with four pitches"^^xsd:string ;
+    rdfs:label "Tetratonic Scale"^^xsd:string .
+
+:TritonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "3"^^xsd:integer ;
+    rdfs:comment "A musical scale with three pitches"^^xsd:string ;
+    rdfs:label "Tritonic Scale"^^xsd:string .
+
+:DitonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "2"^^xsd:integer ;
+    rdfs:comment "A musical scale with two pitches"^^xsd:string ;
+    rdfs:label "Ditonic Scale"^^xsd:string .
+
+:MonotonicScale rdf:type owl:Class ;
+    rdfs:subClassOf :Scale ;
+    :hasNoteCount "1"^^xsd:integer ;
+    rdfs:comment "A musical scale with a single pitch"^^xsd:string ;
+    rdfs:label "Monotonic Scale"^^xsd:string .

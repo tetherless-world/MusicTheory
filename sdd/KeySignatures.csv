@@ -1,0 +1,16 @@
+Major Key,Minor Key,Number of Flats,Number of Sharps
+C,A,0,0
+G,E,,1
+D,B,,2
+A,F#,,3
+E,C#,,4
+B,G#,,5
+F#,D#,,6
+C#,A#,,7
+F,D,1,
+Bb,G,2,
+Eb,C,3,
+Ab,F,4,
+Db,Bb,5,
+Gb,Eb,6,
+Cb,Ab,7,

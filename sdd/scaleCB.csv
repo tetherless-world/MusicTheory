@@ -1,0 +1,109 @@
+Column,Code,Label,Class
+Note,A,A,mto-kb:A
+Note,A# / Bb,A# / Bb,"mto-kb:ASharp, mto-kb:BFlat"
+Note,B,B,mto-kb:B
+Note,C,C,mto-kb:C
+Note,C# / Db,C# / Db,"mto-kb:CSharp, mto-kb:DFlat"
+Note,D,D,mto-kb:D
+Note,D# / Eb,D# / Eb,"mto-kb:DSharp, mto-kb:EFlat"
+Note,E,E,mto-kb:E
+Note,F,F,mto-kb:F
+Note,F# / Gb,F# / Gb,"mto-kb:FSharp, mto-kb:GFlat"
+Note,G,G,mto-kb:G
+Note,G# / Ab,G# / Ab,"mto-kb:GSharp, mto-kb:AFlat"
+Scale,A Major,A Major,mto:MajorScale
+Scale,A# / Bb Major,A# / Bb Major,mto:MajorScale
+Scale,B Major,B Major,mto:MajorScale
+Scale,C Major,C Major,mto:MajorScale
+Scale,C# / Db Major,C# / Db Major,mto:MajorScale
+Scale,D Major,D Major,mto:MajorScale
+Scale,D# / Eb Major,D# / Eb Major,mto:MajorScale
+Scale,E Major,E Major,mto:MajorScale
+Scale,F Major,F Major,mto:MajorScale
+Scale,F# / Gb Major,F# / Gb Major,mto:MajorScale
+Scale,G Major,G Major,mto:MajorScale
+Scale,G# / Ab Major,G# / Ab Major,mto:MajorScale
+Scale,A Natural Minor,A Natural Minor,mto:NaturalMinorScale
+Scale,A# / Bb Natural Minor,A# / Bb Natural Minor,mto:NaturalMinorScale
+Scale,B Natural Minor,B Natural Minor,mto:NaturalMinorScale
+Scale,C Natural Minor,C Natural Minor,mto:NaturalMinorScale
+Scale,C# / Db Natural Minor,C# / Db Natural Minor,mto:NaturalMinorScale
+Scale,D Natural Minor,D Natural Minor,mto:NaturalMinorScale
+Scale,D# / Eb Natural Minor,D# / Eb Natural Minor,mto:NaturalMinorScale
+Scale,E Natural Minor,E Natural Minor,mto:NaturalMinorScale
+Scale,F Natural Minor,F Natural Minor,mto:NaturalMinorScale
+Scale,F# / Gb Natural Minor,F# / Gb Natural Minor,mto:NaturalMinorScale
+Scale,G Natural Minor,G Natural Minor,mto:NaturalMinorScale
+Scale,G# / Ab Natural Minor,G# / Ab Natural Minor,mto:NaturalMinorScale
+Scale,A Melodic Minor,A Melodic Minor,mto:MelodicMinorScale
+Scale,A# / Bb Melodic Minor,A# / Bb Melodic Minor,mto:MelodicMinorScale
+Scale,B Melodic Minor,B Melodic Minor,mto:MelodicMinorScale
+Scale,C Melodic Minor,C Melodic Minor,mto:MelodicMinorScale
+Scale,C# / Db Melodic Minor,C# / Db Melodic Minor,mto:MelodicMinorScale
+Scale,D Melodic Minor,D Melodic Minor,mto:MelodicMinorScale
+Scale,D# / Eb Melodic Minor,D# / Eb Melodic Minor,mto:MelodicMinorScale
+Scale,E Melodic Minor,E Melodic Minor,mto:MelodicMinorScale
+Scale,F Melodic Minor,F Melodic Minor,mto:MelodicMinorScale
+Scale,F# / Gb Melodic Minor,F# / Gb Melodic Minor,mto:MelodicMinorScale
+Scale,G Melodic Minor,G Melodic Minor,mto:MelodicMinorScale
+Scale,G# / Ab Melodic Minor,G# / Ab Melodic Minor,mto:MelodicMinorScale
+Scale,A Harmonic Minor,A Harmonic Minor,mto:HarmonicMinorScale
+Scale,A# / Bb Harmonic Minor,A# / Bb Harmonic Minor,mto:HarmonicMinorScale
+Scale,B Harmonic Minor,B Harmonic Minor,mto:HarmonicMinorScale
+Scale,C Harmonic Minor,C Harmonic Minor,mto:HarmonicMinorScale
+Scale,C# / Db Harmonic Minor,C# / Db Harmonic Minor,mto:HarmonicMinorScale
+Scale,D Harmonic Minor,D Harmonic Minor,mto:HarmonicMinorScale
+Scale,D# / Eb Harmonic Minor,D# / Eb Harmonic Minor,mto:HarmonicMinorScale
+Scale,E Harmonic Minor,E Harmonic Minor,mto:HarmonicMinorScale
+Scale,F Harmonic Minor,F Harmonic Minor,mto:HarmonicMinorScale
+Scale,F# / Gb Harmonic Minor,F# / Gb Harmonic Minor,mto:HarmonicMinorScale
+Scale,G Harmonic Minor,G Harmonic Minor,mto:HarmonicMinorScale
+Scale,G# / Ab Harmonic Minor,G# / Ab Harmonic Minor,mto:HarmonicMinorScale
+Scale,C Minor Blues ,C Minor Blues ,mto:MinorBluesScale
+Scale,C# / Db Minor Blues ,C# / Db Minor Blues ,mto:MinorBluesScale
+Scale,D Minor Blues ,D Minor Blues ,mto:MinorBluesScale
+Scale,D# / Eb Minor Blues ,D# / Eb Minor Blues ,mto:MinorBluesScale
+Scale,E Minor Blues ,E Minor Blues ,mto:MinorBluesScale
+Scale,F Minor Blues ,F Minor Blues ,mto:MinorBluesScale
+Scale,F# / Gb Minor Blues ,F# / Gb Minor Blues ,mto:MinorBluesScale
+Scale,G Minor Blues ,G Minor Blues ,mto:MinorBluesScale
+Scale,G# / Ab Minor Blues ,G# / Ab Minor Blues ,mto:MinorBluesScale
+Scale,A Minor Blues ,A Minor Blues ,mto:MinorBluesScale
+Scale,A# / Bb Minor Blues ,A# / Bb Minor Blues ,mto:MinorBluesScale
+Scale,B Minor Blues ,B Minor Blues ,mto:MinorBluesScale
+Scale,C Major Blues ,C Major Blues ,mto:MajorBluesScale
+Scale,C# / Db Major Blues ,C# / Db Major Blues ,mto:MajorBluesScale
+Scale,D Major Blues ,D Major Blues ,mto:MajorBluesScale
+Scale,D# / Eb Major Blues ,D# / Eb Major Blues ,mto:MajorBluesScale
+Scale,E Major Blues ,E Major Blues ,mto:MajorBluesScale
+Scale,F Major Blues ,F Major Blues ,mto:MajorBluesScale
+Scale,F# / Gb Major Blues ,F# / Gb Major Blues ,mto:MajorBluesScale
+Scale,G Major Blues ,G Major Blues ,mto:MajorBluesScale
+Scale,G# / Ab Major Blues ,G# / Ab Major Blues ,mto:MajorBluesScale
+Scale,A Major Blues ,A Major Blues ,mto:MajorBluesScale
+Scale,A# / Bb Major Blues ,A# / Bb Major Blues ,mto:MajorBluesScale
+Scale,B Major Blues ,B Major Blues ,mto:MajorBluesScale
+Scale,C Minor Pentatonic ,C Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,C# / Db Minor Pentatonic ,C# / Db Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,D Minor Pentatonic ,D Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,D# / Eb Minor Pentatonic ,D# / Eb Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,E Minor Pentatonic ,E Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,F Minor Pentatonic ,F Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,F# / Gb Minor Pentatonic ,F# / Gb Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,G Minor Pentatonic ,G Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,G# / Ab Minor Pentatonic ,G# / Ab Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,A Minor Pentatonic ,A Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,A# / Bb Minor Pentatonic ,A# / Bb Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,B Minor Pentatonic ,B Minor Pentatonic ,mto:MinorPentatonicScale
+Scale,C Major Pentatonic ,C Major Pentatonic ,mto:MajorPentatonicScale
+Scale,C# / Db Major Pentatonic ,C# / Db Major Pentatonic ,mto:MajorPentatonicScale
+Scale,D Major Pentatonic ,D Major Pentatonic ,mto:MajorPentatonicScale
+Scale,D# / Eb Major Pentatonic ,D# / Eb Major Pentatonic ,mto:MajorPentatonicScale
+Scale,E Major Pentatonic ,E Major Pentatonic ,mto:MajorPentatonicScale
+Scale,F Major Pentatonic ,F Major Pentatonic ,mto:MajorPentatonicScale
+Scale,F# / Gb Major Pentatonic ,F# / Gb Major Pentatonic ,mto:MajorPentatonicScale
+Scale,G Major Pentatonic ,G Major Pentatonic ,mto:MajorPentatonicScale
+Scale,G# / Ab Major Pentatonic ,G# / Ab Major Pentatonic ,mto:MajorPentatonicScale
+Scale,A Major Pentatonic ,A Major Pentatonic ,mto:MajorPentatonicScale
+Scale,A# / Bb Major Pentatonic ,A# / Bb Major Pentatonic ,mto:MajorPentatonicScale
+Scale,B Major Pentatonic ,B Major Pentatonic ,mto:MajorPentatonicScale

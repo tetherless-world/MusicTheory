@@ -1,0 +1,7 @@
+Column,Attribute,attributeOf,Format,Unit,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,hasPosition,Label,Comment
+Name,sio:Name,Progression,,,,,,,,,,,,
+Key,mto:Key,Progression,,,,,,,,,,,,
+Progression,,,,,,mto:Progression,,,,,,,,
+Number of chords,sio:Count,??chord,,,,,,,Progression,,,,,
+Quality,sio:Quality,Progression,,,,,,,,,,,,
+??chord,,,,,,mto:Chord,,,,,,,,

@@ -1,0 +1,61 @@
+Column,Code,Label,Class
+Note,A,A,mto-kb:A
+Note,A# / Bb,A# / Bb,"mto-kb:ASharp, mto-kb:BFlat"
+Note,B,B,mto-kb:B
+Note,C,C,mto-kb-kb:C
+Note,C# / Db,C# / Db,"mto-kb:CSharp, mto-kb:DFlat"
+Note,D,D,mto-kb:D
+Note,D# / Eb,D# / Eb,"mto-kb:DSharp, mto-kb:EFlat"
+Note,E,E,mto-kb:E
+Note,F,F,mto-kb:F
+Note,F# / Gb,F# / Gb,"mto-kb:FSharp, mto-kb:GFlat"
+Note,G,G,mto-kb:G
+Note,G# / Ab,G# / Ab,"mto-kb:GSharp, mto-kb:AFlat"
+Scale,A Major,A Major,mto:MajorScale
+Scale,A# / Bb Major,A# / Bb Major,mto:MajorScale
+Scale,B Major,B Major,mto:MajorScale
+Scale,C Major,C Major,mto:MajorScale
+Scale,C# / Db Major,C# / Db Major,mto:MajorScale
+Scale,D Major,D Major,mto:MajorScale
+Scale,D# / Eb Major,D# / Eb Major,mto:MajorScale
+Scale,E Major,E Major,mto:MajorScale
+Scale,F Major,F Major,mto:MajorScale
+Scale,F# / Gb Major,F# / Gb Major,mto:MajorScale
+Scale,G Major,G Major,mto:MajorScale
+Scale,G# / Ab Major,G# / Ab Major,mto:MajorScale
+Scale,A Natural Minor,A Natural Minor,mto:NaturalMinorScale
+Scale,A# / Bb Natural Minor,A# / Bb Natural Minor,mto:NaturalMinorScale
+Scale,B Natural Minor,B Natural Minor,mto:NaturalMinorScale
+Scale,C Natural Minor,C Natural Minor,mto:NaturalMinorScale
+Scale,C# / Db Natural Minor,C# / Db Natural Minor,mto:NaturalMinorScale
+Scale,D Natural Minor,D Natural Minor,mto:NaturalMinorScale
+Scale,D# / Eb Natural Minor,D# / Eb Natural Minor,mto:NaturalMinorScale
+Scale,E Natural Minor,E Natural Minor,mto:NaturalMinorScale
+Scale,F Natural Minor,F Natural Minor,mto:NaturalMinorScale
+Scale,F# / Gb Natural Minor,F# / Gb Natural Minor,mto:NaturalMinorScale
+Scale,G Natural Minor,G Natural Minor,mto:NaturalMinorScale
+Scale,G# / Ab Natural Minor,G# / Ab Natural Minor,mto:NaturalMinorScale
+Scale,A Melodic Minor,A Melodic Minor,mto:MelodicMinorScale
+Scale,A# / Bb Melodic Minor,A# / Bb Melodic Minor,mto:MelodicMinorScale
+Scale,B Melodic Minor,B Melodic Minor,mto:MelodicMinorScale
+Scale,C Melodic Minor,C Melodic Minor,mto:MelodicMinorScale
+Scale,C# / Db Melodic Minor,C# / Db Melodic Minor,mto:MelodicMinorScale
+Scale,D Melodic Minor,D Melodic Minor,mto:MelodicMinorScale
+Scale,D# / Eb Melodic Minor,D# / Eb Melodic Minor,mto:MelodicMinorScale
+Scale,E Melodic Minor,E Melodic Minor,mto:MelodicMinorScale
+Scale,F Melodic Minor,F Melodic Minor,mto:MelodicMinorScale
+Scale,F# / Gb Melodic Minor,F# / Gb Melodic Minor,mto:MelodicMinorScale
+Scale,G Melodic Minor,G Melodic Minor,mto:MelodicMinorScale
+Scale,G# / Ab Melodic Minor,G# / Ab Melodic Minor,mto:MelodicMinorScale
+Scale,A Harmonic Minor,A Harmonic Minor,mto:HarmonicMinorScale
+Scale,A# / Bb Harmonic Minor,A# / Bb Harmonic Minor,mto:HarmonicMinorScale
+Scale,B Harmonic Minor,B Harmonic Minor,mto:HarmonicMinorScale
+Scale,C Harmonic Minor,C Harmonic Minor,mto:HarmonicMinorScale
+Scale,C# / Db Harmonic Minor,C# / Db Harmonic Minor,mto:HarmonicMinorScale
+Scale,D Harmonic Minor,D Harmonic Minor,mto:HarmonicMinorScale
+Scale,D# / Eb Harmonic Minor,D# / Eb Harmonic Minor,mto:HarmonicMinorScale
+Scale,E Harmonic Minor,E Harmonic Minor,mto:HarmonicMinorScale
+Scale,F Harmonic Minor,F Harmonic Minor,mto:HarmonicMinorScale
+Scale,F# / Gb Harmonic Minor,F# / Gb Harmonic Minor,mto:HarmonicMinorScale
+Scale,G Harmonic Minor,G Harmonic Minor,mto:HarmonicMinorScale
+Scale,G# / Ab Harmonic Minor,G# / Ab Harmonic Minor,mto:HarmonicMinorScale

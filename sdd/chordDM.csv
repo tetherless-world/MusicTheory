@@ -1,0 +1,3 @@
+Column,Attribute,attributeOf,Format,Unit,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,hasPosition,Label,Comment
+Note,,,,,,mto:Note,,,,,,,,
+Chord,,,,,,mto:Chord,,mto:hasRootNote,Note,,,,,
