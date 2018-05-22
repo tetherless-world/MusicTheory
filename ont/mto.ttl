@@ -14,7 +14,7 @@
 @prefix chord: <http://purl.org/ontology/chord/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
-@prefix : <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix : <http://purl.org/ontology/mto/> .
 
 <http://purl.org/ontology/mto/mto.ttl>
     rdf:type owl:Ontology ;
