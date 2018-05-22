@@ -7,8 +7,8 @@
 @prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix mto-kb: <http://idea.rpi.edu/heals/kb/mto#> .
-@prefix mto: <http://idea.rpi.edu/heals/ont/mto#> .
+@prefix mto-kb: <http://purl.org/ontology/mto/kb/> 
+@prefix mto: <http://purl.org/ontology/mto/> .
 @prefix mo: <http://purl.org/ontology/mo/> .
 @prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
 @prefix chord: <http://purl.org/ontology/chord/> .
@@ -16,7 +16,7 @@
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix : <http://idea.rpi.edu/heals/ont/mto#> .
 
-<http://idea.rpi.edu/ontologies/mto.ttl>
+<http://purl.org/ontology/mto/mto.ttl>
     rdf:type owl:Ontology ;
     dct:creator "Sabbir M. Rashid"^^xsd:string ;
     dct:created "2018-05-15T12:00:00"^^xsd:dateTime ;
@@ -26,7 +26,7 @@
     dct:title "Music Theory Ontology"^^xsd:string ;
     #owl:imports <http://purl.org/ontology/mo/>, <http://semanticscience.org/resource/>, <http://purl.org/NET/c4dm/timeline.owl#>, <http://purl.org/ontology/chord/> ;
     dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-    owl:versionIRI <http://idea.rpi.edu/heals/ont/mto/0.9> .
+    owl:versionIRI <http://purl.org/ontology/mto/0.9> .
 
 :hasSemitoneCount rdf:type owl:DatatypeProperty ;
     rdfs:comment "Property to assign the number of half steps or semitones associated with a given interval"^^xsd:string ;
