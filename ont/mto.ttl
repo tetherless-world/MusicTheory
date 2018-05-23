@@ -7,7 +7,7 @@
 @prefix uo: <http://purl.obolibrary.org/obo/UO_> . 
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix mto-kb: <http://purl.org/ontology/mto/kb/> 
+@prefix mto-kb: <http://purl.org/ontology/mto/kb/> .
 @prefix mto: <http://purl.org/ontology/mto/> .
 @prefix mo: <http://purl.org/ontology/mo/> .
 @prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
@@ -56,37 +56,48 @@
     rdfs:label "has tonic" ;
     owl:equivalentProperty :hasRootNote .
 
+:hasDiatonicDegree rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property to assign the degree associated with a diatonic scale"^^xsd:string ;
+    rdfs:label "has diatonic degree" ;
+    rdfs:domain :DiatonicScale .
+
 :hasDominant rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the dominant note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has dominant" ;
     rdfs:domain :DiatonicScale .
 
 :hasMediant rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the mediant note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has mediant" ;
     rdfs:domain :DiatonicScale .
 
 :hasSubdominant rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the subdominant note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has subdominant" ;
     rdfs:domain :DiatonicScale .
 
 :hasSubmediant rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the submediant note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has submediant" ;
     rdfs:domain :DiatonicScale .
 
 :hasSubtonic rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the subtonic note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has subtonic" ;
     rdfs:domain :DiatonicScale .
 
 :hasSupertonic rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDiatonicDegree ;
     rdfs:comment "Property to assign the supertonic note associated with a given diatonic scale"^^xsd:string ;
     rdfs:label "has supertonic" ;
     rdfs:domain :DiatonicScale .
 
-:hasDegree rdf:type owl:ObjectProperty ;
+:hasDegree rdf:type owl:DatatypeProperty ;
     rdfs:comment "Property to assign degree of a note in a scale or chord"^^xsd:string ;
     rdfs:label "has degree" ;
     rdfs:domain :Note ;
@@ -220,7 +231,7 @@
     owl:equivalentClass chord:Interval ;
     rdfs:label "Interval"^^xsd:string .
 
-:HarmonicInterval rdf:type owl:Class;
+:HarmonicInterval rdf:type owl:Class ;
     rdfs:subClassOf :Interval ;
     rdfs:comment "Occurs when multiple notes are played at the same time"^^xsd:string ;
     rdfs:label "Harmonic Interval"^^xsd:string .
@@ -440,17 +451,17 @@
     rdfs:label "Decad"^^xsd:string ;
     skos:altLabel "Decachord"^^xsd:string .
 
-:MelodicInterval rdf:type owl:Class;
+:MelodicInterval rdf:type owl:Class ;
     rdfs:subClassOf :Interval ;
     rdfs:comment "Occurs when multiple notes are played in sequence"^^xsd:string ;
     rdfs:label "Melodic Interval"^^xsd:string .
 
-:DiatonicInterval rdf:type owl:Class;
+:DiatonicInterval rdf:type owl:Class ;
     rdfs:comment "Any interval where the first and last note are part of the same major scale"^^xsd:string ;
     rdfs:subClassOf :Interval ;
     rdfs:label "Diatonic Interval"^^xsd:string .
 
-:ChromaticInterval rdf:type owl:Class;
+:ChromaticInterval rdf:type owl:Class ;
     rdfs:comment "Any interval where the first and last note are not part of the same major scale"^^xsd:string ;
     rdfs:subClassOf :Interval ;
     rdfs:label "Chromatic Interval"^^xsd:string .
@@ -688,13 +699,13 @@
     skos:altLabel "A7"^^xsd:string ;
     owl:equivalentClass :PerfectOctaveInterval .
 
-:Step rdf:type owl:Class;
+:Step rdf:type owl:Class ;
     rdfs:comment "A categorization of an interval"^^xsd:string ;
     rdfs:subClassOf :Interval ;
     rdfs:label "Step"^^xsd:string ;
     owl:equivalentClass :Tone .
 
-:HalfStep rdf:type owl:Class;
+:HalfStep rdf:type owl:Class ;
     rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
     :hasSemitoneCount "1"^^xsd:integer ;
     rdfs:subClassOf :Step ;
@@ -702,7 +713,7 @@
     skos:altLabel "S"^^xsd:string ;
     rdfs:label "Half Step"^^xsd:string .
 
-:WholeStep rdf:type owl:Class;
+:WholeStep rdf:type owl:Class ;
     rdfs:comment "An interval of two half steps"^^xsd:string ;
     :hasSemitoneCount "2"^^xsd:integer ;
     rdfs:subClassOf :Step ;
@@ -710,18 +721,18 @@
     skos:altLabel "T"^^xsd:string ;
     rdfs:label "Whole Step"^^xsd:string .
 
-:Tone rdf:type owl:Class;
+:Tone rdf:type owl:Class ;
     rdfs:comment "A categorization of an interval"^^xsd:string ;
     rdfs:subClassOf :Interval ;
     rdfs:label "Tone"^^xsd:string ;
     owl:equivalentClass :Step .
 
-:Microtone rdf:type owl:Class;
+:Microtone rdf:type owl:Class ;
     rdfs:comment "An interval smaller than a semitone"^^xsd:string ;
     rdfs:subClassOf :Tone ;
     rdfs:label "Microtone"^^xsd:string .
 
-:Semitone rdf:type owl:Class;
+:Semitone rdf:type owl:Class ;
     rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
     :hasSemitoneCount "1"^^xsd:integer ;
     rdfs:subClassOf :Tone ;
@@ -729,7 +740,7 @@
     skos:altLabel "S"^^xsd:string ;
     rdfs:label "Semitone"^^xsd:string .
 
-:WholeTone rdf:type owl:Class;
+:WholeTone rdf:type owl:Class ;
     rdfs:comment "An interval of two semitones"^^xsd:string ;
     :hasSemitoneCount "2"^^xsd:integer ;
     rdfs:subClassOf :Tone ;
@@ -737,7 +748,7 @@
     skos:altLabel "T"^^xsd:string ;
     rdfs:label "Whole Tone"^^xsd:string .
 
-:Tritone rdf:type owl:Class;
+:Tritone rdf:type owl:Class ;
     rdfs:comment "An interval of six semitones"^^xsd:string ;
     :hasSemitoneCount "6"^^xsd:integer ;
     rdfs:subClassOf :Tone ;
@@ -763,32 +774,32 @@
     rdfs:comment "The difference between to successive crests of a wave, mathematically the quotient of the wave velocity over frequency"^^xsd:string ;
     rdfs:label "Wavelength"^^xsd:string .
 
-:Accidental rdf:type owl:Class;
+:Accidental rdf:type owl:Class ;
     rdfs:subClassOf :MusicalNotation ;
     rdfs:comment "A notation symbol on a stave that represents a change in the pitch of a note"^^xsd:string ;
     rdfs:label "Acidental"^^xsd:string .
 
-:Natural rdf:type owl:Class;
+:Natural rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
     rdfs:comment "An accidental which represents the unaltered pitch of a note by canceling previous accidentals"^^xsd:string ;
     rdfs:label "Natural"^^xsd:string .
 
-:Sharp rdf:type owl:Class;
+:Sharp rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
     rdfs:comment "An accidental which raises the pitch of a note by a half step"^^xsd:string ;
     rdfs:label "Sharp"^^xsd:string .
 
-:DoubleSharp rdf:type owl:Class;
+:DoubleSharp rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
     rdfs:comment "An accidental which raises the pitch of a note by a whole step"^^xsd:string ;
     rdfs:label "Double Sharp"^^xsd:string .
 
-:Flat rdf:type owl:Class;
+:Flat rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
     rdfs:comment "An accidental which lowers the pitch of a note by a half step"^^xsd:string ;
     rdfs:label "Flat"^^xsd:string .
 
-:DoubleFlat rdf:type owl:Class;
+:DoubleFlat rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
     rdfs:comment "An accidental which lowers the pitch of a note by a whole step"^^xsd:string ;
     rdfs:label "Double Flat"^^xsd:string .
@@ -874,7 +885,7 @@
     :hasDurationLength "1"^^xsd:integer ;
     rdfs:label "Hemidemisemiquaver"^^xsd:string .
 
-:Rest rdf:type owl:Class;
+:Rest rdf:type owl:Class ;
     rdfs:subClassOf :Duration ;
     rdfs:comment "The amount of time that no note is played"^^xsd:string ;
     rdfs:label "Rest"^^xsd:string .
