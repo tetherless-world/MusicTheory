@@ -263,52 +263,52 @@
     rdfs:label "Triad"^^xsd:string ;
     skos:altLabel "Trichord"^^xsd:string .
 
-:MajorChord rdf:type owl:Class ;
+:MajorTriad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, and a perfect fifth above the root"^^xsd:string ;
     rdfs:subClassOf :Triad ;
     :hasComponentsList "(3,5)"^^xsd:string ;
     skos:altLabel "maj"^^xsd:string ;
-    rdfs:label "Major Chord"^^xsd:string .
+    rdfs:label "Major Triad"^^xsd:string .
 
-:MinorChord rdf:type owl:Class ;
+:MinorTriad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, and a perfect fifth above the root"^^xsd:string ;
     rdfs:subClassOf :Triad ;
     :hasComponentsList "(b3,5)"^^xsd:string ;
     skos:altLabel "min"^^xsd:string ;
-    rdfs:label "Minor Chord"^^xsd:string .
+    rdfs:label "Minor Triad"^^xsd:string .
 
-:AugmentedChord rdf:type owl:Class ;
+:AugmentedTriad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, and a note an augmented fifth above the root"^^xsd:string ;
     rdfs:subClassOf :Triad ;
     :hasComponentsList "(3,#5)"^^xsd:string ;
     skos:altLabel "aug"^^xsd:string ;
-    rdfs:label "Augmented Chord"^^xsd:string .
+    rdfs:label "Augmented Triad"^^xsd:string .
 
-:DiminishedChord rdf:type owl:Class ;
+:DiminishedTriad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, and a diminished fifth above the root"^^xsd:string ;
     rdfs:subClassOf :Triad ;
     :hasComponentsList "(b3,b5)"^^xsd:string ;
     skos:altLabel "dim"^^xsd:string ;
-    rdfs:label "Diminished Chord"^^xsd:string .
+    rdfs:label "Diminished Triad"^^xsd:string .
 
 :SuspendedChord rdf:type owl:Class ;
     rdfs:comment "A chord in which the third is replaced"^^xsd:string ;
     rdfs:subClassOf :Chord ;
     rdfs:label "Suspended Chord"^^xsd:string .
 
-:SuspendedSecondChord rdf:type owl:Class ;
+:SuspendedSecondTriad rdf:type owl:Class ;
     rdfs:comment "A chord in which the third is replaced by the major second"^^xsd:string ;
     rdfs:subClassOf :SuspendedChord, :Triad ;
     :hasComponentsList "(2,5)"^^xsd:string ;
     skos:altLabel "sus2"^^xsd:string ;
-    rdfs:label "Suspended Second Chord"^^xsd:string .
+    rdfs:label "Suspended Second Triad"^^xsd:string .
 
-:SuspendedFourthChord rdf:type owl:Class ;
+:SuspendedFourthTriad rdf:type owl:Class ;
     rdfs:comment "A chord in which the third is replaced by the perfect fourth"^^xsd:string ;
     rdfs:subClassOf :SuspendedChord, :Triad ;
     :hasComponentsList "(4,5)"^^xsd:string ;
     skos:altLabel "sus4"^^xsd:string ;
-    rdfs:label "Suspended Fourth Chord"^^xsd:string .
+    rdfs:label "Suspended Fourth Triad"^^xsd:string .
 
 :Tetrad rdf:type owl:Class ;
     rdfs:comment "A set of four notes or pitches"^^xsd:string ;
@@ -317,71 +317,71 @@
     rdfs:label "Tetrad"^^xsd:string ;
     skos:altLabel "Tetrachord"^^xsd:string .
 
-:SixthChord rdf:type owl:Class ;
+:SixthTetrad rdf:type owl:Class ;
     rdfs:comment "A chord in which the sixth above the root is also included"^^xsd:string ;
     rdfs:subClassOf :Tetrad ;
-    rdfs:label "Sixth Chord"^^xsd:string .
+    rdfs:label "Sixth Tetrad"^^xsd:string .
 
-:MajorSixthChord rdf:type owl:Class ;
+:MajorSixthTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a major 6th above the root"^^xsd:string ;
-    rdfs:subClassOf :SixthChord ;
+    rdfs:subClassOf :SixthTetrad ;
     :hasComponentsList "(3,5,6)"^^xsd:string ;
     skos:altLabel "maj6"^^xsd:string ;
-    rdfs:label "Major Sixth Chord"^^xsd:string .
+    rdfs:label "Major Sixth Tetrad"^^xsd:string .
 
-:MinorSixthChord rdf:type owl:Class ;
+:MinorSixthTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a major 6th above the root"^^xsd:string ;
-    rdfs:subClassOf :SixthChord ;
+    rdfs:subClassOf :SixthTetrad ;
     :hasComponentsList "(b3,5,6)"^^xsd:string ;
     skos:altLabel "min6"^^xsd:string ;
-    rdfs:label "Minor Sixth Chord"^^xsd:string .
+    rdfs:label "Minor Sixth Tetrad"^^xsd:string .
 
-:SeventhChord rdf:type owl:Class ;
+:SeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord in which the seventh above the root is also included"^^xsd:string ;
     rdfs:subClassOf :Tetrad ;
-    rdfs:label "Seventh Chord"^^xsd:string .
+    rdfs:label "Seventh Tetrad"^^xsd:string .
 
-:MajorSeventhChord rdf:type owl:Class ;
+:MajorSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a major 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(3,5,7)"^^xsd:string ;
     skos:altLabel "maj7"^^xsd:string ;
     rdfs:label "Major Seventh Chord"^^xsd:string .
 
-:MinorSeventhChord rdf:type owl:Class ;
+:MinorSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(b3,5,b7)"^^xsd:string ;
     skos:altLabel "min7"^^xsd:string ;
-    rdfs:label "Minor Seventh Chord"^^xsd:string .
+    rdfs:label "Minor Seventh Tetrad"^^xsd:string .
 
-:DominantSeventhChord rdf:type owl:Class ;
+:DominantSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(3,5,b7)"^^xsd:string ;
     skos:altLabel "7"^^xsd:string ;
-    rdfs:label "Dominant Seventh Chord"^^xsd:string .
+    rdfs:label "Dominant Seventh Tetrad"^^xsd:string .
 
-:DiminishedSeventhChord rdf:type owl:Class ;
+:DiminishedSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a diminished fifth above the root, and a diminished minor 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(b3,b5,bb7)"^^xsd:string ;
     skos:altLabel "dim7"^^xsd:string ;
-    rdfs:label "Diminished Seventh Chord"^^xsd:string .
+    rdfs:label "Diminished Seventh Tetrad"^^xsd:string .
 
-:HalfDiminishedSeventhChord rdf:type owl:Class ;
+:HalfDiminishedSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a diminished fifth above the root, and a minor 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(b3,b5,b7)"^^xsd:string ;
     skos:altLabel "dim7"^^xsd:string ;
-    rdfs:label "Half Diminished Seventh Chord"^^xsd:string .
+    rdfs:label "Half Diminished Seventh Tetrad"^^xsd:string .
 
-:MinorMajorSeventhChord rdf:type owl:Class ;
+:MinorMajorSeventhTetrad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a major 7th above the root"^^xsd:string ;
-    rdfs:subClassOf :SeventhChord ;
+    rdfs:subClassOf :SeventhTetrad ;
     :hasComponentsList "(b3,5,7)"^^xsd:string ;
     skos:altLabel "minmaj7"^^xsd:string ;
-    rdfs:label "Minor (Major Seventh) Chord"^^xsd:string .
+    rdfs:label "Minor (Major Seventh) Tetrad"^^xsd:string .
 
 :Pentad rdf:type owl:Class ;
     rdfs:comment "A set of five notes or pitches"^^xsd:string ;
@@ -390,31 +390,31 @@
     rdfs:label "Pentad"^^xsd:string ;
     skos:altLabel "Pentachord"^^xsd:string .
 
-:NinthChord rdf:type owl:Class ;
+:NinthPentad rdf:type owl:Class ;
     rdfs:comment "A chord in which the seventh and ninth above the root are included"^^xsd:string ;
     rdfs:subClassOf :Pentad ;
-    rdfs:label "Ninth Chord"^^xsd:string .
+    rdfs:label "Ninth Pentad"^^xsd:string .
 
-:MajorNinthChord rdf:type owl:Class ;
+:MajorNinthPentad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, a major 7th above the root, and a major 9th above the root"^^xsd:string ;
-    rdfs:subClassOf :NinthChord ;
+    rdfs:subClassOf :NinthPentad ;
     :hasComponentsList "(3,5,7,9)"^^xsd:string ;
     skos:altLabel "maj9"^^xsd:string ;
-    rdfs:label "Major Ninth Chord"^^xsd:string .
+    rdfs:label "Major Ninth Pentad"^^xsd:string .
 
-:MinorNinthChord rdf:type owl:Class ;
+:MinorNinthPentad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root, and a major 9th above the root"^^xsd:string ;
-    rdfs:subClassOf :NinthChord ;
+    rdfs:subClassOf :NinthPentad ;
     :hasComponentsList "(b3,5,b7,9)"^^xsd:string ;
     skos:altLabel "min9"^^xsd:string ;
-    rdfs:label "Minor Ninth Chord"^^xsd:string .
+    rdfs:label "Minor Ninth Pentad"^^xsd:string .
 
-:DominantNinthChord rdf:type owl:Class ;
+:DominantNinthPentad rdf:type owl:Class ;
     rdfs:comment "A chord consisting of a root note, a major third above the root, a perfect fifth above the root, and a minor 7th above the root, and a major 9th above the root"^^xsd:string ;
-    rdfs:subClassOf :NinthChord ;
+    rdfs:subClassOf :NinthPentad ;
     :hasComponentsList "(3,5,b7,9)"^^xsd:string ;
     skos:altLabel "9"^^xsd:string ;
-    rdfs:label "Dominant Ninth Chord"^^xsd:string .
+    rdfs:label "Dominant Ninth Pentad"^^xsd:string .
 
 :Hexad rdf:type owl:Class ;
     rdfs:comment "A set of six notes or pitches"^^xsd:string ;
