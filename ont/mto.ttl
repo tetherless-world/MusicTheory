@@ -777,7 +777,7 @@
 :Accidental rdf:type owl:Class ;
     rdfs:subClassOf :MusicalNotation ;
     rdfs:comment "A notation symbol on a stave that represents a change in the pitch of a note"^^xsd:string ;
-    rdfs:label "Acidental"^^xsd:string .
+    rdfs:label "Accidental"^^xsd:string .
 
 :Natural rdf:type owl:Class ;
     rdfs:subClassOf :Accidental ;
